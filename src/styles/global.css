@@ -1,5 +1,5 @@
 :root {
-  --primary-text-color:#FFF;
+  --primary-text-color: hsla(255, 255%, 255%, 1);
   --primary-bg-color: #3D586B;
   --font-stack: Oswald, Helvetica, sans-serif;
 }
