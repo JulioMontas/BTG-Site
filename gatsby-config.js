@@ -6,6 +6,7 @@ module.exports = {
     siteUrl: `https://btgsite.gatsbyjs.io/`,
   },
   plugins: [
+    `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-fontawesome-css`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
