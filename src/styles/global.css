@@ -1,12 +1,10 @@
-@custom-media --viewport-medium (width <= 50rem);
-@custom-selector :--heading h1, h2, h3, h4, h5, h6;
-
 :root {
-  --mainColor: #12345678;
+  --primary-text-color:#FFF;
+  --primary-bg-color: #3D586B;
+  --font-stack: Oswald, Helvetica, sans-serif;
 }
-
-body {
-  color: var(--mainColor);
-  font-family: system-ui;
-  overflow-wrap: break-word;
+body{
+  font-family: var(--font-stack);
+  background: var( --primary-bg-color);
+  color: var(--primary-text-color);
 }
