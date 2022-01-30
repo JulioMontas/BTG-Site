@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `BTG Site`,
+    title: `Barnes Trial Group`,
     description: `If you have been injured in an accident, turn to the Barnes Trial Group in Tampa. Twenty years of trial experience. Call 813-251-0777.`,
     author: `@BTGLaw`,
     siteUrl: `https://btgsite.gatsbyjs.io/`,

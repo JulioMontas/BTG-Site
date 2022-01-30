@@ -2,18 +2,26 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
+import "./header.css"
+
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `rebeccapurple`,
       marginBottom: `1.45rem`,
     }}
   >
     <div
       style={{
         margin: `0 auto`,
-        maxWidth: 960,
+        maxWidth: 1200,
         padding: `1.45rem 1.0875rem`,
+      }}
+    >
+    <div
+      style={{
+        display: `flex`,
+        justifyContent: `space-between`,
+        alignItems: `baseline`,
       }}
     >
       <h1 style={{ margin: 0 }}>
@@ -27,6 +35,39 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
+      <ul
+      style={{
+        display: `flex`,
+      }}
+      >
+        <li>
+          <Link to="/about">
+            The Firm
+          </Link>
+        </li>
+        <li>
+          <Link to="/case-results">
+            Case Results
+          </Link>
+        </li>
+        <li>
+          <Link to="/pratice-areas">
+            Pratice Areas
+          </Link>
+        </li>
+        <li>
+          <Link to="/blog">
+            Blog
+          </Link>
+        </li>
+        <li>
+          <Link to="/contact">
+            Contact
+          </Link>
+        </li>
+      </ul>
+    </div>
+
     </div>
   </header>
 )
