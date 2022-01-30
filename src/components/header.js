@@ -2,21 +2,13 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
+import Container from "./container"
 import "./header.css"
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 1200,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
+  <header>
+  <Container>
+
     <div
       style={{
         display: `flex`,
@@ -66,9 +58,12 @@ const Header = ({ siteTitle }) => (
           </Link>
         </li>
       </ul>
-    </div>
+
+
 
     </div>
+
+    </Container>
   </header>
 )
 

@@ -1,0 +1,25 @@
+.container{
+  width: 100%;
+  padding: 0 1.0875rem 1.45rem;
+}
+/* Mobile 320px  */
+@media screen and (min-width: 30em) {}
+/* Table */
+@media screen and (min-width: 40em) {
+  .container{
+    margin: 0 auto;
+    width: 992px;
+  }
+}
+/* Desktop 980px to 1280px  */
+@media screen and (min-width: 57em) {
+  .container{
+    width: 1200px;
+  }
+}
+/* Desktop 1920px */
+@media screen and (min-width: 120em) {
+  .container{
+    width: 1400px;
+  }
+}
