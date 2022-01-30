@@ -3,35 +3,18 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 import Container from "./container"
-import "./header.module.css"
+import "./header.css"
 
 const Header = ({ siteTitle }) => (
   <header>
   <Container>
-
-    <div
-      style={{
-        display: `flex`,
-        justifyContent: `space-between`,
-        alignItems: `baseline`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
+    <div>
+      <h1>
+        <Link to="/" >
           {siteTitle}
         </Link>
       </h1>
-      <ul
-      style={{
-        display: `flex`,
-      }}
-      >
+      <ul>
         <li>
           <Link to="/about">
             The Firm
@@ -58,11 +41,7 @@ const Header = ({ siteTitle }) => (
           </Link>
         </li>
       </ul>
-
-
-
     </div>
-
     </Container>
   </header>
 )

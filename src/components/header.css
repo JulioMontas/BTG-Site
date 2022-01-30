@@ -1,20 +1,18 @@
 /* X-Small devices (portrait phones, less than 576px) */
-:root {
-  --primary-text-color: hsla(255, 255%, 255%, 1);
-  --primary-bg-color: #3D586B;
-  --font-stack: Oswald, Helvetica, sans-serif;
+header div{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
-body{
-  font-family: var(--font-stack);
-  background: var( --primary-bg-color);
-  color: var(--primary-text-color);
-}
-a{
-  color: var(--primary-text-color);
-  text-decoration: none;
+ul{
+  display: none;
 }
 li{
-  list-style-type: none;
+  margin-right: 1em;
+}
+li:last-child{
+  margin-right: 0;
 }
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
@@ -26,6 +24,9 @@ li{
 }
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  ul{
+    display: flex;
+  }
 
 }
 /* X-Large devices (large desktops, 1200px and up) */
