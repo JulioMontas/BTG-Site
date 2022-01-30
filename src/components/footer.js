@@ -3,12 +3,14 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 import Container from "./container"
-import "./footer.css"
+import "./footer.module.css"
 
-const Footer = ({ siteTitle }) => (
+const Footer = () => (
   <footer>
     <Container>
-      © {new Date().getFullYear()}, Barnes Trial Group. All Rights Reserved. Attorney Advertising. Past results do not guarantee future outcome.
+      <p>
+        © {new Date().getFullYear()}, Barnes Trial Group. All Rights Reserved. Attorney Advertising. Past results do not guarantee future outcome.
+      </p>
     </Container>
   </footer>
 )

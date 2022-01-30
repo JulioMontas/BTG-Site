@@ -4,14 +4,14 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Container from "../components/container"
 
-const AboutPage = () => (
+const FAQPage = () => (
   <Layout>
-    <Seo title="The Firm" />
+    <Seo title="FAQs" />
     <Container>
-      <h1>The Firm</h1>
-      <p>Welcome to the About new gatsby site.</p>
+      <h1>FAQs</h1>
+      <p>Welcome to the FAQs new gatsby site.</p>
     </Container>
   </Layout>
 )
 
-export default AboutPage
+export default FAQPage

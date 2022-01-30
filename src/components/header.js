@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 import Container from "./container"
-import "./header.css"
+import "./header.module.css"
 
 const Header = ({ siteTitle }) => (
   <header>
@@ -43,7 +43,7 @@ const Header = ({ siteTitle }) => (
           </Link>
         </li>
         <li>
-          <Link to="/pratice-areas">
+          <Link to="/practice-areas">
             Pratice Areas
           </Link>
         </li>
