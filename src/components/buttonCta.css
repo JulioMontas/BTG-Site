@@ -1,0 +1,33 @@
+/* X-Small devices (portrait phones, less than 576px) */
+.ButtonCta a{
+  width: 100%;
+  background: #BCA360;
+  color: #FFF;
+  border-radius: 5px;
+  text-align: center;
+  padding: 0.8em 0;
+  letter-spacing: 1px;
+  display: block;
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .ButtonCta a{
+    width: 225px;
+  }
+}
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+
+}
