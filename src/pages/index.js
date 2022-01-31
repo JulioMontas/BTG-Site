@@ -10,11 +10,26 @@ import ButtonCta from "../components/buttonCta"
 import CaseResultBtn from "../components/caseResultBtn"
 import AttorneyBtn from "../components/attorneyBtn";
 
+const theme = {
+  colorsBG: {
+    primary: `#1d3851`,
+    secondary: `#FFF`,
+  },
+  colorsText: {
+    primary: `#333`,
+    secondary: `#FFF`,
+  },
+}
+
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
 
-    <div className="hero">
+    <div
+      className="hero"
+      style={{
+        background: theme.colorsBG.primary,
+      }}>
       <Container>
         <div className="hero-content">
           <h2>Securing The Results Our Clients Deserve</h2>
@@ -29,7 +44,11 @@ const IndexPage = () => (
       </Container>
     </div>
 
-    <div className="praticeAreasList">
+    <div
+      className="praticeAreasList"
+      style={{
+        background: theme.colorsBG.primary,
+      }}>
       <Container>
         <div className="summary">
           <p>We offer effective personal injury representation that can help you secure the best possible outcome to your situation.</p>
@@ -85,7 +104,12 @@ const IndexPage = () => (
       </Container>
     </div>
 
-    <div className="firm">
+    <div
+      className="firm"
+      style={{
+        background: theme.colorsBG.secondary,
+        color: theme.colorsText.primary,
+      }}>
       <Container>
         <div className="wrapper">
           <div className="avatorList">
@@ -106,7 +130,12 @@ const IndexPage = () => (
       </Container>
     </div>
 
-    <div className="testimonial">
+    <div
+      className="testimonial"
+      style={{
+        background: theme.colorsBG.primary,
+      }}
+    >
       <Container>
       <div className="wrapper">
         <div className="image">
@@ -131,7 +160,13 @@ const IndexPage = () => (
       </Container>
     </div>
 
-    <div className="attorneyList">
+    <div
+      className="attorneyList"
+      style={{
+        background: theme.colorsBG.secondary,
+        color: theme.colorsText.primary,
+      }}
+    >
       <Container>
         <h2 className="title">
           Meet Our Attorneys
@@ -146,7 +181,12 @@ const IndexPage = () => (
       </Container>
     </div>
 
-    <div className="caseResultList">
+    <div
+      className="caseResultList"
+      style={{
+        background: theme.colorsBG.primary,
+      }}
+    >
       <Container>
         <div className="summary">
           <p>A serious injury can easily derail a person’s life. We know how to fight for our clients and win. Our goal is to secure the compensation you need to help rebuild your life.</p>
@@ -207,7 +247,13 @@ const IndexPage = () => (
       </Container>
     </div>
 
-    <div className="blogLatestPost">
+    <div
+      className="blogLatestPost"
+      style={{
+        background: theme.colorsBG.secondary,
+        color: theme.colorsText.primary,
+      }}
+    >
       <Container>
         <h2>
           Blog
@@ -221,7 +267,12 @@ const IndexPage = () => (
       </Container>
     </div>
 
-    <div className="contact">
+    <div
+      className="contact"
+      style={{
+        background: theme.colorsBG.primary,
+      }}
+    >
       <Container>
         <div className="wrapper">
           <div>
