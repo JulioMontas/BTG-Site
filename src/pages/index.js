@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+// import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -110,6 +110,7 @@ const IndexPage = () => (
       <Container>
       <div className="wrapper">
         <div className="image">
+        {/*
           <StaticImage
             src="../images/testimonial.png"
             alt="Testimonial"
@@ -118,6 +119,7 @@ const IndexPage = () => (
             width={355}
             height={309}
           />
+          */}
         </div>
         <div className="cta">
           <ButtonCta
