@@ -5,8 +5,8 @@ import "./buttonCta.css"
 
 const ButtonCta = (props) => {
   return (
-    <div className="buttonCta">
-      <Link to={props.url}>
+    <div>
+      <Link to={props.url} className="button-cta">
         <span>
           {props.title}
         </span>

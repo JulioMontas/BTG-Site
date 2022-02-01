@@ -7,13 +7,17 @@ import Seo from "../components/seo"
 import Container from "../components/container"
 
 import ButtonCta from "../components/buttonCta"
-import CaseResultBtn from "../components/caseResultBtn"
+import CaseResultList from "../components/caseResultList"
+import PraticeAreasList from "../components/praticeAreasList"
 import AttorneyBtn from "../components/attorneyBtn";
+
+import * as homeStyles from "../styles/home.module.css"
 
 const theme = {
   colorsBG: {
     primary: `#1d3851`,
     secondary: `#FFF`,
+    test: `green`,
   },
   colorsText: {
     primary: `#333`,
@@ -21,117 +25,15 @@ const theme = {
   },
 }
 
-const dataPraticeAreas = [
-  {
-    url: `/`,
-    title: `Personal Injury`,
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer condimentum lacus ac odio`,
-  },
-  {
-    url: `/`,
-    title: `Medical Malpractice`,
-    description: `Navigating intricate and time-sensitive law to help victims of preventable medical error`,
-  },
-  {
-    url: `/`,
-    title: `Spinal Cord & Brain Injury`,
-    description: `Discovering the nature of complex brain injury and those accountable for costs of care`,
-  },
-  {
-    url: `/`,
-    title: `Nursing Home Abuse`,
-    description: `Advocating for loved ones who have been abused or neglected in elder care facilities`,
-  },
-  {
-    url: `/`,
-    title: `Negligent Security & Property Maintenance`,
-    description: `Identifying failed security measures and holding accountable those responsible`,
-  },
-  {
-    url: `/`,
-    title: `Automobile Accidents`,
-    description: `Securing superior recoveries to compensate for loss and protect against further harm`,
-  },
-  {
-    url: `/`,
-    title: `Boating & Diving Accidents`,
-    description: `Providing guidance on rights under maritime law to those injured in water activities`,
-  },
-  {
-    url: `/`,
-    title: `Trucking Accidents`,
-    description: `Unraveling the complex web of responsibility in commercial vehicle accidents`,
-  },
-  {
-    url: `/`,
-    title: `Zantac Recall Litigation`,
-    description: `Assisting those who have become ill after using ranitidine (Zantac) products`,
-  }
-]
-const dataCaseResult = [
-  {
-    url: `/`,
-    title: `$17,000,000`,
-    description: `Fall From Skylight`,
-  },
-  {
-    url: `/`,
-    title: `$3,900,000`,
-    description: `Motorcycle Accident`,
-  },
-  {
-    url: `/`,
-    title: `$3,900,000`,
-    description: `Medical Malpractice`,
-  },
-  {
-    url: `/`,
-    title: `$2,250,000`,
-    description: `Negligent Security`,
-  },
-  {
-    url: `/`,
-    title: `$1,610,000`,
-    description: `Automobile Accident and Insurance Bad Faith`,
-  },
-  {
-    url: `/`,
-    title: `$1,300,000"`,
-    description: `Motorcycle Accident`,
-  },
-  {
-    url: `/`,
-    title: `$1,196,858`,
-    description: `Car Accident`,
-  },
-  {
-    url: `/`,
-    title: `$1,185,000`,
-    description: `Premises Liability`,
-  },
-  {
-    url: `/`,
-    title: `$1,000,000`,
-    description: `Automobile Accident`,
-  },
-  {
-    url: `/`,
-    title: `$350,000`,
-    description: `Car Accident`,
-  }
-]
-
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
 
-    <div className="hero">
+    <div className={homeStyles.homeHeroBG}>
       <Container>
-        <div className="hero-content">
-          <h2>Securing The Results Our Clients Deserve</h2>
-          <p>Our goal is to secure the compensation you need to help rebuild your life.</p>
-        </div>
-        <div className="hero-cta">
+        <h2 className={homeStyles.homeHeroTitle}>Securing The Results Our Clients Deserve</h2>
+        <p className={homeStyles.homeHeroDescription}>Our goal is to secure the compensation you need to help rebuild your life.</p>
+        <div className={homeStyles.homeHeroCTA}>
           <ButtonCta
             url="/contact/consultation/"
             title={"Free Consultation"}
@@ -140,35 +42,15 @@ const IndexPage = () => (
       </Container>
     </div>
 
-    <div
-      className="praticeAreasList"
-      style={{
-        background: theme.colorsBG.primary,
-      }}>
+    <div className={homeStyles.caseResultList} style={{background: theme.colorsBG.primary, }}>
       <Container>
-        <div className="summary">
-          <p>We offer effective personal injury representation that can help you secure the best possible outcome to your situation.</p>
-        </div>
-        <h2>List of pratice areas</h2>
-        <div className="wrapper">
-          {dataPraticeAreas.map(data => (
-            <CaseResultBtn
-              key={data.id}
-              url="/"
-              description={data.title}
-              title={data.description}
-            />
-          ))}
-        </div>
+        <p className={homeStyles.featureSummary}>A serious injury can easily derail a person’s life. We know how to fight for our clients and win. Our goal is to secure the compensation you need to help rebuild your life.</p>
+        <h2 className={homeStyles.featuresTitle}>List of case results</h2>
+        <CaseResultList />
       </Container>
     </div>
 
-    <div
-      className="firm"
-      style={{
-        background: theme.colorsBG.secondary,
-        color: theme.colorsText.primary,
-      }}>
+    <div className={homeStyles.homeTheFirmBG} style={{background: theme.colorsBG.secondary, color: theme.colorsText.primary, }}>
       <Container>
         <div className="wrapper">
           <div className="avatorList">
@@ -189,12 +71,7 @@ const IndexPage = () => (
       </Container>
     </div>
 
-    <div
-      className="testimonial"
-      style={{
-        background: theme.colorsBG.primary,
-      }}
-    >
+    <div className={homeStyles.homeTestimonial} style={{background: theme.colorsBG.primary, }}>
       <Container>
       <div className="wrapper">
       <h2>Testimonial</h2>
@@ -220,13 +97,7 @@ const IndexPage = () => (
       </Container>
     </div>
 
-    <div
-      className="attorneyList"
-      style={{
-        background: theme.colorsBG.secondary,
-        color: theme.colorsText.primary,
-      }}
-    >
+    <div className={homeStyles.homeAttorneyList} style={{background: theme.colorsBG.secondary, color: theme.colorsText.primary, }}>
       <Container>
         <h2 className="title">
           Meet Our Attorneys
@@ -241,37 +112,15 @@ const IndexPage = () => (
       </Container>
     </div>
 
-    <div
-      className="caseResultList"
-      style={{
-        background: theme.colorsBG.primary,
-      }}
-    >
+    <div className={homeStyles.homePraticeAreasList} style={{background: theme.colorsBG.primary, }}>
       <Container>
-        <div className="summary">
-          <p>A serious injury can easily derail a person’s life. We know how to fight for our clients and win. Our goal is to secure the compensation you need to help rebuild your life.</p>
-        </div>
-        <h2>List of case results</h2>
-        <div className="wrapper">
-        {dataCaseResult.map(data => (
-          <CaseResultBtn
-            key={data.id}
-            url="/"
-            description={data.title}
-            title={data.description}
-          />
-        ))}
-        </div>
+        <p className={homeStyles.featureSummary}>We offer effective personal injury representation that can help you secure the best possible outcome to your situation.</p>
+        <h2 className={homeStyles.featuresTitle}>List of pratice areas</h2>
+        <PraticeAreasList />
       </Container>
     </div>
 
-    <div
-      className="blogLatestPost"
-      style={{
-        background: theme.colorsBG.secondary,
-        color: theme.colorsText.primary,
-      }}
-    >
+    <div className={homeStyles.homeBlogLatestPost} style={{ background: theme.colorsBG.secondary, color: theme.colorsText.primary, }}>
       <Container>
         <h2>
           Blog
@@ -285,12 +134,7 @@ const IndexPage = () => (
       </Container>
     </div>
 
-    <div
-      className="contact"
-      style={{
-        background: theme.colorsBG.primary,
-      }}
-    >
+    <div className={homeStyles.homeContact} style={{background: theme.colorsBG.primary, }}>
       <Container>
         <div className="wrapper">
           <div>

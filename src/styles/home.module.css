@@ -1,0 +1,100 @@
+/* X-Small devices (portrait phones, less than 576px) */
+/* #### */
+/* Grid */
+/* #### */
+.caseResultList,
+.homeTheFirmBG,
+.homeTestimonial,
+.homeAttorneyList,
+.homePraticeAreasList,
+.homeBlogLatestPost,
+.homeContact{
+  padding: 10rem 1rem 11rem;
+  /* border: 2px solid red; */
+}
+/* ############ */
+/* Hero Section */
+/* ############ */
+.homeHeroBG{
+    background-image: linear-gradient(rgba(61, 88, 107, 1), rgba(29, 56, 81, 0.6)), url("../images/hero-bg.jpg");
+    height: 55vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: 0 10px;
+}
+.homeHeroTitle{
+  font-size: 2em;
+  text-transform: uppercase;
+}
+.homeHeroDescription{
+    font-size: 1em;
+    letter-spacing: 0.1em;
+}
+.homeHeroCTA{
+    text-align: right;
+    margin-top: 8em;
+}
+/* #################################### */
+/* Pratice Areas & Case Results Section */
+/* #################################### */
+.featureSummary{
+    font-size: 2.25em;
+    line-height: 155%;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    font-size: 2.25em;
+    line-height: 155%;
+    text-align: center;
+}
+.featuresTitle{
+    font-size: 1em;
+    letter-spacing: 0.02em;
+    font-weight: 400;
+    margin-bottom: 1em;
+}
+/* ######################## */
+/* The Firm (About) Section */
+/* ######################## */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  /* ############ */
+  /* Hero Section */
+  /* ############ */
+  .homeHeroBG{
+    height: 65vh;
+  }
+  .homeHeroTitle{
+    font-size: 3em;
+    padding-top: 8%;
+  }
+  .homeHeroDescription{
+    font-size: 1.4em;
+  }
+  .homeHeroCTA{
+    margin-top: 24em;
+    float: right;
+  }
+  /* #################################### */
+  /* Pratice Areas & Case Results Section */
+  /* #################################### */
+}
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+
+}

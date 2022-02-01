@@ -6,7 +6,7 @@
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 html {
-  font: var(--font-stack) !important;
+  font: var(--font-stack);
   font-size: 100%;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -14,7 +14,7 @@ html {
   overflow-y: scroll;
 }
 body {
-  background: var( --primary-bg-color) !important;
+  background: var( --primary-bg-color);
   color: var(--primary-text-color);
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -122,10 +122,7 @@ hr {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
+  padding: 0;
   margin-bottom: calc(1.45rem - 1px);
   background: hsla(0, 0%, 0%, 0.2);
   border: none;
@@ -229,14 +226,8 @@ hgroup,
 img
 figure,
 fieldset{
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  /* margin-bottom: 1.45rem; */
+  margin: 0;
+  padding: 0;
 }
 h1,
 h2,
@@ -244,9 +235,6 @@ h3,
 h4,
 h5,
 h6{
-  color: inherit;
-  font-weight: bold;
-  text-rendering: optimizeLegibility;
   line-height: 1.1;
 }
 p {
@@ -435,32 +423,19 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
-
-.container{
-  width: 100%;
+.hero{
+  padding: 6rem 1rem 6rem;
+  background: #1d3851;
 }
 header,
 footer{
   padding: 1rem 1rem 1rem;
 }
-.hero{
-  height: 70vh;
-  padding: 3rem 1rem 0rem;
-  background: #1d3851;
-}
-.praticeAreasList,
-.firm,
-.testimonial,
-.attorneyList,
-.caseResultList,
-.blogLatestPost,
-.contact{
-  padding: 10rem 1rem 11rem;
+.container{
+  width: 100%;
 }
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-
-}
+@media (min-width: 576px) { }
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .container{
