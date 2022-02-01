@@ -58,6 +58,24 @@
 /* ######################## */
 /* The Firm (About) Section */
 /* ######################## */
+.twoColumnsGrid{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.avatorList{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 10px;
+}
+.avatorList div:nth-child(03){z-index: 900;}
+.avatorList div:nth-child(04){z-index: 1;}
+
+.avatorSummary {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+}
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
@@ -89,6 +107,18 @@
   /* #################################### */
   /* Pratice Areas & Case Results Section */
   /* #################################### */
+
+  /* ######################## */
+  /* The Firm (About) Section */
+  /* ######################## */
+  .twoColumnsGrid{
+    grid-template-columns: 1fr 1fr;
+  }
+  .avatorList{
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    column-gap: 67px;
+  }
 }
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {

@@ -2,6 +2,7 @@
 :root {
   --primary-text-color: hsla(255, 255%, 255%, 1);
   --primary-bg-color: #3D586B;
+  --primary-cta-color: #BCA360;
   --font-stack: 112.5%/1.45em Oswald, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }

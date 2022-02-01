@@ -10,6 +10,7 @@ import ButtonCta from "../components/buttonCta"
 import CaseResultList from "../components/caseResultList"
 import PraticeAreasList from "../components/praticeAreasList"
 import AttorneyBtn from "../components/attorneyBtn";
+import Avator from "../components/avator";
 
 import * as homeStyles from "../styles/home.module.css"
 
@@ -50,26 +51,46 @@ const IndexPage = () => (
       </Container>
     </div>
 
+
+
+
+
+
     <div className={homeStyles.homeTheFirmBG} style={{background: theme.colorsBG.secondary, color: theme.colorsText.primary, }}>
       <Container>
-        <div className="wrapper">
-          <div className="avatorList">
-          {/* <AvatorList /> */}
+        <div className={homeStyles.twoColumnsGrid}>
+
+
+
+          <div className={homeStyles.avatorList}>
+            <Avator />
+            <Avator />
+            <Avator />
+            <Avator />
+            <Avator />
           </div>
-          <div className="summary">
-          <h2>Trial Lawyer Committed to Serving the Injured</h2>
-          <p>With more than 25 years of combined experience and a focus on providing the most effective trial representation available, we have been able to build a record of positive results for our clients that we are proud of.</p>
-          <p>Our firm is dedicated to creating the positive results people need after they have been hurt in serious accidents. We know that most people simply want to recover the life they had before an accident. We have the experience and skill necessary to secure the full compensation people will need to be able to overcome the obstacles that stand in their way. </p>
-          <div className="cta">
-            <ButtonCta
-              url="/about"
-              title={"The Firm"}
-            />
+
+          <div className={homeStyles.avatorSummary}>
+            <h2>Trial Lawyer Committed to Serving the Injured</h2>
+            <p>With more than 25 years of combined experience and a focus on providing the most effective trial representation available, we have been able to build a record of positive results for our clients that we are proud of.</p>
+            <p>Our firm is dedicated to creating the positive results people need after they have been hurt in serious accidents. We know that most people simply want to recover the life they had before an accident. We have the experience and skill necessary to secure the full compensation people will need to be able to overcome the obstacles that stand in their way. </p>
+            <div className="cta">
+              <ButtonCta
+                url="/about"
+                title={"The Firm"}
+              />
+            </div>
           </div>
-        </div>
+
+
+
         </div>
       </Container>
     </div>
+
+
+
+
 
     <div className={homeStyles.homeTestimonial} style={{background: theme.colorsBG.primary, }}>
       <Container>
@@ -122,10 +143,10 @@ const IndexPage = () => (
 
     <div className={homeStyles.homeBlogLatestPost} style={{ background: theme.colorsBG.secondary, color: theme.colorsText.primary, }}>
       <Container>
+      <div className={homeStyles.twoColumnsGrid}>
         <h2>
           Blog
         </h2>
-        <div>
          <ButtonCta
             url="/blog"
             title={"Blog"}
@@ -136,7 +157,7 @@ const IndexPage = () => (
 
     <div className={homeStyles.homeContact} style={{background: theme.colorsBG.primary, }}>
       <Container>
-        <div className="wrapper">
+        <div className={homeStyles.twoColumnsGrid}>
           <div>
             <h2 className="title">
               BTG in Tampa serves clients in Clearwater, Hillsborough County, Pinellas County and throughout Central Florida.
