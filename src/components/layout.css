@@ -456,7 +456,6 @@ footer{
 .blogLatestPost,
 .contact{
   padding: 10rem 1rem 11rem;
-  border: 1px solid #fff;
 }
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {

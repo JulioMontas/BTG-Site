@@ -21,6 +21,106 @@ const theme = {
   },
 }
 
+const dataPraticeAreas = [
+  {
+    url: `/`,
+    title: `Personal Injury`,
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer condimentum lacus ac odio`,
+  },
+  {
+    url: `/`,
+    title: `Medical Malpractice`,
+    description: `Navigating intricate and time-sensitive law to help victims of preventable medical error`,
+  },
+  {
+    url: `/`,
+    title: `Spinal Cord & Brain Injury`,
+    description: `Discovering the nature of complex brain injury and those accountable for costs of care`,
+  },
+  {
+    url: `/`,
+    title: `Nursing Home Abuse`,
+    description: `Advocating for loved ones who have been abused or neglected in elder care facilities`,
+  },
+  {
+    url: `/`,
+    title: `Negligent Security & Property Maintenance`,
+    description: `Identifying failed security measures and holding accountable those responsible`,
+  },
+  {
+    url: `/`,
+    title: `Automobile Accidents`,
+    description: `Securing superior recoveries to compensate for loss and protect against further harm`,
+  },
+  {
+    url: `/`,
+    title: `Boating & Diving Accidents`,
+    description: `Providing guidance on rights under maritime law to those injured in water activities`,
+  },
+  {
+    url: `/`,
+    title: `Trucking Accidents`,
+    description: `Unraveling the complex web of responsibility in commercial vehicle accidents`,
+  },
+  {
+    url: `/`,
+    title: `Zantac Recall Litigation`,
+    description: `Assisting those who have become ill after using ranitidine (Zantac) products`,
+  }
+]
+const dataCaseResult = [
+  {
+    url: `/`,
+    title: `$17,000,000`,
+    description: `Fall From Skylight`,
+  },
+  {
+    url: `/`,
+    title: `$3,900,000`,
+    description: `Motorcycle Accident`,
+  },
+  {
+    url: `/`,
+    title: `$3,900,000`,
+    description: `Medical Malpractice`,
+  },
+  {
+    url: `/`,
+    title: `$2,250,000`,
+    description: `Negligent Security`,
+  },
+  {
+    url: `/`,
+    title: `$1,610,000`,
+    description: `Automobile Accident and Insurance Bad Faith`,
+  },
+  {
+    url: `/`,
+    title: `$1,300,000"`,
+    description: `Motorcycle Accident`,
+  },
+  {
+    url: `/`,
+    title: `$1,196,858`,
+    description: `Car Accident`,
+  },
+  {
+    url: `/`,
+    title: `$1,185,000`,
+    description: `Premises Liability`,
+  },
+  {
+    url: `/`,
+    title: `$1,000,000`,
+    description: `Automobile Accident`,
+  },
+  {
+    url: `/`,
+    title: `$350,000`,
+    description: `Car Accident`,
+  }
+]
+
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
@@ -51,51 +151,14 @@ const IndexPage = () => (
         </div>
         <h2>List of pratice areas</h2>
         <div className="wrapper">
-          <CaseResultBtn
-            url="/"
-            description={"Personal Injury"}
-            title={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer condimentum lacus ac odio."}
-          />
-          <CaseResultBtn
-            url="/"
-            description={"Medical Malpractice"}
-            title={"Navigating intricate and time-sensitive law to help victims of preventable medical error."}
-          />
-          <CaseResultBtn
-            url="/"
-            description={"Spinal Cord & Brain Injury"}
-            title={"Discovering the nature of complex brain injury and those accountable for costs of care."}
-          />
-          <CaseResultBtn
-            url="/"
-            description={"Nursing Home Abuse"}
-            title={"Advocating for loved ones who have been abused or neglected in elder care facilities."}
-          />
-          <CaseResultBtn
-            url="/"
-            description={"Negligent Security & Property Maintenance"}
-            title={"Identifying failed security measures and holding accountable those responsible."}
-          />
-          <CaseResultBtn
-            url="/"
-            description={"Automobile Accidents"}
-            title={"Securing superior recoveries to compensate for loss and protect against further harm."}
-          />
-          <CaseResultBtn
-            url="/"
-            description={"Boating & Diving Accidents"}
-            title={"Providing guidance on rights under maritime law to those injured in water activities."}
-          />
-          <CaseResultBtn
-            url="/"
-            description={"Trucking Accidents"}
-            title={"Unraveling the complex web of responsibility in commercial vehicle accidents."}
-          />
-          <CaseResultBtn
-            url="/"
-            description={"Zantac Recall Litigation"}
-            title={"Assisting those who have become ill after using ranitidine (Zantac) products."}
-          />
+          {dataPraticeAreas.map(data => (
+            <CaseResultBtn
+              key={data.id}
+              url="/"
+              description={data.title}
+              title={data.description}
+            />
+          ))}
         </div>
       </Container>
     </div>
@@ -134,6 +197,7 @@ const IndexPage = () => (
     >
       <Container>
       <div className="wrapper">
+      <h2>Testimonial</h2>
         <div className="image">
         {/*
           <StaticImage
@@ -189,56 +253,14 @@ const IndexPage = () => (
         </div>
         <h2>List of case results</h2>
         <div className="wrapper">
+        {dataCaseResult.map(data => (
           <CaseResultBtn
+            key={data.id}
             url="/"
-            amount={"$17,000,000"}
-            title={"Fall From Skylight"}
+            description={data.title}
+            title={data.description}
           />
-          <CaseResultBtn
-            url="/"
-            amount={"$3,900,000"}
-            title={"Motorcycle Accident"}
-          />
-          <CaseResultBtn
-             url="/"
-             amount={"$3,900,000"}
-             title={"Medical Malpractice"}
-          />
-          <CaseResultBtn
-             url="/"
-             amount={"$2,250,000"}
-             title={"Negligent Security"}
-          />
-          <CaseResultBtn
-             url="/"
-             amount={"$1,610,000"}
-             title={"Automobile Accident and Insurance Bad Faith"}
-          />
-          <CaseResultBtn
-             url="/"
-             amount={"$1,300,000"}
-             title={"Motorcycle Accident"}
-          />
-          <CaseResultBtn
-             url="/"
-             amount={"$1,196,858"}
-             title={"Car Accident"}
-          />
-          <CaseResultBtn
-             url="/"
-             amount={"$1,185,000"}
-             title={"Premises Liability"}
-          />
-          <CaseResultBtn
-             url="/"
-             amount={"$1,000,000"}
-             title={"Automobile Accident"}
-          />
-          <CaseResultBtn
-             url="/"
-             amount={"$350,000"}
-             title={"Car Accident"}
-          />
+        ))}
         </div>
       </Container>
     </div>
