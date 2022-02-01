@@ -25,11 +25,7 @@ const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
 
-    <div
-      className="hero"
-      style={{
-        background: theme.colorsBG.primary,
-      }}>
+    <div className="hero">
       <Container>
         <div className="hero-content">
           <h2>Securing The Results Our Clients Deserve</h2>

@@ -7,10 +7,12 @@ import Container from "../../../components/container"
 const ConsultationPage = () => (
   <Layout>
     <Seo title="Consultation" />
-    <Container>
-      <h1>Consultation</h1>
-      <p>Welcome to the Consultation new gatsby site.</p>
-    </Container>
+    <div className="hero">
+      <Container>
+        <h1>Consultation</h1>
+        <p>Welcome to the Consultation new gatsby site.</p>
+      </Container>
+    </div>
   </Layout>
 )
 

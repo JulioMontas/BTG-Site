@@ -3,7 +3,6 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 import Container from "./container"
-import "./footer.css"
 
 const Footer = () => (
   <footer>

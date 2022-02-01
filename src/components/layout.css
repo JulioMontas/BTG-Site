@@ -436,10 +436,6 @@ pre tt:after {
   content: "";
 }
 
-
-
-
-
 .container{
   width: 100%;
 }
@@ -450,6 +446,7 @@ footer{
 .hero{
   height: 70vh;
   padding: 3rem 1rem 0rem;
+  background: #1d3851;
 }
 .praticeAreasList,
 .firm,

@@ -7,10 +7,12 @@ import Container from "../../components/container"
 const CaseResultsPage = () => (
   <Layout>
     <Seo title="Case Results" />
-    <Container>
-      <h1>Case Results</h1>
-      <p>Welcome to the Case Results new gatsby site.</p>
-    </Container>
+    <div className="hero">
+      <Container>
+        <h1>Case Results</h1>
+        <p>Welcome to the Case Results new gatsby site.</p>
+      </Container>
+    </div>
   </Layout>
 )
 
