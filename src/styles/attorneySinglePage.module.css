@@ -15,18 +15,6 @@
   font-weight: 400;
   margin-bottom: 1em;
 }
-/* ############ */
-/* Hero Section */
-/* ############ */
-/* This code is copy from layout.css */
-.hero{
-  padding: 2rem 1rem 2rem;
-  background: #1d3851;
-}
-.mainTitle{
-  font-weight: normal;
-  font-size: 26px;
-}
 /* ############# */
 /* Intro Section */
 /* ############# */

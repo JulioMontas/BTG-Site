@@ -5,10 +5,9 @@ import Seo from "../../components/seo"
 const BlogPage = () => (
   <Layout>
     <Seo title="Blog" />
-    <div className="hero">
+    <div className="globalHero">
       <div className="container">
-        <h1>Blog</h1>
-        <p>Welcome to the Blog new gatsby site.</p>
+        <h2 className="heroTitle">Blog</h2>
       </div>
     </div>
   </Layout>

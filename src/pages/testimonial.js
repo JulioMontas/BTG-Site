@@ -5,10 +5,9 @@ import Seo from "../components/seo"
 const TestimonialPage = () => (
   <Layout>
     <Seo title="Testimonial" />
-    <div className="hero">
+    <div className="globalHero">
       <div className="container">
-        <h1>Testimonial</h1>
-        <p>Welcome to the testimonial new gatsby site.</p>
+        <h2 className="heroTitle">Testimonial</h2>
       </div>
     </div>
   </Layout>

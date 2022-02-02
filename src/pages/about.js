@@ -23,11 +23,11 @@ const AboutPage = () => (
     <Seo title="The Firm" />
     <div className={aboutStyles.heroBG}>
       <div className="container">
-        <h2 className={aboutStyles.title}>The Firm</h2>
+        <h2 className="heroTitle">The Firm</h2>
       </div>
     </div>
 
-    <div className={aboutStyles.intro}>
+    <div className={aboutStyles.intro} style={{background: theme.colorsBG.secondary, color: theme.colorsText.primary}}>
       <div className="container">
         <div>
           <p>

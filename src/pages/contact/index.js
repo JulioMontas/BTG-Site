@@ -5,10 +5,9 @@ import Seo from "../../components/seo"
 const ContactPage = () => (
   <Layout>
     <Seo title="Contact" />
-    <div className="hero">
+    <div className="globalHero">
       <div className="container">
-        <h1>Contact</h1>
-        <p>Welcome to the Contact new gatsby site.</p>
+        <h2 className="heroTitle">Contact</h2>
       </div>
     </div>
   </Layout>

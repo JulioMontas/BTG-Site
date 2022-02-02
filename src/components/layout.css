@@ -333,18 +333,11 @@ th {
   font-weight: bold;
 }
 li {
-  /* margin-bottom: calc(1.45rem / 2); */
   list-style-type: none;
 }
 ol li,
 ul li {
   padding-left: 0;
-}
-li > ol,
-li > ul {
-  /* margin-left: 1.45rem;
-  margin-bottom: calc(1.45rem / 2);
-  margin-top: calc(1.45rem / 2); */
 }
 blockquote *:last-child {
   margin-bottom: 0;
@@ -418,13 +411,14 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
-.hero{
+.globalHero{
   padding: 2rem 1rem 2rem;
   background: #1d3851;
 }
-header,
-footer{
-  padding: 1rem 1rem 1rem;
+.heroTitle{
+  font-weight: normal;
+  font-size: 26px;
+  letter-spacing: 1px;
 }
 .container{
   width: 100%;

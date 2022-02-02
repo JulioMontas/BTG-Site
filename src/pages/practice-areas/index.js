@@ -18,16 +18,15 @@ const theme = {
 const PraticeAreasPage = () => (
   <Layout>
     <Seo title="Pratice Areas" />
-    <div className="hero">
+    <div className="globalHero">
       <div className="container">
-        <h1>Pratice Areas</h1>
-        <p>Welcome to the Pratice Areas new gatsby site.</p>
+        <h2 className="heroTitle">Pratice Areas</h2>
       </div>
     </div>
     <div
       style={{
         background: theme.colorsBG.primary,
-        paddingBottom: `5em`
+        padding:`3em 0 7em`
       }}
     >
       <div className="container">

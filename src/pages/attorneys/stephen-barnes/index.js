@@ -22,9 +22,9 @@ const AttorneysSinglePage = () => (
   <Layout>
     <Seo title="Stephen A. Barnes" />
 
-    <div className={Styles.hero}>
+    <div className="globalHero">
       <div className="container">
-        <h2 className={Styles.mainTitle}>Stephen A. Barnes</h2>
+        <h2 className="heroTitle">Stephen A. Barnes</h2>
       </div>
     </div>
 

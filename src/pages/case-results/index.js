@@ -18,16 +18,16 @@ const theme = {
 const CaseResultsPage = () => (
   <Layout>
     <Seo title="Case Results" />
-    <div className="hero">
+
+    <div className="globalHero">
       <div className="container">
-        <h1>Case Results</h1>
-        <p>Welcome to the Case Results new gatsby site.</p>
+        <h2 className="heroTitle">Case Results</h2>
       </div>
     </div>
     <div
       style={{
         background: theme.colorsBG.primary,
-        paddingBottom: `5em`
+        padding:`3em 0 7em`
       }}
     >
       <div className="container">

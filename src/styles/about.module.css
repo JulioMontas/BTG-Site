@@ -21,10 +21,6 @@
   position: relative;
   padding: 0 10px;
 }
-.title {
-  color: #fff;
-  font-size: 18px;
-}
 .caseResultsTitle,
 .attorneysTitle,
 .testimonialTitle{
@@ -36,12 +32,6 @@
 /* ############# */
 /* Intro Section */
 /* ############# */
-.intro{
-  background: #FFF;
-  color: #333;
-  padding: 8em 0;
-  display: flex;
-}
 .intro p,
 .secondIntro p{
   font-size: 2em;
