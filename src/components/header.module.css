@@ -1,18 +1,39 @@
 /* X-Small devices (portrait phones, less than 576px) */
-header div{
+.header{
+  background: var(--primary-bg-color);
+  padding: 0 10px;
+}
+.wrapper{
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
 }
-ul{
+.wrapper{
+  padding: 1.5rem 0;
+}
+.wrapper ul{
   display: none;
 }
-/* li{
-  margin-right: 1em;
-} */
-li:last-child{
-  margin-right: 0;
+.wrapper a{
+  text-transform: uppercase;
+  font-size: 1.1em;
+  letter-spacing: 1px;
+  color:rgba(255, 255, 255, 0.8);
+  &:hover {
+    color: rgba(255, 255, 255, 1);
+  }
+}
+.wrapper ul li{
+  margin-right: 20px;
+}
+.wrapper ul li:last-child{
+  margin-right: 0px;
+}
+.cta{
+  display: block;
+  background: none;
+  border: none;
 }
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { }
@@ -20,8 +41,11 @@ li:last-child{
 @media (min-width: 768px) { }
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  ul{
-    display: flex;
+  .wrapper ul{
+    display: inline-flex;
+  }
+  .cta{
+      display: none;
   }
 }
 /* X-Large devices (large desktops, 1200px and up) */

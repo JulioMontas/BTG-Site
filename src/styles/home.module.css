@@ -9,8 +9,7 @@
 .homePraticeAreasList,
 .homeBlogLatestPost,
 .homeContact{
-  padding: 10rem 1rem 11rem;
-  /* border: 2px solid red; */
+  padding: var(--container-padding-mobile);
 }
 /* ############ */
 /* Hero Section */

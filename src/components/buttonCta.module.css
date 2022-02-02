@@ -1,5 +1,5 @@
 /* X-Small devices (portrait phones, less than 576px) */
-.button-cta{
+.buttonCTA{
   width: 100%;
   background: var(--primary-cta-color);
   border-radius: 5px;
@@ -18,7 +18,7 @@
 }
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  .button-cta{
+  .buttonCTA{
     width: 225px;
   }
 }
