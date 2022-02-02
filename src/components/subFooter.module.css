@@ -1,3 +1,8 @@
+.lastFooter{
+  background: #eef0f2;
+  color: #333;
+  padding: 2em 0;
+}
 .subFooter{
   display: flex;
   flex-direction: row;
