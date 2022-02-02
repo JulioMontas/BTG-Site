@@ -1,0 +1,13 @@
+.subFooter{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+}
+.subFooterCTA{
+  color: #BCA360;
+  text-decoration: underline;
+}
+.subFooterCTA:hover{
+  text-decoration: none;
+}

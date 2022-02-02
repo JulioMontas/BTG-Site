@@ -1,8 +1,6 @@
 import * as React from "react"
-
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
-import Container from "../../components/container"
 import CaseResultList from "../../components/caseResultList"
 
 const theme = {
@@ -21,10 +19,10 @@ const CaseResultsPage = () => (
   <Layout>
     <Seo title="Case Results" />
     <div className="hero">
-      <Container>
+      <div className="container">
         <h1>Case Results</h1>
         <p>Welcome to the Case Results new gatsby site.</p>
-      </Container>
+      </div>
     </div>
     <div
       style={{
@@ -32,9 +30,9 @@ const CaseResultsPage = () => (
         paddingBottom: `5em`
       }}
     >
-      <Container>
+      <div className="container">
         <CaseResultList />
-      </Container>
+      </div>
     </div>
   </Layout>
 )

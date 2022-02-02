@@ -1,9 +1,5 @@
 import * as React from "react"
-import PropTypes from "prop-types"
-
-import Container from "./container"
 import CaseResultBtn from "./caseResultBtn"
-
 import * as praticeAreasStyles from "./praticeAreasList.module.css"
 
 const dataPraticeAreas = [

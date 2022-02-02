@@ -19,7 +19,7 @@ html {
   overflow-y: scroll;
 }
 body {
-  background: var( --primary-bg-color);
+  background: var(--primary-bg-color);
   color: var(--primary-text-color);
   margin: 0;
   -webkit-font-smoothing: antialiased;

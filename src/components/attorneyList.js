@@ -1,8 +1,6 @@
 import React from "react"
 import { Link } from 'gatsby'
-
 import Avator from "./avator"
-
 import * as attorneyListStyles from "./attorneyList.module.css"
 
 const AttorneyList = (props) => {

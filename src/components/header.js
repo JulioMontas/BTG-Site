@@ -1,13 +1,11 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-
-import Container from "./container"
 import "./header.css"
 
 const Header = ({ siteTitle }) => (
   <header>
-  <Container>
+  <div className="container">
     <div>
       <h1>
         <Link to="/" >
@@ -42,7 +40,7 @@ const Header = ({ siteTitle }) => (
         </li>
       </ul>
     </div>
-    </Container>
+    </div>
   </header>
 )
 

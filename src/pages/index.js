@@ -1,16 +1,11 @@
 import * as React from "react"
 import { Link } from "gatsby"
-// import { StaticImage } from "gatsby-plugin-image"
-
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import Container from "../components/container"
-
 import ButtonCta from "../components/buttonCta"
 import CaseResultList from "../components/caseResultList"
 import PraticeAreasList from "../components/praticeAreasList"
 import Avator from "../components/avator";
-
 import * as homeStyles from "../styles/home.module.css"
 
 const theme = {
@@ -30,28 +25,28 @@ const IndexPage = () => (
     <Seo title="Home" />
 
     <div className={homeStyles.homeHeroBG}>
-      <Container>
-        <h2 className={homeStyles.homeHeroTitle}>Securing The Results Our Clients Deserve</h2>
-        <p className={homeStyles.homeHeroDescription}>Our goal is to secure the compensation you need to help rebuild your life.</p>
-        <div className={homeStyles.homeHeroCTA}>
-          <ButtonCta
-            url="/contact/consultation/"
-            title={"Free Consultation"}
-          />
+        <div className="container">
+          <h2 className={homeStyles.homeHeroTitle}>Securing The Results Our Clients Deserve</h2>
+          <p className={homeStyles.homeHeroDescription}>Our goal is to secure the compensation you need to help rebuild your life.</p>
+          <div className={homeStyles.homeHeroCTA}>
+            <ButtonCta
+              url="/contact/consultation/"
+              title={"Free Consultation"}
+            />
+          </div>
         </div>
-      </Container>
     </div>
 
     <div className={homeStyles.caseResultList} style={{background: theme.colorsBG.primary, }}>
-      <Container>
+      <div className="container">
         <p className={homeStyles.featureSummary}>A serious injury can easily derail a person’s life. We know how to fight for our clients and win.</p>
         <h2 className={homeStyles.featuresTitle}>List of case results</h2>
         <CaseResultList />
-      </Container>
+      </div>
     </div>
 
     <div className={homeStyles.homeTheFirmBG} style={{background: theme.colorsBG.secondary, color: theme.colorsText.primary, }}>
-      <Container>
+      <div className="container">
         <div className={homeStyles.twoColumnsGrid}>
           <div className={homeStyles.avatorList}>
             <Avator />
@@ -72,24 +67,15 @@ const IndexPage = () => (
             </div>
           </div>
         </div>
-      </Container>
+      </div>
     </div>
 
     <div className={homeStyles.homeTestimonial}>
-      <Container>
+      <div className="container">
       <div className="wrapper">
       <h2 className={homeStyles.testimonialTitle}>Testimonial</h2>
         <div className="image">
-        {/*
-          <StaticImage
-            src="../images/testimonial.png"
-            alt="Testimonial"
-            placeholder="blurred"
-            layout="fixed"
-            width={355}
-            height={309}
-          />
-          */}
+
         </div>
         <div className="cta">
           <ButtonCta
@@ -98,19 +84,19 @@ const IndexPage = () => (
           />
         </div>
       </div>
-      </Container>
+      </div>
     </div>
 
     <div className={homeStyles.homePraticeAreasList} style={{background: theme.colorsBG.primary,}}>
-      <Container>
+      <div className="container">
         <p className={homeStyles.featureSummary}>Personal injury representation that can help you secure the best possible outcome to your situation.</p>
         <h2 className={homeStyles.featuresTitle}>List of pratice areas</h2>
         <PraticeAreasList />
-      </Container>
+      </div>
     </div>
 
     <div className={homeStyles.homeBlogLatestPost} style={{ background: theme.colorsBG.secondary, color: theme.colorsText.primary, }}>
-      <Container>
+      <div className="container">
       <div className={homeStyles.twoColumnsGrid}>
         <h2 className={homeStyles.blogTitle}>
           Read our latest Article
@@ -122,11 +108,11 @@ const IndexPage = () => (
           />
         </div>
         </div>
-      </Container>
+      </div>
     </div>
 
     <div className={homeStyles.homeContact} style={{background: theme.colorsBG.primary, }}>
-      <Container>
+      <div className="container">
         <div className={homeStyles.twoColumnsGrid}>
           <div>
             <h2 className={homeStyles.contactTitle}>
@@ -140,9 +126,8 @@ const IndexPage = () => (
             />
           </div>
         </div>
-      </Container>
+      </div>
     </div>
-
   </Layout>
 )
 

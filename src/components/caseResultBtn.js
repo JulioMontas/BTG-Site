@@ -1,7 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
-
-import * as caseResultBtnStyles from "../styles/caseResultBtn.module.css"
+import * as caseResultBtnStyles from "./caseResultBtn.module.css"
 
 const CaseResultBtn = (props) => {
   return (
