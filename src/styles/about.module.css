@@ -1,0 +1,68 @@
+/* X-Small devices (portrait phones, less than 576px) */
+/* #### */
+/* Grid */
+/* #### */
+.intro,
+.attorneys,
+.secondIntro,
+.caseResultsList,
+.testimonial{
+  padding: 10rem 1rem 11rem;
+  /* border: 2px solid red; */
+}
+/* ############ */
+/* Hero Section */
+/* ############ */
+.heroBG{
+  background-image: linear-gradient(rgba(61, 88, 107, 1), rgba(29, 56, 81, 0.6)), url("../images/the-team.jpg");
+  height: 55vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 0 10px;
+}
+.title {
+  color: #fff;
+  font-size: 18px;
+}
+.caseResultsTitle,
+.attorneysTitle,
+.testimonialTitle{
+  font-size: 1em;
+  letter-spacing: 0.02em;
+  font-weight: 400;
+  margin-bottom: 1em;
+}
+/* ############# */
+/* Intro Section */
+/* ############# */
+.intro{
+  background: #FFF;
+  color: #333;
+  padding: 8em 0;
+  display: flex;
+}
+.intro p,
+.secondIntro p{
+  font-size: 2em;
+  line-height: 160%;
+  margin-bottom: 1em;
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { }
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { }
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  /* ############ */
+  /* Hero Section */
+  /* ############ */
+  .heroBG{
+    height: 65vh;
+  }
+}
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { }
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { }

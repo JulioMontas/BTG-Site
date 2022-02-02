@@ -1,6 +1,6 @@
 import React from "react"
 
-import * as avatorStyles from "./avator.module.css"
+import * as avatorStyles from "../styles/avator.module.css"
 
 const Avator = (props) => {
   return (

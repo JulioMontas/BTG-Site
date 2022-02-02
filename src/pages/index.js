@@ -9,7 +9,6 @@ import Container from "../components/container"
 import ButtonCta from "../components/buttonCta"
 import CaseResultList from "../components/caseResultList"
 import PraticeAreasList from "../components/praticeAreasList"
-import AttorneyBtn from "../components/attorneyBtn";
 import Avator from "../components/avator";
 
 import * as homeStyles from "../styles/home.module.css"
@@ -45,23 +44,15 @@ const IndexPage = () => (
 
     <div className={homeStyles.caseResultList} style={{background: theme.colorsBG.primary, }}>
       <Container>
-        <p className={homeStyles.featureSummary}>A serious injury can easily derail a person’s life. We know how to fight for our clients and win. Our goal is to secure the compensation you need to help rebuild your life.</p>
+        <p className={homeStyles.featureSummary}>A serious injury can easily derail a person’s life. We know how to fight for our clients and win.</p>
         <h2 className={homeStyles.featuresTitle}>List of case results</h2>
         <CaseResultList />
       </Container>
     </div>
 
-
-
-
-
-
     <div className={homeStyles.homeTheFirmBG} style={{background: theme.colorsBG.secondary, color: theme.colorsText.primary, }}>
       <Container>
         <div className={homeStyles.twoColumnsGrid}>
-
-
-
           <div className={homeStyles.avatorList}>
             <Avator />
             <Avator />
@@ -69,9 +60,8 @@ const IndexPage = () => (
             <Avator />
             <Avator />
           </div>
-
           <div className={homeStyles.avatorSummary}>
-            <h2>Trial Lawyer Committed to Serving the Injured</h2>
+            <h2 className={homeStyles.avatorTitle}>Trial Lawyer Committed to Serving the Injured</h2>
             <p>With more than 25 years of combined experience and a focus on providing the most effective trial representation available, we have been able to build a record of positive results for our clients that we are proud of.</p>
             <p>Our firm is dedicated to creating the positive results people need after they have been hurt in serious accidents. We know that most people simply want to recover the life they had before an accident. We have the experience and skill necessary to secure the full compensation people will need to be able to overcome the obstacles that stand in their way. </p>
             <div className="cta">
@@ -81,21 +71,14 @@ const IndexPage = () => (
               />
             </div>
           </div>
-
-
-
         </div>
       </Container>
     </div>
 
-
-
-
-
-    <div className={homeStyles.homeTestimonial} style={{background: theme.colorsBG.primary, }}>
+    <div className={homeStyles.homeTestimonial}>
       <Container>
       <div className="wrapper">
-      <h2>Testimonial</h2>
+      <h2 className={homeStyles.testimonialTitle}>Testimonial</h2>
         <div className="image">
         {/*
           <StaticImage
@@ -118,24 +101,9 @@ const IndexPage = () => (
       </Container>
     </div>
 
-    <div className={homeStyles.homeAttorneyList} style={{background: theme.colorsBG.secondary, color: theme.colorsText.primary, }}>
+    <div className={homeStyles.homePraticeAreasList} style={{background: theme.colorsBG.primary,}}>
       <Container>
-        <h2 className="title">
-          Meet Our Attorneys
-        </h2>
-        <div className="wrapper">
-          <AttorneyBtn />
-          <AttorneyBtn />
-          <AttorneyBtn />
-          <AttorneyBtn />
-          <AttorneyBtn />
-        </div>
-      </Container>
-    </div>
-
-    <div className={homeStyles.homePraticeAreasList} style={{background: theme.colorsBG.primary, }}>
-      <Container>
-        <p className={homeStyles.featureSummary}>We offer effective personal injury representation that can help you secure the best possible outcome to your situation.</p>
+        <p className={homeStyles.featureSummary}>Personal injury representation that can help you secure the best possible outcome to your situation.</p>
         <h2 className={homeStyles.featuresTitle}>List of pratice areas</h2>
         <PraticeAreasList />
       </Container>
@@ -144,13 +112,15 @@ const IndexPage = () => (
     <div className={homeStyles.homeBlogLatestPost} style={{ background: theme.colorsBG.secondary, color: theme.colorsText.primary, }}>
       <Container>
       <div className={homeStyles.twoColumnsGrid}>
-        <h2>
-          Blog
+        <h2 className={homeStyles.blogTitle}>
+          Read our latest Article
         </h2>
+        <div className={homeStyles.blogCTA}>
          <ButtonCta
             url="/blog"
             title={"Blog"}
           />
+        </div>
         </div>
       </Container>
     </div>
@@ -159,11 +129,11 @@ const IndexPage = () => (
       <Container>
         <div className={homeStyles.twoColumnsGrid}>
           <div>
-            <h2 className="title">
+            <h2 className={homeStyles.contactTitle}>
               BTG in Tampa serves clients in Clearwater, Hillsborough County, Pinellas County and throughout Central Florida.
             </h2>
           </div>
-          <div className="cta">
+          <div className={homeStyles.contactCTA}>
             <ButtonCta
               url="/contact"
               title={"Contact Us"}

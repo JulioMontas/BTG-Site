@@ -1,11 +1,11 @@
 /* X-Small devices (portrait phones, less than 576px) */
+
 /* #### */
 /* Grid */
 /* #### */
 .caseResultList,
 .homeTheFirmBG,
 .homeTestimonial,
-.homeAttorneyList,
 .homePraticeAreasList,
 .homeBlogLatestPost,
 .homeContact{
@@ -33,34 +33,33 @@
     letter-spacing: 0.1em;
 }
 .homeHeroCTA{
-    text-align: right;
-    margin-top: 8em;
+  text-align: right;
+  margin-top: 8em;
 }
 /* #################################### */
 /* Pratice Areas & Case Results Section */
 /* #################################### */
 .featureSummary{
-    font-size: 2.25em;
-    line-height: 155%;
-    width: 100%;
-    margin: 0 auto;
-    margin-bottom: 50px;
-    font-size: 2.25em;
-    line-height: 155%;
-    text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  text-align: center;
 }
 .featuresTitle{
-    font-size: 1em;
-    letter-spacing: 0.02em;
-    font-weight: 400;
-    margin-bottom: 1em;
+  font-size: 1em;
+  letter-spacing: 0.02em;
+  font-weight: 400;
+  margin-bottom: 1em;
 }
 /* ######################## */
 /* The Firm (About) Section */
 /* ######################## */
+
+/* Use by The Firm, Blog, and Contact section */
 .twoColumnsGrid{
   display: grid;
   grid-template-columns: 1fr;
+  grid-row-gap: 3em;
 }
 .avatorList{
   display: flex;
@@ -76,15 +75,24 @@
     flex-direction: column;
     row-gap: 25px;
 }
+/* ############### */
+/* Contact Section */
+/* ############### */
+.contactTitle,
+.blogTitle,
+.avatorTitle,
+.featureSummary,
+.testimonialTitle{
+  letter-spacing: 0.02em;
+  font-weight: normal;
+  font-size: 2em;
+  line-height: 150%;
+}
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-
-}
+@media (min-width: 576px) { }
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-
-}
+@media (min-width: 768px) { }
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   /* ############ */
@@ -96,12 +104,13 @@
   .homeHeroTitle{
     font-size: 3em;
     padding-top: 8%;
+    margin-bottom: 10px;
   }
   .homeHeroDescription{
     font-size: 1.4em;
   }
   .homeHeroCTA{
-    margin-top: 24em;
+    margin-top: 23em;
     float: right;
   }
   /* #################################### */
@@ -119,12 +128,17 @@
     flex-wrap: wrap-reverse;
     column-gap: 67px;
   }
+  /* ###################### */
+  /* Contact & Blog Section */
+  /* ###################### */
+  .contactCTA,
+  .blogCTA{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 /* X-Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-
-}
+@media (min-width: 1200px) { }
 /* XX-Large devices (larger desktops, 1400px and up) */
-@media (min-width: 1400px) {
-
-}
+@media (min-width: 1400px) { }
