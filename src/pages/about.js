@@ -29,11 +29,9 @@ const AboutPage = () => (
 
     <div className={aboutStyles.intro} style={{background: theme.colorsBG.secondary, color: theme.colorsText.primary}}>
       <div className="container">
-        <div>
           <p>
             BTG is committed to protecting you and your family during the legal process. While many large firms build case loads of many hundreds of files, BTG believes this prevents a law firm from treating a client as an individual and meeting the unique needs of each case. For this reason, BTG is committed to maintaining a smaller case load. You will come to know the attorneys and staff at BTG on a first name basis as they ensure you realize personalized service throughout our relationship   with you.
           </p>
-        </div>
         </div>
     </div>
 

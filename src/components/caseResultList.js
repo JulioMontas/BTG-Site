@@ -5,52 +5,52 @@ import * as praticeAreasStyles from "./praticeAreasList.module.css"
 
 const dataCaseResult = [
   {
-    url: `/`,
+    url: `/case-results/tampa-17-000-000-skylight-fall`,
     title: `$17,000,000`,
     description: `Fall From Skylight`,
   },
   {
-    url: `/`,
+    url: `/case-results/`,
     title: `$3,900,000`,
     description: `Motorcycle Accident`,
   },
   {
-    url: `/`,
+    url: `/case-results/`,
     title: `$3,900,000`,
     description: `Medical Malpractice`,
   },
   {
-    url: `/`,
+    url: `/case-results/`,
     title: `$2,250,000`,
     description: `Negligent Security`,
   },
   {
-    url: `/`,
+    url: `/case-results/`,
     title: `$1,610,000`,
     description: `Automobile Accident and Insurance Bad Faith`,
   },
   {
-    url: `/`,
+    url: `/case-results/`,
     title: `$1,300,000"`,
     description: `Motorcycle Accident`,
   },
   {
-    url: `/`,
+    url: `/case-results/`,
     title: `$1,196,858`,
     description: `Car Accident`,
   },
   {
-    url: `/`,
+    url: `/case-results/`,
     title: `$1,185,000`,
     description: `Premises Liability`,
   },
   {
-    url: `/`,
+    url: `/case-results/`,
     title: `$1,000,000`,
     description: `Automobile Accident`,
   },
   {
-    url: `/`,
+    url: `/case-results/`,
     title: `$350,000`,
     description: `Car Accident`,
   }
@@ -61,7 +61,7 @@ const CaseResultList = () => (
     {dataCaseResult.map(data => (
       <CaseResultBtn
         key={data.id}
-        url="/"
+        url={data.url}
         description={data.title}
         title={data.description}
       />

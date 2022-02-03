@@ -1,0 +1,11 @@
+/* X-Small devices (portrait phones, less than 576px) */
+/* ### Grid ### */
+.intro{
+  padding: var(--container-padding-mobile);
+}
+
+.intro p{
+  font-size: 2em;
+  line-height: 160%;
+  margin-bottom: 1em;
+}
