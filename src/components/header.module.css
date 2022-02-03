@@ -4,15 +4,15 @@
   padding: 0 10px;
 }
 .wrapper{
-  width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
 }
 .wrapper{
   padding: 1.5rem 0;
 }
-.wrapper ul{
+.wrapper ul,
+.desktopLogo{
   display: none;
 }
 .wrapper a{
@@ -41,10 +41,12 @@
 @media (min-width: 768px) { }
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  .wrapper ul{
+  .wrapper ul,
+  .desktopLogo{
     display: inline-flex;
   }
-  .cta{
+  .cta,
+  .mobileLogo{
       display: none;
   }
 }
