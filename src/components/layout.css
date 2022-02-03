@@ -4,12 +4,19 @@
   --primary-bg-color: #3D586B;
   --secondary-bg-color: #FFF;
   --tertiary-bg-color: #1d3851;
-  --primary-cta-color: #BCA360;
+
+  --primary-cta-color: linear-gradient(180deg, #FFAB49 -4.03%, #FF8C04 100%);
+  --jlo-color-gradient: linear-gradient(180deg, #FFAB49 -4.03%, #FF8C04 100%);
+  --jlo-color-solid: #FF971C;
+
   --container-padding-desktop: 10rem 1rem 11rem;
   --container-padding-mobile: 10rem 1rem 11rem;
   --font-stack: 112.5%/1.45em Oswald, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
+  /*
+  --primary-cta-color: #BCA360;
+  */
 *, html {
     margin: 0;
     padding: 0;

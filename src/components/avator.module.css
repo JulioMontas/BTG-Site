@@ -5,6 +5,6 @@
   width: var(--primary-size);
   height: var(--primary-size);
   background: var(--primary-cta-color);
-  border: 1px solid var(--primary-bg-color);
+  border: 1px solid #FFF;
   border-radius: 500px;
 }

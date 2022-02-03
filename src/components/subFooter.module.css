@@ -10,9 +10,8 @@
   align-items: end;
 }
 .subFooterCTA{
-  color: #BCA360;
-  text-decoration: underline;
+  color: var(--jlo-color-solid);
 }
 .subFooterCTA:hover{
-  text-decoration: none;
+  text-decoration: underline;
 }
