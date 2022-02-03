@@ -1,5 +1,4 @@
 import * as React from "react"
-import PropTypes from "prop-types"
 import CaseResultBtn from "./caseResultBtn"
 import * as praticeAreasStyles from "./praticeAreasList.module.css"
 
@@ -62,8 +61,8 @@ const CaseResultList = () => (
       <CaseResultBtn
         key={data.id}
         url={data.url}
-        description={data.title}
-        title={data.description}
+        description={data.description}
+        title={data.title}
       />
     ))}
   </div>

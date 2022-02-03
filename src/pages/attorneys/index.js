@@ -2,7 +2,7 @@ import * as React from "react"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 import AttorneyList from "../../components/attorneyList"
-import * as attorneysStyles from "../../styles/attorneysPage.module.css"
+// import * as attorneysStyles from "../../styles/attorneysPage.module.css"
 
 const AttorneysPage = () => (
   <Layout>

@@ -39,7 +39,7 @@ const IndexPage = () => (
     <div className={homeStyles.caseResultList} style={{background: theme.colorsBG.primary, }}>
       <div className="container">
         <p className={homeStyles.featureSummary}>A serious injury can easily derail a person’s life. We know how to fight for our clients and win.</p>
-        <h2 className={homeStyles.featuresTitle}>List of case results</h2>
+        <h2 className={homeStyles.featuresTitle}>List of our winning case results</h2>
         <CaseResultList />
       </div>
     </div>

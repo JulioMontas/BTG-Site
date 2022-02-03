@@ -35,8 +35,9 @@
 .phoneNumber {
   font-size: 1.125em;
 }
-.textLink div{
-  margin-bottom: 1em;
+.textLink div,
+.address div span div span:first-child{
+  margin-bottom: 0.65em;
 }
 .textLink div:last-child{
   margin-bottom: 0;
@@ -94,16 +95,27 @@
 @media (min-width: 768px) { }
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  .address,
+  .phoneNumber {
+    font-size: 1.3em;
+  }
   .wrapper{
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 2fr 2fr 1fr;
       grid-template-areas:
       "textLink address socialMedia";
       row-gap: 1em;
       padding: 3.5em 0px 3.5em;
   }
+  .socialMedia li{
+    margin-right: 2.1em;
+  }
   .subFooter{
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-end;
+  }
+  .subFooter div{
+    text-align: right;
   }
 }
 /* X-Large devices (large desktops, 1200px and up) */
