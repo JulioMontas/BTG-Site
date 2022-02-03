@@ -6,11 +6,16 @@
 .caseResultList,
 .homeTheFirmBG,
 .homeTestimonial,
-.homePraticeAreasList,
-.homeBlogLatestPost,
-.homeContact{
+.homePraticeAreasList{
   padding: var(--container-padding-mobile);
 }
+.homeBlogLatestPost,
+.homeContact{
+  padding: 6rem 1rem 6rem;
+}
+
+
+
 /* ############ */
 /* Hero Section */
 /* ############ */
@@ -87,7 +92,27 @@
   font-size: 2em;
   line-height: 150%;
 }
-
+/*
+https://www.shapedivider.app/
+https://fireship.io/lessons/wavy-backgrounds/
+*/
+.customWaveBottom {
+  position: absolute;
+    top: 1;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    margin-top: 96px;
+}
+.customWaveBottom svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 30px;
+    fill: #1d3851;
+}
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { }
 /* Medium devices (tablets, 768px and up) */

@@ -9,9 +9,9 @@ const dataPraticeAreas = [
     description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer condimentum lacus ac odio`,
   },
   {
-    url: `/practice-areas/`,
-    title: `Medical Malpractice`,
-    description: `Navigating intricate and time-sensitive law to help victims of preventable medical error`,
+    url: `/practice-areas/tampa-boating-diving-accidents`,
+    title: `Boating & Diving Accidents`,
+    description: `Providing guidance on rights under maritime law to those injured in water activities`,
   },
   {
     url: `/practice-areas/`,
@@ -20,13 +20,13 @@ const dataPraticeAreas = [
   },
   {
     url: `/practice-areas/`,
-    title: `Nursing Home Abuse`,
-    description: `Advocating for loved ones who have been abused or neglected in elder care facilities`,
+    title: `Negligent Security & Property Maintenance`,
+    description: `Identifying failed security measures and holding accountable those responsible`,
   },
   {
     url: `/practice-areas/`,
-    title: `Negligent Security & Property Maintenance`,
-    description: `Identifying failed security measures and holding accountable those responsible`,
+    title: `Nursing Home Abuse`,
+    description: `Advocating for loved ones who have been abused or neglected in elder care facilities`,
   },
   {
     url: `/practice-areas/`,
@@ -34,9 +34,9 @@ const dataPraticeAreas = [
     description: `Securing superior recoveries to compensate for loss and protect against further harm`,
   },
   {
-    url: `/practice-areas/tampa-boating-diving-accidents`,
-    title: `Boating & Diving Accidents`,
-    description: `Providing guidance on rights under maritime law to those injured in water activities`,
+    url: `/practice-areas/`,
+    title: `Medical Malpractice`,
+    description: `Navigating intricate and time-sensitive law to help victims of preventable medical error`,
   },
   {
     url: `/practice-areas/`,
