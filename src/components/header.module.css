@@ -1,7 +1,9 @@
 /* X-Small devices (portrait phones, less than 576px) */
 .header{
   background: var(--primary-bg-color);
-  padding: 0 10px;
+  position: fixed;
+  z-index: 99999;
+  width: 100%;
 }
 .wrapper{
   display: flex;
@@ -9,7 +11,7 @@
   align-items: center;
 }
 .wrapper{
-  padding: 1.5rem 0;
+  padding: 1rem 0 0.2em;
 }
 .wrapper ul,
 .desktopLogo{
@@ -35,6 +37,32 @@
   background: none;
   border: none;
 }
+
+
+
+/*
+Also save in home.css
+https://www.shapedivider.app/
+https://fireship.io/lessons/wavy-backgrounds/
+*/
+.customWaveBottom {
+  position: absolute;
+    top: 1;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    /* margin-top: 96px; */
+}
+.customWaveBottom svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 25px;
+    fill: var(--primary-bg-color);
+}
+
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { }
 /* Medium devices (tablets, 768px and up) */
