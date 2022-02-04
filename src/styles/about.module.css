@@ -23,6 +23,7 @@
   background-size: cover;
   position: relative;
   padding: 0 10px;
+  margin-top: var(--globalHero-header-margin-top);
 }
 .caseResultsTitle,
 .attorneysTitle,
@@ -52,7 +53,6 @@
   /* ############ */
   .heroBG{
     height: 65vh;
-    margin-top: 100px;
   }
 }
 /* X-Large devices (large desktops, 1200px and up) */

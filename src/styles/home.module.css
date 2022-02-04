@@ -25,6 +25,9 @@
   position: relative;
   padding: 0rem 1rem 0rem;
 }
+.homeHeroBG{
+  margin-top: var(--globalHero-header-margin-top);
+}
 .homeHeroTitle{
   font-size: 46px;
   line-height: 130%;
@@ -136,7 +139,6 @@ https://fireship.io/lessons/wavy-backgrounds/
   /* ############ */
   .homeHeroBG{
     height: 65vh;
-      margin-top: 100px;
   }
   .homeHeroTitle{
     padding-top: 8%;

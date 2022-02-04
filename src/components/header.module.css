@@ -4,7 +4,7 @@
   position: fixed;
   z-index: 99999;
   width: 100%;
-  margin-top: -100px;
+  margin-top: var(--hero-header-margin-top);
   padding: 0rem 1rem 0rem;
 }
 .wrapper{
@@ -39,8 +39,6 @@
   background: none;
   border: none;
 }
-
-
 
 /*
 Also save in home.css

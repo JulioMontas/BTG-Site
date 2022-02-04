@@ -13,6 +13,10 @@
   --container-padding-mobile: 10rem 1rem 10rem;
   --font-stack: 112.5%/1.45em Oswald, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+  --globalHero-header-margin-top: 105px;
+  /* Only use inside 'header.module.css' */
+  --hero-header-margin-top: -105px;
 }
   /*
   --primary-cta-color: #BCA360;
@@ -421,6 +425,7 @@ pre tt:after {
 .globalHero{
   padding: 2rem 1rem 2rem;
   background: #1d3851;
+  margin-top: var(--globalHero-header-margin-top);
 }
 .heroTitle{
   font-weight: normal;
@@ -445,9 +450,6 @@ pre tt:after {
   .container{
     max-width: 992px;
     /* background: yellow; */
-  }
-  .globalHero{
-    margin-top: 100px;
   }
 }
 /* X-Large devices (large desktops, 1200px and up) */
