@@ -4,13 +4,13 @@ import Seo from "../components/seo"
 import CaseResultList from "../components/caseResultList"
 import AttorneyList from "../components/attorneyList"
 import ButtonCta from "../components/buttonCta"
+import GlobalContact from "../components/globalContact"
 import * as aboutStyles from "../styles/about.module.css"
 
 const theme = {
   colorsBG: {
     primary: `#1d3851`,
     secondary: `#FFF`,
-    test: `green`,
   },
   colorsText: {
     primary: `#333`,
@@ -72,6 +72,9 @@ const AboutPage = () => (
         </div>
       </div>
     </div>
+
+    <GlobalContact />
+
   </Layout>
 )
 

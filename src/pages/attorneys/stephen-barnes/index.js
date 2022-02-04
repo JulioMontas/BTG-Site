@@ -4,6 +4,7 @@ import Seo from "../../../components/seo"
 import ButtonCta from "../../../components/buttonCta"
 import Avator from "../../../components/avator"
 import AttorneyList from "../../../components/attorneyList"
+import GlobalContact from "../../../components/globalContact"
 import * as Styles from "../../../styles/attorneySinglePage.module.css"
 
 const theme = {
@@ -103,6 +104,8 @@ const AttorneysSinglePage = () => (
         <AttorneyList />
       </div>
     </div>
+
+    <GlobalContact />
 
   </Layout>
 )

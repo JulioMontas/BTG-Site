@@ -2,12 +2,12 @@ import * as React from "react"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 import PraticeAreasList from "../../components/praticeAreasList"
+import GlobalContact from "../../components/globalContact"
 
 const theme = {
   colorsBG: {
     primary: `#1d3851`,
     secondary: `#FFF`,
-    test: `green`,
   },
   colorsText: {
     primary: `#333`,
@@ -33,6 +33,7 @@ const PraticeAreasPage = () => (
         <PraticeAreasList />
       </div>
     </div>
+    <GlobalContact />
   </Layout>
 )
 

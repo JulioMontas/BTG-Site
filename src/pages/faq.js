@@ -1,6 +1,7 @@
 import * as React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import GlobalContact from "../components/globalContact"
 
 const FAQPage = () => (
   <Layout>
@@ -10,6 +11,7 @@ const FAQPage = () => (
         <h2 className="heroTitle">FAQs</h2>
       </div>
     </div>
+    <GlobalContact />
   </Layout>
 )
 

@@ -1,7 +1,7 @@
 import * as React from "react"
 import Layout from "../../../components/layout"
 import Seo from "../../../components/seo"
-
+import GlobalContact from "../../../components/globalContact"
 import * as caseResultsArticleStyles from "../../../styles/caseResultsArticle.module.css"
 
 const theme = {
@@ -58,7 +58,7 @@ const CaseResultsArticle = () => (
       </div>
     </div>
 
-
+    <GlobalContact />
   </Layout>
 )
 
