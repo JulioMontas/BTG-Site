@@ -427,10 +427,15 @@ pre tt:after {
   background: #1d3851;
   margin-top: var(--globalHero-header-margin-top);
 }
-.heroTitle{
+.globalHero__text--title{
   font-weight: normal;
   font-size: 26px;
   letter-spacing: 1px;
+  margin-bottom: 0.20em;
+}
+.globalHero__text--summary{
+  font-size: 1em;
+  letter-spacing: 0.04em
 }
 .container{
   width: 100%;
@@ -442,21 +447,21 @@ pre tt:after {
   .container{
     margin: 0 auto;
     max-width: 768px;
-    /* background: gold; */
   }
 }
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   .container{
     max-width: 992px;
-    /* background: yellow; */
+  }
+  .globalHero{
+    padding: 5rem 1rem 5rem;
   }
 }
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   .container{
     max-width: 1200px;
-    /* background: purple; */
   }
 }
 /* XX-Large devices (larger desktops, 1400px and up) */

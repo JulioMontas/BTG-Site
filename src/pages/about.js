@@ -22,8 +22,15 @@ const AboutPage = () => (
   <Layout>
     <Seo title="The Firm" />
     <div className={aboutStyles.heroBG}>
-      <div className="container">
-        <h2 className="heroTitle">The Firm</h2>
+      <div className="globalHero"
+      style={{
+        background:`none`,
+      }}
+      >
+        <div className="container">
+          <h2 className="globalHero__text--title">The Firm</h2>
+          <p className="globalHero__text--summary">Summary text</p>
+        </div>
       </div>
     </div>
 

@@ -1,7 +1,10 @@
 import * as React from "react"
+import PropTypes from "prop-types"
+import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 import CaseResultList from "../../components/caseResultList"
+import GlobalHero from "../../components/globalHero"
 import GlobalContact from "../../components/globalContact"
 
 const theme = {
@@ -18,12 +21,10 @@ const theme = {
 const CaseResultsPage = () => (
   <Layout>
     <Seo title="Case Results" />
-
-    <div className="globalHero">
-      <div className="container">
-        <h2 className="heroTitle">Case Results</h2>
-      </div>
-    </div>
+    <GlobalHero
+      title= "Case Results"
+      summary= "Summary text"
+    />
     <div
       style={{
         background: theme.colorsBG.primary,

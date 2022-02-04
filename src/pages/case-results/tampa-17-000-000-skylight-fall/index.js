@@ -2,6 +2,7 @@ import * as React from "react"
 import Layout from "../../../components/layout"
 import Seo from "../../../components/seo"
 import GlobalContact from "../../../components/globalContact"
+import GlobalHero from "../../../components/globalHero"
 import * as caseResultsArticleStyles from "../../../styles/caseResultsArticle.module.css"
 
 const theme = {
@@ -19,12 +20,10 @@ const theme = {
 const CaseResultsArticle = () => (
   <Layout>
     <Seo title="Case Results Article" />
-    <div className="globalHero">
-      <div className="container">
-        <h2 className="heroTitle">Tampa $17,000,000 Skylight Fall</h2>
-      </div>
-    </div>
-
+    <GlobalHero
+      title= "Tampa $17,000,000 Skylight Fall"
+      summary= "Summary text"
+    />
     <div className={caseResultsArticleStyles.intro} style={{background: theme.colorsBG.secondary, color: theme.colorsText.primary}}>
       <div className="container">
         <p>His neighbor, an AC system salesman, had fallen over twenty feet through an unprotected skylight while attending a “pre-construction” meeting on the roof of a warehouse, near TIA. He landed head first on a concrete floor, and subsequently fought for his life at St. Joseph’s Hospital.</p>

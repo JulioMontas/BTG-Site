@@ -8,12 +8,10 @@ import GlobalContact from "../../components/globalContact"
 const AttorneysPage = () => (
   <Layout>
     <Seo title="Attorneys" />
-    <div className="hero">
-      <div className="container">
-        <h2>Attorneys</h2>
-      </div>
-    </div>
-
+    <GlobalHero
+      title= "Attorneys"
+      summary= "Summary text"
+    />
     <div className="attorneys">
       <div className="container">
         <AttorneyList />

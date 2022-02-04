@@ -2,6 +2,7 @@ import * as React from "react"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 import PraticeAreasList from "../../components/praticeAreasList"
+import GlobalHero from "../../components/globalHero"
 import GlobalContact from "../../components/globalContact"
 
 const theme = {
@@ -18,11 +19,10 @@ const theme = {
 const PraticeAreasPage = () => (
   <Layout>
     <Seo title="Pratice Areas" />
-    <div className="globalHero">
-      <div className="container">
-        <h2 className="heroTitle">Pratice Areas</h2>
-      </div>
-    </div>
+    <GlobalHero
+      title= "Pratice Areas"
+      summary= "Summary text"
+    />
     <div
       style={{
         background: theme.colorsBG.primary,

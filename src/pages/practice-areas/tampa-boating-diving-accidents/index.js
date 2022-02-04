@@ -1,6 +1,7 @@
 import * as React from "react"
 import Layout from "../../../components/layout"
 import Seo from "../../../components/seo"
+import GlobalHero from "../../../components/globalHero"
 import GlobalContact from "../../../components/globalContact"
 import * as caseResultsArticleStyles from "../../../styles/caseResultsArticle.module.css"
 
@@ -19,12 +20,10 @@ const theme = {
 const CaseResultsArticle = () => (
   <Layout>
     <Seo title="Case Results Article" />
-    <div className="globalHero">
-      <div className="container">
-        <h2 className="heroTitle">Tampa Boating Diving Accidents</h2>
-      </div>
-    </div>
-
+    <GlobalHero
+      title= "Tampa Boating Diving Accidents"
+      summary= "Summary text"
+    />
     <div className={caseResultsArticleStyles.intro} style={{background: theme.colorsBG.secondary, color: theme.colorsText.primary}}>
       <div className="container">
         <p>Experienced Help For Those Injured On The Water With the port we have here in Tampa and the many opportunities for people to enjoy the water for recreational purposes, the possibility of serious injury on the water is very real. Depending on where the injury takes place and the circumstances of the accident, very different sets of laws may apply.</p>

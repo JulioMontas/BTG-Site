@@ -1,6 +1,7 @@
 import * as React from "react"
 import Layout from "../../../components/layout"
 import Seo from "../../../components/seo"
+import GlobalHero from "../../../components/globalHero"
 import ButtonCta from "../../../components/buttonCta"
 import Avator from "../../../components/avator"
 import AttorneyList from "../../../components/attorneyList"
@@ -22,13 +23,10 @@ const theme = {
 const AttorneysSinglePage = () => (
   <Layout>
     <Seo title="Stephen A. Barnes" />
-
-    <div className="globalHero">
-      <div className="container">
-        <h2 className="heroTitle">Stephen A. Barnes</h2>
-      </div>
-    </div>
-
+    <GlobalHero
+      title= "Stephen A. Barnes"
+      summary= "Summary text"
+    />
     <div className={Styles.intro} style={{background: theme.colorsBG.secondary, color: theme.colorsText.primary}}>
       <div className="container">
         <div className={Styles.descriptio}>

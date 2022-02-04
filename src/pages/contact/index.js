@@ -1,14 +1,17 @@
 import * as React from "react"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
+import GlobalHero from "../../components/globalHero"
 
 const ContactPage = () => (
   <Layout>
     <Seo title="Contact" />
-    <div className="globalHero">
-      <div className="container">
-        <h2 className="heroTitle">Contact</h2>
-      </div>
+    <GlobalHero
+      title= "Contact Us"
+      summary= "Summary text"
+    />
+    <div className="container">
+      <h3>Lorem ipsum dolor sit amet.</h3>
     </div>
   </Layout>
 )

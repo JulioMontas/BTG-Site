@@ -1,15 +1,15 @@
 import * as React from "react"
 import Layout from "../../../components/layout"
 import Seo from "../../../components/seo"
+import GlobalHero from "../../../components/globalHero"
 
 const ConsultationPage = () => (
   <Layout>
     <Seo title="Consultation" />
-    <div className="globalHero">
-      <div className="container">
-        <h2 className="heroTitle">Consultation</h2>
-      </div>
-    </div>
+    <GlobalHero
+      title= "Consultation"
+      summary= "Summary text"
+    />
   </Layout>
 )
 
