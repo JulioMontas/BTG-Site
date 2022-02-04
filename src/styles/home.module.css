@@ -70,7 +70,6 @@
 .avatorList{
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   column-gap: 10px;
 }
 .avatorList div:nth-child(03){z-index: 900;}
@@ -157,24 +156,26 @@ https://fireship.io/lessons/wavy-backgrounds/
     margin-top: 34%;
     float: right;
   }
-  /* #################################### */
-  /* Pratice Areas & Case Results Section */
-  /* #################################### */
-
+  .avatorTitle{
+    letter-spacing: 0.02em;
+    font-size: 2.25em;
+  }
   /* ######################## */
   /* The Firm (About) Section */
   /* ######################## */
   .twoColumnsGrid{
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:1fr 1fr;
+    column-gap: 5em;
   }
   .avatorList{
     justify-content: center;
-    flex-wrap: wrap-reverse;
-    column-gap: 67px;
+    align-items: center;
   }
   /* ###################### */
   /* Contact & Blog Section */
   /* ###################### */
+
+
   .contactCTA,
   .blogCTA{
     display: flex;
