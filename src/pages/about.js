@@ -44,7 +44,7 @@ const AboutPage = () => (
       </div>
     </div>
 
-    <div className={aboutStyles.secondIntro}>
+    <div className={aboutStyles.secondIntro} style={{background: theme.colorsBG.secondary, color: theme.colorsText.primary}}>
       <div className="container">
         <p>Finally, the Barnes Trial Group was founded to send a loud and clear message to the insurance industry that BTG is prepared and committed to tirelessly litigate your case through trial should the insurance company fail to treat you or your family fairly. Our commitment to regularly and effectively trying cases empowers BTG with a reputation within the industry that allow us to fulfill your needs with strength, dignity and proven results.</p>
       </div>

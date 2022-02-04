@@ -9,3 +9,7 @@
   line-height: 160%;
   margin-bottom: 1em;
 }
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+}
