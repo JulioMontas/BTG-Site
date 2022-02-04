@@ -27,8 +27,8 @@
 .svgColorChange,
 .phoneNumber,
 .subFooterCTA{
-  color: var(--jlo-color-solid);
-  fill: var(--jlo-color-solid);
+  color: var(--primary-cta-color);
+  fill: var(--primary-cta-color);
 }
 /* F O N T */
 .address,
