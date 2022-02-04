@@ -66,8 +66,6 @@ const Header = ({ siteTitle }) => (
       </svg>
     </div>
 
-
-
   </div>
 )
 
