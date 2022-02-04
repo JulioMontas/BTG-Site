@@ -3,6 +3,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import GlobalHero from "../components/globalHero"
 import GlobalContact from "../components/globalContact"
+import IntroText from "../components/introText"
 
 const TestimonialPage = () => (
   <Layout>
@@ -11,6 +12,7 @@ const TestimonialPage = () => (
       title= "Testimonial"
       summary= "Summary text"
     />
+    <IntroText />
     <GlobalContact />
   </Layout>
 )

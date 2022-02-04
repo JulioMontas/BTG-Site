@@ -2,6 +2,7 @@ import * as React from "react"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 import GlobalHero from "../../components/globalHero"
+import IntroText from "../../components/introText"
 
 const ContactPage = () => (
   <Layout>
@@ -10,9 +11,7 @@ const ContactPage = () => (
       title= "Contact Us"
       summary= "Summary text"
     />
-    <div className="container">
-      <h3>Lorem ipsum dolor sit amet.</h3>
-    </div>
+    <IntroText />
   </Layout>
 )
 

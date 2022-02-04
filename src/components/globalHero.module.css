@@ -1,10 +1,5 @@
 .globalHero{
-
-}
-
-.globalHero__text--title{
-
-}
-.globalHero__text--summary{
-
+  padding: 2rem 1rem 2rem;
+  background: #1d3851;
+  margin-top: var(--globalHero-header-margin-top);
 }

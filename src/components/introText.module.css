@@ -1,0 +1,15 @@
+.pIntro{
+  padding: var(--container-padding-mobile);
+}
+.summary{
+  font-size: 20px;
+  line-height: 160%;
+  margin-bottom: 1em;
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .pIntro{
+    padding: var(--container-padding-desktop);
+  }
+}

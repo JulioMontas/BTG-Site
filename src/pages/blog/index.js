@@ -3,6 +3,7 @@ import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 import GlobalHero from "../../components/globalHero"
 import GlobalContact from "../../components/globalContact"
+import IntroText from "../../components/introText"
 
 const BlogPage = () => (
   <Layout>
@@ -11,9 +12,7 @@ const BlogPage = () => (
       title= "Blog"
       summary= "Summary text"
     />
-    <div className="container">
-      <h3>Lorem ipsum dolor sit amet.</h3>
-    </div>
+    <IntroText />
     <GlobalContact />
   </Layout>
 )

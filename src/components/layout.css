@@ -9,8 +9,8 @@
   --jlo-color-gradient: linear-gradient(180deg, #FFAB49 -4.03%, #FF8C04 100%);
   --jlo-color-solid: #FF971C;
 
-  --container-padding-desktop: 10rem 1rem 10rem;
-  --container-padding-mobile: 10rem 1rem 10rem;
+  --container-padding-desktop: 9rem 1rem 10rem;
+  --container-padding-mobile: 4rem 1rem 5rem;
   --font-stack: 112.5%/1.45em Oswald, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
@@ -250,14 +250,19 @@ fieldset{
   padding: 0;
 }
 p {
-  font-size: 1rem;
+  font-size: 1em;
   font-weight: normal;
+  letter-spacing: 0.04em
 }
 h1{
   font-size: 2.25rem;
 }
 h2 {
   font-size: 1.62671rem;
+  font-weight: normal;
+  font-size: 26px;
+  letter-spacing: 1px;
+  margin-bottom: 0.2em;
 }
 h3 {
   font-size: 1.38316rem;
