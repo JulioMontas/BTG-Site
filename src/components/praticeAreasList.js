@@ -1,5 +1,5 @@
 import * as React from "react"
-import CaseResultBtn from "./caseResultBtn"
+import PracticeAreasBtn from "./practiceAreasBtn"
 import * as praticeAreasStyles from "./praticeAreasList.module.css"
 
 const dataPraticeAreas = [
@@ -17,11 +17,6 @@ const dataPraticeAreas = [
     url: `/practice-areas/`,
     title: `Spinal Cord & Brain Injury`,
     description: `Discovering the nature of complex brain injury and those accountable for costs of care`,
-  },
-  {
-    url: `/practice-areas/`,
-    title: `Negligent Security & Property Maintenance`,
-    description: `Identifying failed security measures and holding accountable those responsible`,
   },
   {
     url: `/practice-areas/`,
@@ -47,17 +42,22 @@ const dataPraticeAreas = [
     url: `/practice-areas/`,
     title: `Zantac Recall Litigation`,
     description: `Assisting those who have become ill after using ranitidine (Zantac) products`,
+  },
+  {
+    url: `/practice-areas/`,
+    title: `Negligent Security & Property Maintenance`,
+    description: `Identifying failed security measures and holding accountable those responsible`,
   }
 ]
 
 const PraticeAreasList = () => (
   <div className={praticeAreasStyles.wrapper}>
     {dataPraticeAreas.map(data => (
-      <CaseResultBtn
+      <PracticeAreasBtn
         key={data.id}
         url={data.url}
-        description={data.title}
-        title={data.description}
+        description={data.description}
+        title={data.title}
       />
     ))}
   </div>

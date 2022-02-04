@@ -1,0 +1,35 @@
+.cta{
+  padding: 1em 0.285em 1.3em;
+  display: block;
+  text-align: center;
+  background: var(--primary-cta-color);
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.32);
+  border-radius: 10px;
+}
+.cta:hover{
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.32);
+}
+.cta svg{
+  grid-area: svg;
+  opacity: 0.5;
+  transform: rotate(325deg);
+}
+.photo{
+  grid-area: photo;
+}
+.title{
+  grid-area: title;
+  font-size: 1.1em;
+  letter-spacing: 0.1em;
+  line-height: 1.3;
+  text-transform: uppercase;
+  text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+}
+.wrapper{
+  display: grid;
+  grid-template-columns: 1fr 7%;
+  grid-template-areas:
+  ". svg"
+  "photo photo"
+  "title title";
+}
