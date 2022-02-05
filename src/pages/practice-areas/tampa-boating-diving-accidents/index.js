@@ -19,7 +19,7 @@ const theme = {
 
 const CaseResultsArticle = () => (
   <Layout>
-    <Seo title="Case Results Article" />
+    <Seo title="Tampa Boating Diving Accidents | Practice Areas" />
     <GlobalHero
       title= "Tampa Boating Diving Accidents"
       summary= "Summary text"

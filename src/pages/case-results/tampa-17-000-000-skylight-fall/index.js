@@ -19,7 +19,7 @@ const theme = {
 
 const CaseResultsArticle = () => (
   <Layout>
-    <Seo title="Case Results Article" />
+    <Seo title="Tampa $17,000,000 Skylight Fall | Case Results" />
     <GlobalHero
       title= "Tampa $17,000,000 Skylight Fall"
       summary= "Summary text"
