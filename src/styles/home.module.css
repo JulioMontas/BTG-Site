@@ -61,7 +61,7 @@
   width: 100%;
   margin: 0 auto;
   margin-bottom: 50px;
-  text-align: center;
+  text-align: left;
 }
 .featuresTitle{
   font-size: 1em;
@@ -95,8 +95,8 @@
 .testimonialTitle{
   letter-spacing: 0.02em;
   font-weight: normal;
-  font-size: 2em;
-  line-height: 150%;
+  font-size: 1.4em;
+  line-height: 130%;
 }
 /*
 https://www.shapedivider.app/
@@ -138,6 +138,14 @@ https://fireship.io/lessons/wavy-backgrounds/
   .homeHeroPhoto,
   .homeHeroBG::before{
     height: var(--size-hero-desktop);
+  }
+  .contactTitle,
+  .blogTitle,
+  .avatorTitle,
+  .featureSummary,
+  .testimonialTitle{
+    font-size: 2em;
+    line-height: 150%;
   }
   .homeHeroTitle{
     width: 700px;
