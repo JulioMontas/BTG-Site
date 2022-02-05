@@ -1,6 +1,7 @@
 import * as React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import { StaticImage } from "gatsby-plugin-image"
 import ButtonCta from "../components/buttonCta"
 import CaseResultList from "../components/caseResultList"
 import PraticeAreasList from "../components/praticeAreasList"
@@ -24,7 +25,15 @@ const IndexPage = () => (
     <Seo title="Home" />
 
     <div className={homeStyles.homeHeroBG}>
-        <div className="container">
+      <StaticImage
+        src="../images/hero-bg.jpg"
+        alt="hero background"
+        placeholder="blurred"
+        layout="fullWidth"
+        className={homeStyles.homeHeroPhoto}
+      />
+      <div className="container">
+        <div className={homeStyles.homeWrapper}>
           <h2 className={homeStyles.homeHeroTitle}>Securing The Results Our Clients Deserve</h2>
           <p className={homeStyles.homeHeroDescription}>Our goal is to secure the compensation you need to help rebuild your life.</p>
           <div className={homeStyles.homeHeroCTA}>
@@ -34,6 +43,7 @@ const IndexPage = () => (
             />
           </div>
         </div>
+      </div>
     </div>
 
     <div className={homeStyles.caseResultList} style={{background: theme.colorsBG.primary, }}>

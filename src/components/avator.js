@@ -9,7 +9,7 @@ const Avator = (props) => {
     <StaticImage
       src="../images/attorney-team-stephen.jpg"
       alt="A dinosaur"
-      placeholder="blurred"
+      placeholder="tracedSVG"
       layout="constrained"
       width={width}
       height={width}
