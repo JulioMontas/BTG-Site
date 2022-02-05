@@ -22,7 +22,7 @@ const theme = {
 
 const AttorneysSinglePage = () => (
   <Layout>
-    <Seo title="Stephen A. Barnes" />
+    <Seo title="Stephen A. Barnes | Attorney" />
     <GlobalHero
       title= "Stephen A. Barnes"
       summary= "Summary text"

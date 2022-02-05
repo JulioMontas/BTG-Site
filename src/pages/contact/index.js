@@ -6,7 +6,7 @@ import IntroText from "../../components/introText"
 
 const ContactPage = () => (
   <Layout>
-    <Seo title="Contact" />
+    <Seo title="Contact Us" />
     <GlobalHero
       title= "Contact Us"
       summary= "Summary text"
