@@ -1,6 +1,7 @@
 import * as React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import { StaticImage } from "gatsby-plugin-image"
 import CaseResultList from "../components/caseResultList"
 import AttorneyList from "../components/attorneyList"
 import ButtonCta from "../components/buttonCta"
@@ -21,18 +22,33 @@ const theme = {
 const AboutPage = () => (
   <Layout>
     <Seo title="The Firm" />
+
+
     <div className={aboutStyles.heroBG}>
-      <div className="globalHero"
-      style={{
-        background:`none`,
-      }}
-      >
+      <StaticImage
+        src="../images/the-team.jpg"
+        alt="hero background"
+        placeholder="blurred"
+        layout="fullWidth"
+        className={aboutStyles.heroPhoto}
+      />
         <div className="container">
-          <h2 className="globalHero__text--title">The Firm</h2>
-          <p className="globalHero__text--summary">Summary text</p>
+          <div className={aboutStyles.wrapper}>
+            <h2 className="globalHero__text--title">The Firm</h2>
+            <p className="globalHero__text--summary">Summary text</p>
+          </div>
         </div>
-      </div>
+
+
+
     </div>
+
+
+
+
+
+
+
 
     <div className={aboutStyles.intro} style={{background: theme.colorsBG.secondary, color: theme.colorsText.primary}}>
       <div className="container">

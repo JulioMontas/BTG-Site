@@ -1,7 +1,8 @@
-/* X-Small devices (portrait phones, less than 576px) */
-/* #### */
+:root {
+  --size-hero-mobile: 60vh;
+  --size-hero-desktop: 70vh;
+}
 /* Grid */
-/* #### */
 .intro,
 .attorneys,
 .secondIntro,
@@ -12,18 +13,29 @@
 .intro{
   background: red;
 }
-/* ############ */
 /* Hero Section */
-/* ############ */
+.wrapper{
+  padding: 3.6rem 0rem 0rem;
+  position: absolute;
+  top: 80px;
+  width: 80%;
+  z-index: 20;
+}
+
+.heroPhoto,
+.heroBG::before{
+  height: var(--size-hero-mobile);
+}
 .heroBG{
-  background-image: linear-gradient(rgba(61, 88, 107, 1), rgba(29, 56, 81, 0.6)), url("../images/the-team.jpg");
-  height: 55vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  padding: 0 10px;
   margin-top: var(--globalHero-header-margin-top);
+}
+.heroBG::before{
+  content: "";
+  display: block;
+  background: linear-gradient(rgba(61, 88, 107, 1), rgba(29, 56, 81, 0.6));
+  width: 100%;
+  position: absolute;
+  z-index: 10;
 }
 .caseResultsTitle,
 .attorneysTitle,
@@ -48,12 +60,12 @@
 @media (min-width: 768px) { }
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  /* ############ */
   /* Hero Section */
-  /* ############ */
-  .heroBG{
-    height: 65vh;
+  .homeHeroPhoto,
+  .homeHeroBG::before{
+    height: var(--size-hero-desktop);
   }
+
 }
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { }

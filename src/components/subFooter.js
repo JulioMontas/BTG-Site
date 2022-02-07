@@ -1,10 +1,11 @@
 import * as React from "react"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as footerStyles from "./subFooter.module.css"
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 const SubFooter = () => (
   <div className={footerStyles.lastFooter}>
     <div className="container">
-
 
     <div className={footerStyles.wrapper}>
             <address className={footerStyles.textLink}>
@@ -85,8 +86,7 @@ const SubFooter = () => (
 <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_967_2022"/>
 <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_967_2022" result="shape"/>
 </filter>
-</defs>
-</svg>
+</defs></svg>
                 </a>
               </li>
               <li>
@@ -137,55 +137,16 @@ const SubFooter = () => (
 <clipPath id="clip0_967_2025">
 <rect width="32.0266" height="32.0266" fill="white" transform="translate(0.541992 0.418945)"/>
 </clipPath>
-</defs>
-</svg>
+</defs></svg>
                 </a>
               </li>
               <li>
                 <a href="mailto:test@gmail.com">
-                <svg width="38" height="32" viewBox="0 0 38 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g filter="url(#filter0_d_967_2033)">
-<path d="M8.29535 2.21436H29.6464C31.1143 2.21436 32.3153 3.41535 32.3153 4.88324V20.8965C32.3153 22.3644 31.1143 23.5654 29.6464 23.5654H8.29535C6.82746 23.5654 5.62646 22.3644 5.62646 20.8965V4.88324C5.62646 3.41535 6.82746 2.21436 8.29535 2.21436Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" shape-rendering="crispEdges"/>
-</g>
-<g filter="url(#filter1_d_967_2033)">
-<path d="M32.3153 4.8833L18.9709 14.2244L5.62646 4.8833" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" shape-rendering="crispEdges"/>
-</g>
-<defs>
-<filter id="filter0_d_967_2033" x="0.626465" y="0.214355" width="36.689" height="31.3511" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dy="3"/>
-<feGaussianBlur stdDeviation="2"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_967_2033"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_967_2033" result="shape"/>
-</filter>
-<filter id="filter1_d_967_2033" x="0.626465" y="0.883301" width="36.689" height="19.3413" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dy="1"/>
-<feGaussianBlur stdDeviation="2"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_967_2033"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_967_2033" result="shape"/>
-</filter>
-</defs>
-</svg>
+                  <FontAwesomeIcon icon={faEnvelope} size="2x"/>
                 </a>
               </li>
             </ul>
         </div>
-
-
-
-
-
-
-
-
-
 
       <div className={footerStyles.subFooter}>
         <p>
@@ -196,7 +157,6 @@ const SubFooter = () => (
           <a href="/" className={footerStyles.subFooterCTA}>Give feedback about our website</a>
         </div>
       </div>
-
 
     </div>
   </div>

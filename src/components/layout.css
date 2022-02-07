@@ -1,4 +1,5 @@
 /* X-Small devices (portrait phones, less than 576px) */
+/* Color check: https://www.websiterating.com/bca360/1d3851 */
 :root {
   --primary-text-color: hsla(255, 255%, 255%, 1);
   --primary-bg-color: #3D586B;
