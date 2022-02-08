@@ -41,7 +41,10 @@ const AboutPage = () => (
 
     <div className={aboutStyles.intro} style={{background: theme.colorsBG.secondary, color: theme.colorsText.primary}}>
       <div className="container">
-        <IntroText />
+        <IntroText
+          title= "BTG is committed to protecting you and your family during the legal process."
+          summary= "The Barnes Trial Group was also founded upon the recognition that the use of state of the art technology is an absolute necessity to effectively represent you. BTG utilizes one of the most powerful case management software programs in the industry and a secure digital document management repository."
+        />
       </div>
     </div>
 

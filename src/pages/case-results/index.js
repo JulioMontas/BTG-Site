@@ -13,15 +13,12 @@ const CaseResultsPage = () => (
       title= "Case Results"
       summary= "Summary text"
     />
-    <IntroText />
-    <div
-      style={{
-        padding:`7em 0 7em`
-      }}
-    >
-      <div className="container">
-        <CaseResultList />
-      </div>
+    <IntroText
+      title= "Title"
+      summary= "Summary"
+    />
+    <div className="container">
+      <CaseResultList />
     </div>
     <GlobalContact />
   </Layout>

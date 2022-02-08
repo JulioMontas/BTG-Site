@@ -12,7 +12,10 @@ const BlogPage = () => (
       title= "Blog"
       summary= "Summary text"
     />
-    <IntroText />
+    <IntroText
+      title= "Title Text"
+      summary= "Summary Text"
+    />
     <GlobalContact />
   </Layout>
 )

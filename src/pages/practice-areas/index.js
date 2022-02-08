@@ -13,15 +13,12 @@ const PraticeAreasPage = () => (
       title= "Pratice Areas"
       summary= "Summary text"
     />
-    <IntroText />
-    <div
-      style={{
-        padding:`7em 0 7em`
-      }}
-    >
-      <div className="container">
-        <PraticeAreasList />
-      </div>
+    <IntroText
+      title= "Title"
+      summary= "Summary"
+    />
+    <div className="container">
+      <PraticeAreasList />
     </div>
     <GlobalContact />
   </Layout>

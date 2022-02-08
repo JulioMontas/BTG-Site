@@ -9,6 +9,9 @@
     grid-template-columns: 1fr;
     row-gap: 2em;
 }
+.sectionPadding{
+  padding: var(--container-padding-mobile);
+}
 @media (min-width: 576px) { }
 @media (min-width: 768px) { }
 @media (min-width: 992px) {

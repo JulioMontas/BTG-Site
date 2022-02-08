@@ -56,7 +56,7 @@ const dataCaseResult = [
 ]
 
 const CaseResultList = () => (
-  <div>
+  <div className={praticeAreasStyles.sectionPadding}>
     <h2 className={praticeAreasStyles.title}>
       List of Our Winning Case Results
     </h2>

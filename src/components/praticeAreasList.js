@@ -51,7 +51,7 @@ const dataPraticeAreas = [
 ]
 
 const PraticeAreasList = () => (
-  <div>
+  <div className={praticeAreasStyles.sectionPadding}>
     <h2 className={praticeAreasStyles.title}>
       List of Pratice Areas
     </h2>

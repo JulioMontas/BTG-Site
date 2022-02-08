@@ -10,8 +10,9 @@
   --jlo-color-gradient: linear-gradient(180deg, #FFAB49 -4.03%, #FF8C04 100%);
   --jlo-color-solid: #FF971C;
 
-  --container-padding-desktop: 9rem 1rem 10rem;
+  --container-padding-desktop: 12rem 0rem 11rem;
   --container-padding-mobile: 4rem 1rem 5rem;
+
   --font-stack: 112.5%/1.45em Oswald, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
@@ -38,15 +39,6 @@ body {
   background: var(--primary-bg-color);
   color: var(--primary-text-color);
   margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: normal;
-  word-wrap: break-word;
-  font-kerning: normal;
-  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
-  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
-  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
-  font-feature-settings: "kern", "liga", "clig", "calt";
 }
 article,
 aside,
@@ -365,8 +357,6 @@ p *:last-child  {
 li > p {
   margin-bottom: calc(1.45rem / 2);
 }
-
-
 .globalHero__text--title{
   font-weight: normal;
   font-size: 26px;
@@ -408,11 +398,5 @@ li > p {
 @media (min-width: 1400px) {
   .container{
     max-width: 1400px;
-    /* background: red; */
   }
-}
-@media (min-width:1536px) {
-    .container {
-        max-width: 1536px
-    }
 }
