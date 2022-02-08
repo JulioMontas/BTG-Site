@@ -13,8 +13,8 @@ const BlogPage = () => (
       summary= "Summary text"
     />
     <IntroText
-      title= "Title Text"
-      summary= "Summary Text"
+      title= "Aliquam ultricies mollis risus."
+      summary= "Etiam hendrerit ipsum at enim fermentum, et molestie dui semper. quis auctor augue rhoncus in. Duis tristique accumsan ante vel blandit."
     />
     <GlobalContact />
   </Layout>

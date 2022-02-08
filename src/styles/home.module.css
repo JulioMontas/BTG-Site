@@ -46,7 +46,7 @@
   font-weight: bold;
 }
 .homeHeroDescription{
-  font-size: 1em;
+  font-size: var(--summary-lg-fontSize);
   letter-spacing: 0.1em;
 }
 .homeHeroTitle,

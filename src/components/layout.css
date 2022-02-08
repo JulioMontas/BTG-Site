@@ -10,6 +10,10 @@
   --jlo-color-gradient: linear-gradient(180deg, #FFAB49 -4.03%, #FF8C04 100%);
   --jlo-color-solid: #FF971C;
 
+  --summary-lg-fontSize: 1.25em;
+  --summary-lg-lineHeight: 200%;
+
+
   --container-padding-desktop: 12rem 0rem 11rem;
   --container-padding-mobile: 4rem 1rem 5rem;
 
@@ -101,45 +105,8 @@ mark {
 small {
   font-size: 80%;
 }
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-sub {
-  bottom: -0.25em;
-}
-sup {
-  top: -0.5em;
-}
-img {
-  border-style: none;
-  max-width: 100%;
-}
-
 svg:not(:root) {
   overflow: hidden;
-}
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace;
-  font-size: 1em;
-}
-hr {
-  box-sizing: content-box;
-  overflow: visible;
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding: 0;
-  margin-bottom: calc(1.45rem - 1px);
-  background: hsla(0, 0%, 0%, 0.2);
-  border: none;
-  height: 1px;
 }
 button,
 input,
@@ -243,7 +210,8 @@ fieldset{
   padding: 0;
 }
 p {
-  font-size: 1em;
+  font-size: var(--summary-lg-fontSize);
+  line-height: var(--summary-lg-lineHeight);
   font-weight: normal;
   letter-spacing: 0.04em
 }
@@ -273,37 +241,6 @@ ul {
   padding: 0;
   list-style-position: outside;
   list-style-image: none;
-}
-ol {
-  margin-left: 1.45rem;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-  list-style-position: outside;
-  list-style-image: none;
-}
-pre {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  margin-bottom: 1.45rem;
-  font-size: 0.85rem;
-  line-height: 1.42;
-  background: hsla(0, 0%, 0%, 0.04);
-  border-radius: 3px;
-  overflow: auto;
-  word-wrap: normal;
-  padding: 1.45rem;
-}
-table {
-  font-size: 1rem;
-  line-height: 1.45rem;
-  border-collapse: collapse;
-  width: 100%;
 }
 blockquote {
   margin-left: 1.45rem;

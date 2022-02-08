@@ -1,6 +1,5 @@
 import * as React from "react";
 import { navigate } from "gatsby-link";
-import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../../components/layout";
 import Seo from "../../components/seo"
 import GlobalHero from "../../components/globalHero"
@@ -47,7 +46,7 @@ export default class Index extends React.Component {
         />
         <IntroText
           title= "Nullam odio magna, vestibulum ut consectetur."
-          summary= "quis auctor augue rhoncus in. Duis tristique accumsan ante vel blandit. Aliquam ultricies mollis risus id fermentum. Etiam hendrerit ipsum at enim fermentum, et molestie dui semper."
+          summary= "Quis auctor augue rhoncus in. Duis tristique accumsan ante vel blandit. Aliquam ultricies mollis risus id fermentum. Molestie dui semper."
         />
         <div className="container">
           <div className="top-0 absolute w-full md:w-2/3">

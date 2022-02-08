@@ -70,7 +70,6 @@ const IndexPage = () => (
           </div>
           <div className={homeStyles.avatorSummary}>
             <h2 className={homeStyles.avatorTitle}>Trial Lawyer Committed to Serving the Injured</h2>
-            <p>With more than 25 years of combined experience and a focus on providing the most effective trial representation available, we have been able to build a record of positive results for our clients that we are proud of.</p>
             <p>Our firm is dedicated to creating the positive results people need after they have been hurt in serious accidents. We know that most people simply want to recover the life they had before an accident. We have the experience and skill necessary to secure the full compensation people will need to be able to overcome the obstacles that stand in their way. </p>
             <div className="cta">
               <ButtonCta

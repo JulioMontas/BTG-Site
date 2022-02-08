@@ -14,8 +14,8 @@ const PraticeAreasPage = () => (
       summary= "Summary text"
     />
     <IntroText
-      title= "Title"
-      summary= "Summary"
+      title= "Quis auctor augue rhoncus in."
+      summary= "Ipsum at enim fermentum, et molestie dui semper. Quis auctor augue rhoncus in. Duis tristique accumsan."
     />
     <div className="container">
       <PraticeAreasList />

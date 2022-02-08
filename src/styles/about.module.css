@@ -38,15 +38,15 @@
 }
 .attorneysTitle,
 .testimonialTitle{
-  font-size: 1em;
+  font-size: var(--summary-lg-fontSize);
   letter-spacing: 0.02em;
   font-weight: 400;
   margin-bottom: 1em;
 }
 /* Intro Section */
 .secondIntro p{
-  font-size: 2em;
-  line-height: 160%;
+  font-size: var(--summary-lg-fontSize);
+  line-height: var(--summary-lg-lineHeight);
   margin-bottom: 1em;
 }
 /* Small devices (landscape phones, 576px and up) */

@@ -14,8 +14,8 @@ const CaseResultsPage = () => (
       summary= "Summary text"
     />
     <IntroText
-      title= "Title"
-      summary= "Summary"
+      title= "Ipsum at enim fermentum."
+      summary= "Et molestie dui semper. quis auctor augue rhoncus in. Duis tristique accumsan."
     />
     <div className="container">
       <CaseResultList />

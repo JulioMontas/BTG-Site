@@ -7,13 +7,13 @@
   align-items: baseline;
   grid-row-gap: 1em;
 }
-.summary{
+.title{
   font-size: 2em;
   line-height: 130%;
 }
-.description{
-  font-size: 1.3em;
-  line-height: 200%;
+.summary{
+  font-size: var(--summary-lg-fontSize);
+  line-height: var(--summary-lg-lineHeight);
 }
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {

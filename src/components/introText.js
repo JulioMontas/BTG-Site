@@ -15,8 +15,8 @@ const IntroText = (props) => {
     <div className={Styles.pIntro} style={{background: theme.colorsBG.primary, color: theme.colorsText.primary}}>
       <div className="container">
         <div className={Styles.wrapper}>
-          <h2 className={Styles.summary}>{props.title}</h2>
-          <p className={Styles.description}>{props.summary}</p>
+          <h2 className={Styles.title}>{props.title}</h2>
+          <p className={Styles.summary}>{props.summary}</p>
         </div>
       </div>
     </div>

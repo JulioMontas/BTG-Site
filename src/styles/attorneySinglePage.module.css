@@ -1,7 +1,4 @@
-/* X-Small devices (portrait phones, less than 576px) */
-/* ############### */
 /* Grid and Global */
-/* ############### */
 .intro,
 .skills,
 .video,
@@ -10,14 +7,12 @@
 }
 /* This code is copy from about.module.css */
 .title{
-  font-size: 1em;
+  font-size: var(--summary-lg-fontSize);
   letter-spacing: 0.02em;
   font-weight: 400;
   margin-bottom: 1em;
 }
-/* ############# */
 /* Intro Section */
-/* ############# */
 .descriptio{
   display: grid;
   grid-template-columns: 1fr;
@@ -36,9 +31,7 @@
   border: 1px solid var(--primary-cta-color);
   padding: 1em 2em;
 }
-/* ############# */
 /* awards Section */
-/* ############# */
 .awards{
   display: grid;
   grid-template-columns: 1fr;
