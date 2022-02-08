@@ -26,6 +26,7 @@
     "gatsby-plugin-sitemap": "^5.6.0",
     "gatsby-remark-images-contentful": "^5.6.0",
     "gatsby-source-contentful": "^6.1.4",
+    "gatsby-source-datocms": "^3.0.15",
     "gatsby-source-filesystem": "^4.6.0",
     "gatsby-transformer-sharp": "^4.6.0",
     "gatsby-transformer-sqip": "^4.6.0",

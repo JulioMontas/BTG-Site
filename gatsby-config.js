@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Barnes Trial Group`,
@@ -5,7 +9,14 @@ module.exports = {
     author: `@BTGLaw`,
     siteUrl: `https://btgsite.gatsbyjs.io/`,
   },
-  plugins: [
+  plugins: [{
+    resolve: `gatsby-source-datocms`,
+    options: {
+      apiToken: process.env.DATO_API_TOKEN,
+      preview: true,
+      disableLiveReload: false,
+    },
+  },
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-fontawesome-css`,
     `gatsby-plugin-sitemap`,

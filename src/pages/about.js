@@ -7,6 +7,7 @@ import AttorneyList from "../components/attorneyList"
 import ButtonCta from "../components/buttonCta"
 import GlobalContact from "../components/globalContact"
 import IntroText from "../components/introText"
+import { graphql } from 'gatsby'
 import * as aboutStyles from "../styles/about.module.css"
 
 const theme = {
@@ -20,7 +21,7 @@ const theme = {
   },
 }
 
-const AboutPage = () => (
+const AboutPage = ({ data }) => (
   <Layout>
     <Seo title="The Firm" />
     <div className={aboutStyles.heroBG}>
@@ -33,7 +34,7 @@ const AboutPage = () => (
       />
         <div className="container">
           <div className={aboutStyles.wrapper}>
-            <h2 className="globalHero__text--title">The Firm</h2>
+            <h2 className="globalHero__text--title">{data.datoCmsAbout.title}</h2>
             <p className="globalHero__text--summary">Summary text</p>
           </div>
         </div>
@@ -88,3 +89,13 @@ const AboutPage = () => (
 )
 
 export default AboutPage
+
+export const query = graphql`
+  {
+    datoCmsAbout {
+      id
+      title
+      bio
+    }
+  }
+`
