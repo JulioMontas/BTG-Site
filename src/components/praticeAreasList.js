@@ -51,15 +51,20 @@ const dataPraticeAreas = [
 ]
 
 const PraticeAreasList = () => (
-  <div className={praticeAreasStyles.wrapper}>
-    {dataPraticeAreas.map(data => (
-      <PracticeAreasBtn
-        key={data.id}
-        url={data.url}
-        description={data.description}
-        title={data.title}
-      />
-    ))}
+  <div>
+    <h2 className={praticeAreasStyles.title}>
+      List of Pratice Areas
+    </h2>
+    <div className={praticeAreasStyles.wrapper}>
+      {dataPraticeAreas.map(data => (
+        <PracticeAreasBtn
+          key={data.id}
+          url={data.url}
+          description={data.description}
+          title={data.title}
+        />
+      ))}
+    </div>
   </div>
 )
 

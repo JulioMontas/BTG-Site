@@ -15,13 +15,12 @@
 }
 /* Hero Section */
 .wrapper{
-  padding: 3.6rem 0rem 0rem;
+  padding: 3.6rem 1rem 0rem;
   position: absolute;
   top: 80px;
   width: 80%;
   z-index: 20;
 }
-
 .heroPhoto,
 .heroBG::before{
   height: var(--size-hero-mobile);
@@ -37,7 +36,6 @@
   position: absolute;
   z-index: 10;
 }
-.caseResultsTitle,
 .attorneysTitle,
 .testimonialTitle{
   font-size: 1em;
@@ -45,10 +43,7 @@
   font-weight: 400;
   margin-bottom: 1em;
 }
-/* ############# */
 /* Intro Section */
-/* ############# */
-.intro p,
 .secondIntro p{
   font-size: 2em;
   line-height: 160%;
@@ -65,7 +60,9 @@
   .homeHeroBG::before{
     height: var(--size-hero-desktop);
   }
-
+  .wrapper{
+    padding: 3.6rem 0rem 0rem;
+  }
 }
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { }

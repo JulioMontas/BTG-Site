@@ -54,7 +54,6 @@ const IndexPage = () => (
     <div className={homeStyles.caseResultList} style={{background: theme.colorsBG.primary, }}>
       <div className="container">
         <p className={homeStyles.featureSummary}>A serious injury can easily derail a person’s life. We know how to fight for our clients and win.</p>
-        <h2 className={homeStyles.featuresTitle}>List of our winning case results</h2>
         <CaseResultList />
       </div>
     </div>
@@ -104,7 +103,6 @@ const IndexPage = () => (
     <div className={homeStyles.homePraticeAreasList} style={{background: theme.colorsBG.primary,}}>
       <div className="container">
         <p className={homeStyles.featureSummary}>Personal injury representation that can help you secure the best possible outcome to your situation.</p>
-        <h2 className={homeStyles.featuresTitle}>List of pratice areas</h2>
         <PraticeAreasList />
       </div>
     </div>

@@ -6,6 +6,7 @@ import CaseResultList from "../components/caseResultList"
 import AttorneyList from "../components/attorneyList"
 import ButtonCta from "../components/buttonCta"
 import GlobalContact from "../components/globalContact"
+import IntroText from "../components/introText"
 import * as aboutStyles from "../styles/about.module.css"
 
 const theme = {
@@ -22,8 +23,6 @@ const theme = {
 const AboutPage = () => (
   <Layout>
     <Seo title="The Firm" />
-
-
     <div className={aboutStyles.heroBG}>
       <StaticImage
         src="../images/the-team.jpg"
@@ -38,24 +37,12 @@ const AboutPage = () => (
             <p className="globalHero__text--summary">Summary text</p>
           </div>
         </div>
-
-
-
     </div>
-
-
-
-
-
-
-
 
     <div className={aboutStyles.intro} style={{background: theme.colorsBG.secondary, color: theme.colorsText.primary}}>
       <div className="container">
-          <p>
-            BTG is committed to protecting you and your family during the legal process. While many large firms build case loads of many hundreds of files, BTG believes this prevents a law firm from treating a client as an individual and meeting the unique needs of each case. For this reason, BTG is committed to maintaining a smaller case load. You will come to know the attorneys and staff at BTG on a first name basis as they ensure you realize personalized service throughout our relationship   with you.
-          </p>
-        </div>
+        <IntroText />
+      </div>
     </div>
 
     <div className={aboutStyles.attorneys} style={{background: theme.colorsBG.primary, }}>
@@ -75,9 +62,6 @@ const AboutPage = () => (
 
     <div className={aboutStyles.caseResultsList} style={{background: theme.colorsBG.primary, }}>
       <div className="container">
-      <h2 className={aboutStyles.caseResultsTitle}>
-        List of Case Results
-      </h2>
       <CaseResultList />
       </div>
     </div>
@@ -97,7 +81,6 @@ const AboutPage = () => (
     </div>
 
     <GlobalContact />
-
   </Layout>
 )
 

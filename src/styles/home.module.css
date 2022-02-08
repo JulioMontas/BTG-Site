@@ -63,12 +63,6 @@
   margin-bottom: 50px;
   text-align: left;
 }
-.featuresTitle{
-  font-size: 1em;
-  letter-spacing: 0.02em;
-  font-weight: 400;
-  margin-bottom: 1em;
-}
 /* Use by The Firm, Blog, and Contact section */
 .twoColumnsGrid{
   display: grid;

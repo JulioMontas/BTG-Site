@@ -56,15 +56,20 @@ const dataCaseResult = [
 ]
 
 const CaseResultList = () => (
-  <div className={praticeAreasStyles.wrapper}>
-    {dataCaseResult.map(data => (
-      <CaseResultBtn
-        key={data.id}
-        url={data.url}
-        description={data.description}
-        title={data.title}
-      />
-    ))}
+  <div>
+    <h2 className={praticeAreasStyles.title}>
+      List of Our Winning Case Results
+    </h2>
+    <div className={praticeAreasStyles.wrapper}>
+      {dataCaseResult.map(data => (
+        <CaseResultBtn
+          key={data.id}
+          url={data.url}
+          description={data.description}
+          title={data.title}
+        />
+      ))}
+    </div>
   </div>
 )
 

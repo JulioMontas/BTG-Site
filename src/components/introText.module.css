@@ -1,15 +1,27 @@
 .pIntro{
   padding: var(--container-padding-mobile);
 }
-.summary{
-  font-size: 20px;
-  line-height: 160%;
-  margin-bottom: 1em;
+.wrapper{
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: baseline;
+  grid-row-gap: 1em;
 }
-
+.summary{
+  font-size: 2em;
+  line-height: 130%;
+}
+.description{
+  font-size: 1.3em;
+  line-height: 200%;
+}
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   .pIntro{
     padding: var(--container-padding-desktop);
+  }
+  .wrapper{
+    grid-template-columns: 2fr 1fr;
+    align-items: baseline;
   }
 }
