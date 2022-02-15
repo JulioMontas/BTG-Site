@@ -46,11 +46,6 @@ const IndexPage = () => (
       </div>
     </div>
 
-
-
-
-
-
     <div className={homeStyles.caseResultList} style={{background: theme.colorsBG.primary, }}>
       <div className="container">
         <p className={homeStyles.featureSummary}>A serious injury can easily derail a person’s life. We know how to fight for our clients and win.</p>

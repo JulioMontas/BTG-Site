@@ -89,13 +89,3 @@ const AboutPage = ({ data }) => (
 )
 
 export default AboutPage
-
-export const query = graphql`
-  {
-    datoCmsAbout {
-      id
-      title
-      bio
-    }
-  }
-`
