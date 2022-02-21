@@ -20,7 +20,15 @@ const theme = {
   },
 }
 
-const AboutPage = ({ data }) => (
+export const query = graphql`{
+  datoCmsAbout{
+    id
+    title
+    bio
+  }
+}`
+
+const AboutPage = ({data}) => (
   <Layout>
     <Seo title="The Firm" />
     <div className={aboutStyles.heroBG}>
