@@ -25,7 +25,10 @@ export const query = graphql`{
   datoCmsAbout{
     id
     title
-    bio
+    subtitle
+    bio {
+      value
+    }
   }
 }`
 
