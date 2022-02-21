@@ -8,6 +8,7 @@ import ButtonCta from "../components/buttonCta"
 import GlobalContact from "../components/globalContact"
 import IntroText from "../components/introText"
 import * as aboutStyles from "../styles/about.module.css"
+import { graphql } from 'gatsby'
 
 const theme = {
   colorsBG: {
