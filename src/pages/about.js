@@ -7,7 +7,6 @@ import AttorneyList from "../components/attorneyList"
 import ButtonCta from "../components/buttonCta"
 import GlobalContact from "../components/globalContact"
 import IntroText from "../components/introText"
-import { graphql } from 'gatsby'
 import * as aboutStyles from "../styles/about.module.css"
 
 const theme = {

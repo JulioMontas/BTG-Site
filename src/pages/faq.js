@@ -1,18 +1,53 @@
 import * as React from "react"
 import Layout from "../components/layout"
-import Seo from "../components/seo"
 import GlobalHero from "../components/globalHero"
 import GlobalContact from "../components/globalContact"
-import IntroText from "../components/introText"
+import { graphql } from 'gatsby'
+import { HelmetDatoCms } from 'gatsby-source-datocms'
 
-const FAQPage = () => (
+export const query = graphql`
+  {
+    site: datoCmsFaviconMetaTags {
+      tags
+    }
+    faq: datoCmsFaq {
+      seoMetaTags {
+        tags
+      }
+    }
+    allFaqs: datoCmsFaq {
+      title
+      description
+      content {
+        id
+        title
+        content
+      }
+      backgroundColor {
+        rgb
+      }
+      textColor {
+        rgb
+      }
+    }
+  }
+`
+
+const FAQPage = ({ data: {site, faq, allFaqs} }) => (
   <Layout>
-    <Seo title="FAQs" />
+    <HelmetDatoCms seo={faq.seoMetaTags} />
     <GlobalHero
-      title= "FAQs"
-      summary= "Summary text"
+      title= {allFaqs.title}
+      summary= {allFaqs.description}
     />
-    <IntroText />
+    <div className="container">
+      {allFaqs.content.map(data => (
+        <div>
+          <p><b>{data.title}?</b></p>
+          <p>{data.content}</p>
+        </div>
+      ))}
+    </div>
     <GlobalContact />
   </Layout>
 )

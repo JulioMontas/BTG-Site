@@ -13,8 +13,11 @@ module.exports = {
     resolve: `gatsby-source-datocms`,
     options: {
       apiToken: process.env.DATO_API_TOKEN,
-      preview: true,
+      previewMode: true,
       disableLiveReload: false,
+      localeFallbacks: {
+        it: ['en'],
+      },
     },
   },
     `gatsby-plugin-gatsby-cloud`,
