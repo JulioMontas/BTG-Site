@@ -2,6 +2,7 @@ import * as React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { StaticImage } from "gatsby-plugin-image"
+import CaseResultBtn from "../components/caseResultBtn"
 import CaseResultList from "../components/caseResultList"
 import AttorneyList from "../components/attorneyList"
 import ButtonCta from "../components/buttonCta"
@@ -10,17 +11,6 @@ import IntroText from "../components/introText"
 import * as aboutStyles from "../styles/about.module.css"
 import { graphql } from 'gatsby'
 import { StructuredText } from "react-datocms";
-
-const theme = {
-  colorsBG: {
-    primary: `#1d3851`,
-    secondary: `#FFF`,
-  },
-  colorsText: {
-    primary: `#333`,
-    secondary: `#FFF`,
-  },
-}
 
 export const query = graphql`{
   datoCmsAbout {
@@ -89,7 +79,10 @@ export const query = graphql`{
   }
   allDatoCmsCaseResult {
     nodes {
+      id
       title
+      subtitle
+      slug
     }
   }
   allDatoCmsTestimonial {
@@ -170,7 +163,17 @@ const AboutPage = ({data}) => (
         color: data.datoCmsAbout.caseResultTColor.hex
     }}>
       <div className="container">
-        <CaseResultList />
+        <h2 className={aboutStyles.attorneysTitle}>
+          {data.datoCmsAbout.caseResultTitle}
+        </h2>
+        {data.allDatoCmsCaseResult.nodes.map(data => (
+          <CaseResultBtn
+            key={data.id}
+            url={data.slug}
+            description={data.subtitle}
+            title={data.title}
+          />
+        ))}
       </div>
     </div>
 
