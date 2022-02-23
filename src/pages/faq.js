@@ -10,7 +10,7 @@ export const query = graphql`
     site: datoCmsFaviconMetaTags {
       tags
     }
-    faq: datoCmsFaq {
+    siteTag: datoCmsFaq {
       seoMetaTags {
         tags
       }
@@ -24,29 +24,36 @@ export const query = graphql`
         content
       }
       backgroundColor {
-        rgb
+        hex
       }
       textColor {
-        rgb
+        hex
       }
     }
   }
 `
 
-const FAQPage = ({ data: {site, faq, allFaqs} }) => (
+const FAQPage = ({ data: {site, siteTag, allFaqs} }) => (
   <Layout>
-    <HelmetDatoCms seo={faq.seoMetaTags} />
+    <HelmetDatoCms seo={siteTag.seoMetaTags} />
     <GlobalHero
-      title= {allFaqs.title}
-      summary= {allFaqs.description}
+      title={allFaqs.title}
+      summary={allFaqs.description}
     />
-    <div className="container">
-      {allFaqs.content.map(data => (
-        <div>
-          <p><b>{data.title}?</b></p>
-          <p>{data.content}</p>
-        </div>
-      ))}
+    <div
+      style={{
+        background: allFaqs.backgroundColor.hex,
+        color: allFaqs.textColor.hex
+      }}
+    >
+      <div className="container">
+        {allFaqs.content.map(data => (
+          <div>
+            <p><b>{data.title}?</b></p>
+            <p>{data.content}</p>
+          </div>
+        ))}
+      </div>
     </div>
     <GlobalContact />
   </Layout>

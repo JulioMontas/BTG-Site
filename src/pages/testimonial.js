@@ -1,18 +1,55 @@
 import * as React from "react"
 import Layout from "../components/layout"
-import Seo from "../components/seo"
 import GlobalHero from "../components/globalHero"
 import GlobalContact from "../components/globalContact"
-import IntroText from "../components/introText"
+import { graphql } from 'gatsby'
+import { HelmetDatoCms } from 'gatsby-source-datocms'
+import { StructuredText } from "react-datocms";
 
-const TestimonialPage = () => (
+export const query = graphql`{
+  site: datoCmsFaviconMetaTags {
+    tags
+  }
+  siteTag: datoCmsTestimonial {
+    seoMetaTags {
+      tags
+    }
+  }
+  allTestimonials: datoCmsTestimonial {
+    title
+    description
+    content {
+      date
+      content {
+        value
+      }
+      socialMediaUrl {
+        label
+        url
+      }
+    }
+  }
+}
+`
+
+const TestimonialPage = ({ data: {site, siteTag, allTestimonials} }) => (
   <Layout>
-    <Seo title="Testimonial" />
+    <HelmetDatoCms seo={siteTag.seoMetaTags} />
     <GlobalHero
-      title= "Testimonial"
-      summary= "Summary text"
+      title={allTestimonials.title}
+      summary={allTestimonials.description}
     />
-    <IntroText />
+    <div style={{ }}>
+      <div className="container">
+        {allTestimonials.content.map(data => (
+          <div>
+            <small>{data.date}</small>
+            <StructuredText data={data.content} />
+          </div>
+        ))}
+
+      </div>
+    </div>
     <GlobalContact />
   </Layout>
 )

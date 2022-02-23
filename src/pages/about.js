@@ -9,6 +9,7 @@ import GlobalContact from "../components/globalContact"
 import IntroText from "../components/introText"
 import * as aboutStyles from "../styles/about.module.css"
 import { graphql } from 'gatsby'
+import { StructuredText } from "react-datocms";
 
 const theme = {
   colorsBG: {
@@ -22,12 +23,82 @@ const theme = {
 }
 
 export const query = graphql`{
-  datoCmsAbout{
+  datoCmsAbout {
     id
     title
-    subtitle
-    bio {
+    description
+    gradientTColor {
+      alpha
+      rgb
+    }
+    gradientBColor {
+      alpha
+      rgb
+    }
+    topicTitle
+    topicDescription
+    topicBgColor {
+      hex
+    }
+    topicTColor {
+      hex
+    }
+    attorneyTitle
+    attorneyBdColor {
+      hex
+    }
+    attorneyTColor {
+      hex
+    }
+    historyContent {
       value
+    }
+    historyBgColor {
+      hex
+    }
+    historyTColor {
+      hex
+    }
+    caseResultTitle
+    caseResultBgColor {
+      hex
+    }
+    caseResultTColor {
+      hex
+    }
+    testimonialTitle
+    testimonialBdColor {
+      hex
+    }
+    testimonialTColor {
+      hex
+    }
+  }
+  allDatoCmsAttorney {
+    nodes {
+      name
+      caseResult {
+        title
+        slug
+      }
+      practiceArea {
+        title
+        slug
+      }
+    }
+  }
+  allDatoCmsCaseResult {
+    nodes {
+      title
+    }
+  }
+  allDatoCmsTestimonial {
+    nodes {
+      content {
+        content {
+          value
+        }
+      }
     }
   }
 }`
@@ -46,45 +117,72 @@ const AboutPage = ({data}) => (
         <div className="container">
           <div className={aboutStyles.wrapper}>
             <h2 className="globalHero__text--title">{data.datoCmsAbout.title}</h2>
-            <p className="globalHero__text--summary">Summary text</p>
+            <p className="globalHero__text--summary">{data.datoCmsAbout.description}</p>
           </div>
         </div>
     </div>
 
-    <div className={aboutStyles.intro} style={{background: theme.colorsBG.secondary, color: theme.colorsText.primary}}>
+    <div
+      className={aboutStyles.intro}
+      style={{
+        background: data.datoCmsAbout.topicBgColor.hex,
+        color: data.datoCmsAbout.topicTColor.hex
+      }}>
       <div className="container">
         <IntroText
-          title= "BTG is committed to protecting you and your family during the legal process."
-          summary= "The Barnes Trial Group was also founded upon the recognition that the use of state of the art technology is an absolute necessity to effectively represent you. BTG utilizes one of the most powerful case management software programs in the industry and a secure digital document management repository."
+          title={data.datoCmsAbout.topicTitle}
+          summary={data.datoCmsAbout.topicDescription}
         />
       </div>
     </div>
 
-    <div className={aboutStyles.attorneys} style={{background: theme.colorsBG.primary, }}>
+    <div
+      className={aboutStyles.attorneys}
+      style={{
+        background: data.datoCmsAbout.attorneyBdColor.hex,
+        color: data.datoCmsAbout.attorneyTColor.hex
+    }}>
       <div className="container">
         <h2 className={aboutStyles.attorneysTitle}>
-          Attorneys
+          {data.datoCmsAbout.attorneyTitle}
         </h2>
         <AttorneyList />
       </div>
     </div>
 
-    <div className={aboutStyles.secondIntro} style={{background: theme.colorsBG.secondary, color: theme.colorsText.primary}}>
+    <div
+      className={aboutStyles.secondIntro}
+      style={{
+        background: data.datoCmsAbout.historyBgColor.hex,
+        color: data.datoCmsAbout.historyTColor.hex
+      }}>
       <div className="container">
-        <p>Finally, the Barnes Trial Group was founded to send a loud and clear message to the insurance industry that BTG is prepared and committed to tirelessly litigate your case through trial should the insurance company fail to treat you or your family fairly. Our commitment to regularly and effectively trying cases empowers BTG with a reputation within the industry that allow us to fulfill your needs with strength, dignity and proven results.</p>
+        <p>
+          <StructuredText data={data.datoCmsAbout.historyContent} />
+        </p>
       </div>
     </div>
 
-    <div className={aboutStyles.caseResultsList} style={{background: theme.colorsBG.primary, }}>
+    <div
+      className={aboutStyles.caseResultsList}
+      style={{
+        background: data.datoCmsAbout.caseResultBgColor.hex,
+        color: data.datoCmsAbout.caseResultTColor.hex
+    }}>
       <div className="container">
-      <CaseResultList />
+        <CaseResultList />
       </div>
     </div>
 
-    <div className={aboutStyles.testimonial}>
+    <div
+      className={aboutStyles.testimonial}
+      style={{
+        background: data.datoCmsAbout.testimonialBdColor.hex,
+        color: data.datoCmsAbout.testimonialTColor.hex
+    }}>
       <div className="container">
         <h2 className={aboutStyles.testimonialTitle}>
-          Testimonial
+          {data.datoCmsAbout.testimonialTitle}
         </h2>
         <div className="cta">
           <ButtonCta
