@@ -20,9 +20,22 @@ exports.createPages = async ({ graphql, actions }) => {
           slug
           name
           location
+          phoneNumber
+          faxNumber
           practiceArea {
             slug
             title
+          }
+          caseResult {
+            slug
+            title
+            subtitle
+          }
+          content {
+            value
+          }
+          achievement {
+            value
           }
         }
       }
