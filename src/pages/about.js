@@ -3,8 +3,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { StaticImage } from "gatsby-plugin-image"
 import CaseResultBtn from "../components/caseResultBtn"
-import CaseResultList from "../components/caseResultList"
-import AttorneyList from "../components/attorneyList"
+import AttorneyBtn from "../components/attorneyBtn"
 import ButtonCta from "../components/buttonCta"
 import GlobalContact from "../components/globalContact"
 import IntroText from "../components/introText"
@@ -66,7 +65,10 @@ export const query = graphql`{
   }
   allDatoCmsAttorney {
     nodes {
+      id
+      slug
       name
+      location
       caseResult {
         title
         slug
@@ -74,6 +76,9 @@ export const query = graphql`{
       practiceArea {
         title
         slug
+      }
+      picture {
+        url
       }
     }
   }
@@ -139,7 +144,14 @@ const AboutPage = ({data}) => (
         <h2 className={aboutStyles.attorneysTitle}>
           {data.datoCmsAbout.attorneyTitle}
         </h2>
-        <AttorneyList />
+        {data.allDatoCmsAttorney.nodes.map(data => (
+          <AttorneyBtn
+            key={data.id}
+            url={data.slug}
+            location={data.location}
+            title={data.name}
+          />
+        ))}
       </div>
     </div>
 
@@ -195,7 +207,6 @@ const AboutPage = ({data}) => (
         </div>
       </div>
     </div>
-
     <GlobalContact />
   </Layout>
 )

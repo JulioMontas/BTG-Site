@@ -1,0 +1,13 @@
+.cta{
+  background: var(--primary-cta-color);
+  width: 100%;
+  border-radius: 10px;
+  padding: 2em 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 1em;
+  text-align: center;
+  margin-bottom: 1em;
+}

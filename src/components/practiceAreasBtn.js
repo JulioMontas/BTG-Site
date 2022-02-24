@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import * as practiceAreasBtnStyles from "./practiceAreasBtn.module.css"
 import { StaticImage } from "gatsby-plugin-image"
 
-const CaseResultBtn = (props) => {
+const PracticeAreasBtn = (props) => {
   return (
     <Link
       to={props.url}
@@ -21,4 +21,4 @@ const CaseResultBtn = (props) => {
   )
 }
 
-export default CaseResultBtn
+export default PracticeAreasBtn

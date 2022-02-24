@@ -7,7 +7,7 @@ const Avator = (props) => {
   return (
     <div className={avatorStyles.avator}>
     <StaticImage
-      src="../images/attorney-team-stephen.jpg"
+      // src="../images/attorney-team-stephen.jpg"
       alt="A dinosaur"
       placeholder="tracedSVG"
       layout="constrained"
