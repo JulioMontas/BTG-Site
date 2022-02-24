@@ -6,7 +6,7 @@ import * as attorneyBtnStyles from "./attorneyBtn.module.css"
 const AttorneyBtn = (props) => {
   return (
     <Link
-      to={'/attorneys/' + props.url}
+      to={'/attorney/' + props.url}
       className={attorneyBtnStyles.cta}
     >
       <Avator />
