@@ -5,7 +5,7 @@ import * as caseResultBtnStyles from "./caseResultBtn.module.css"
 const CaseResultBtn = (props) => {
   return (
     <Link
-      to={'/case-results/' + props.url}
+      to={'/case-result/' + props.url}
       className={caseResultBtnStyles.cta}
     >
       <p className={caseResultBtnStyles.description}>

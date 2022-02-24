@@ -10,10 +10,10 @@ const AttorneyBtn = (props) => {
       className={attorneyBtnStyles.cta}
     >
       <Avator />
-      <h3 className={attorneyBtnStyles.title}>
+      <h3>
         {props.title}
       </h3>
-      <p className={attorneyBtnStyles.location}>
+      <p>
         {props.location}
       </p>
     </Link>
