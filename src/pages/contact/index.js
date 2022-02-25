@@ -3,7 +3,6 @@ import { navigate } from "gatsby-link";
 import Layout from "../../components/layout";
 import Seo from "../../components/seo"
 import GlobalHero from "../../components/globalHero"
-import IntroText from "../../components/introText"
 
 function encode(data) {
   return Object.keys(data)
@@ -42,11 +41,7 @@ export default class Index extends React.Component {
         <Seo title="Contact" />
         <GlobalHero
           title= "Contact"
-          summary= "Summary text"
-        />
-        <IntroText
-          title= "Nullam odio magna, vestibulum ut consectetur."
-          summary= "Quis auctor augue rhoncus in. Duis tristique accumsan ante vel blandit. Aliquam ultricies mollis risus id fermentum. Molestie dui semper."
+          summary= "Etiam hendrerit ipsum at enim fermentum."
         />
         <div className="container">
           <div className="top-0 absolute w-full md:w-2/3">
