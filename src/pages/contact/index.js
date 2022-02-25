@@ -3,6 +3,7 @@ import { navigate } from "gatsby-link";
 import Layout from "../../components/layout";
 import Seo from "../../components/seo"
 import GlobalHero from "../../components/globalHero"
+import GlobalContact from "../../components/globalContact"
 
 function encode(data) {
   return Object.keys(data)
@@ -41,8 +42,12 @@ export default class Index extends React.Component {
         <Seo title="Contact" />
         <GlobalHero
           title= "Contact"
-          summary= "Etiam hendrerit ipsum at enim fermentum."
+          summary= "Etiam hendrerit ipsum fermentum."
         />
+        <div
+        style={{padding:`6rem 1rem 6rem`}}
+        >
+
         <div className="container">
           <div className="top-0 absolute w-full md:w-2/3">
 
@@ -120,6 +125,9 @@ export default class Index extends React.Component {
 
           </div>
         </div>
+
+        </div>
+        <GlobalContact />
       </Layout>
     );
   }

@@ -2,9 +2,10 @@ import * as React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Avator from "../components/avator"
-import ButtonCta from "../components/buttonCta"
 import GlobalContact from "../components/globalContact"
 import GlobalHero from "../components/globalHero"
+import CaseResultBtn from "../components/caseResultBtn"
+import PracticeAreasBtn from "../components/practiceAreasBtn"
 import { StructuredText } from "react-datocms";
 import * as Styles from "../styles/attorneySinglePage.module.css"
 
@@ -58,10 +59,12 @@ const AttorneyProfile = ({ pageContext: { node } }) => {
             Practice Area
           </h2>
           {node.practiceArea.map(data => (
-            <div>
-              <p>{data.title}</p>
-              <p>{data.slug}</p>
-            </div>
+            <PracticeAreasBtn
+              key={data.id}
+              url={data.slug}
+              description={data.description}
+              title={data.title}
+            />
           ))}
         </div>
       </div>
@@ -72,10 +75,12 @@ const AttorneyProfile = ({ pageContext: { node } }) => {
             Case Result
           </h2>
           {node.caseResult.map(data => (
-            <div>
-              <p>{data.title}</p>
-              <p>{data.subtitle}</p>
-            </div>
+            <CaseResultBtn
+              key={data.id}
+              url={data.slug}
+              description={data.subtitle}
+              title={data.title}
+            />
           ))}
         </div>
       </div>

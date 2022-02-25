@@ -11,96 +11,6 @@ import * as aboutStyles from "../styles/about.module.css"
 import { graphql } from 'gatsby'
 import { StructuredText } from "react-datocms";
 
-export const query = graphql`{
-  datoCmsAbout {
-    id
-    title
-    description
-    gradientTColor {
-      alpha
-      rgb
-    }
-    gradientBColor {
-      alpha
-      rgb
-    }
-    topicTitle
-    topicDescription
-    topicBgColor {
-      hex
-    }
-    topicTColor {
-      hex
-    }
-    attorneyTitle
-    attorneyBdColor {
-      hex
-    }
-    attorneyTColor {
-      hex
-    }
-    historyContent {
-      value
-    }
-    historyBgColor {
-      hex
-    }
-    historyTColor {
-      hex
-    }
-    caseResultTitle
-    caseResultBgColor {
-      hex
-    }
-    caseResultTColor {
-      hex
-    }
-    testimonialTitle
-    testimonialBdColor {
-      hex
-    }
-    testimonialTColor {
-      hex
-    }
-  }
-  allDatoCmsAttorney {
-    nodes {
-      id
-      slug
-      name
-      location
-      caseResult {
-        title
-        slug
-      }
-      practiceArea {
-        title
-        slug
-      }
-      picture {
-        url
-      }
-    }
-  }
-  allDatoCmsCaseResult {
-    nodes {
-      id
-      title
-      subtitle
-      slug
-    }
-  }
-  allDatoCmsTestimonial {
-    nodes {
-      content {
-        content {
-          value
-        }
-      }
-    }
-  }
-}`
-
 const AboutPage = ({data}) => (
   <Layout>
     <Seo title="The Firm" />
@@ -210,5 +120,95 @@ const AboutPage = ({data}) => (
     <GlobalContact />
   </Layout>
 )
+
+export const query = graphql`{
+  datoCmsAbout {
+    id
+    title
+    description
+    gradientTColor {
+      alpha
+      rgb
+    }
+    gradientBColor {
+      alpha
+      rgb
+    }
+    topicTitle
+    topicDescription
+    topicBgColor {
+      hex
+    }
+    topicTColor {
+      hex
+    }
+    attorneyTitle
+    attorneyBdColor {
+      hex
+    }
+    attorneyTColor {
+      hex
+    }
+    historyContent {
+      value
+    }
+    historyBgColor {
+      hex
+    }
+    historyTColor {
+      hex
+    }
+    caseResultTitle
+    caseResultBgColor {
+      hex
+    }
+    caseResultTColor {
+      hex
+    }
+    testimonialTitle
+    testimonialBdColor {
+      hex
+    }
+    testimonialTColor {
+      hex
+    }
+  }
+  allDatoCmsAttorney {
+    nodes {
+      id
+      slug
+      name
+      location
+      caseResult {
+        title
+        slug
+      }
+      practiceArea {
+        title
+        slug
+      }
+      picture {
+        url
+      }
+    }
+  }
+  allDatoCmsCaseResult {
+    nodes {
+      id
+      title
+      subtitle
+      slug
+    }
+  }
+  allDatoCmsTestimonial {
+    nodes {
+      content {
+        content {
+          value
+        }
+      }
+    }
+  }
+}`
 
 export default AboutPage

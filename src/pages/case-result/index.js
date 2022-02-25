@@ -1,47 +1,33 @@
 import * as React from "react"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
+import CaseResultBtn from "../../components/caseResultBtn"
 import GlobalHero from "../../components/globalHero"
 import GlobalContact from "../../components/globalContact"
 import * as praticeAreasStyles from "../../components/praticeAreasList.module.css"
 import { graphql } from 'gatsby'
-import { Link } from "gatsby"
 
-const theme = {
-  colorsBG: {
-    primary: `#1d3851`,
-    secondary: `#FFF`,
-    test: `green`,
-  },
-  colorsText: {
-    primary: `#333`,
-    secondary: `#FFF`,
-  },
-}
-
-const BlogPage = ({data}) => (
+const CaseResultsPage = ({data}) => (
   <Layout>
-    <Seo title="Blog" />
+    <Seo title="Case Results" />
     <GlobalHero
-      title= "Blog"
-      summary= "Etiam hendrerit ipsum at enim fermentum."
+      title= "Case Results"
+      summary= "Et molestie dui semper. quis auctor augue rhoncus in. Duis tristique accumsan."
     />
-    <div style={{background: theme.colorsBG.secondary}}>
+    <div>
     <div className="container">
       <div
         className={praticeAreasStyles.wrapper}
         style={{padding:`6rem 1rem 6rem`}}
       >
-      {data.allDatoCmsPost.nodes.map(data => (
-        <Link
-          to={'/blog/' + data.slug}
-          style={{color: theme.colorsText.primary}}
-        >
-          <h3>
-            {data.title}
-          </h3>
-        </Link>
-      ))}
+        {data.allDatoCmsCaseResult.nodes.map(data => (
+          <CaseResultBtn
+            key={data.id}
+            url={data.slug}
+            description={data.subtitle}
+            title={data.title}
+          />
+        ))}
       </div>
     </div>
     </div>
@@ -50,15 +36,15 @@ const BlogPage = ({data}) => (
 )
 
 export const query = graphql`{
-    allDatoCmsPost {
+    allDatoCmsCaseResult {
       nodes {
         id
         slug
         title
-        excerpt
+        subtitle
       }
     }
   }
 `
 
-export default BlogPage
+export default CaseResultsPage

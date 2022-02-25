@@ -59,6 +59,25 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
+  const queryBlogPost = await graphql(`
+    {
+      allDatoCmsPost {
+        nodes {
+          id
+          slug
+          title
+          excerpt
+          content {
+            value
+            blocks {
+              id
+            }
+          }
+        }
+      }
+    }
+  `)
+
   queryCaseResult.data.allDatoCmsCaseResult.nodes.forEach(node => {
     createPage({
       path: `/case-result/${node.slug}`,
@@ -77,6 +96,13 @@ exports.createPages = async ({ graphql, actions }) => {
     createPage({
       path: `/practice-area/${node.slug}`,
       component: require.resolve(`./src/templates/pratice-area-post.js`),
+      context: { node },
+    })
+  })
+  queryBlogPost.data.allDatoCmsPost.nodes.forEach(node => {
+    createPage({
+      path: `/blog/${node.slug}`,
+      component: require.resolve(`./src/templates/post.js`),
       context: { node },
     })
   })

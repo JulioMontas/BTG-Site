@@ -51,8 +51,8 @@ const Header = ({ siteTitle }) => (
 
         <ul className="hidden lg:block">
           <li><Link to="/about">The Firm</Link></li>
-          <li><Link to="/case-results">Case Results</Link></li>
-          <li><Link to="/practice-areas">Practice Areas</Link></li>
+          <li><Link to="/case-result">Case Results</Link></li>
+          <li><Link to="/practice-area">Practice Areas</Link></li>
           <li><Link to="/blog">Blog</Link></li>
           <li><Link to="/contact">Contact</Link></li>
         </ul>

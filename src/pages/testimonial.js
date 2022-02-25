@@ -6,6 +6,27 @@ import { graphql } from 'gatsby'
 import { HelmetDatoCms } from 'gatsby-source-datocms'
 import { StructuredText } from "react-datocms";
 
+const TestimonialPage = ({ data: {site, siteTag, allTestimonials} }) => (
+  <Layout>
+    <HelmetDatoCms seo={siteTag.seoMetaTags} />
+    <GlobalHero
+      title={allTestimonials.title}
+      summary={allTestimonials.description}
+    />
+    <div style={{ }}>
+      <div className="container">
+        {allTestimonials.content.map(data => (
+          <div>
+            <small>{data.date}</small>
+            <StructuredText data={data.content} />
+          </div>
+        ))}
+      </div>
+    </div>
+    <GlobalContact />
+  </Layout>
+)
+
 export const query = graphql`{
   site: datoCmsFaviconMetaTags {
     tags
@@ -31,27 +52,5 @@ export const query = graphql`{
   }
 }
 `
-
-const TestimonialPage = ({ data: {site, siteTag, allTestimonials} }) => (
-  <Layout>
-    <HelmetDatoCms seo={siteTag.seoMetaTags} />
-    <GlobalHero
-      title={allTestimonials.title}
-      summary={allTestimonials.description}
-    />
-    <div style={{ }}>
-      <div className="container">
-        {allTestimonials.content.map(data => (
-          <div>
-            <small>{data.date}</small>
-            <StructuredText data={data.content} />
-          </div>
-        ))}
-
-      </div>
-    </div>
-    <GlobalContact />
-  </Layout>
-)
 
 export default TestimonialPage

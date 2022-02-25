@@ -6,7 +6,7 @@ import { StaticImage } from "gatsby-plugin-image"
 const PracticeAreasBtn = (props) => {
   return (
     <Link
-      to={props.url}
+      to={'/practice-area/' + props.url}
       className={practiceAreasBtnStyles.cta}
     >
       <div className={practiceAreasBtnStyles.wrapper}>
