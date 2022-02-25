@@ -13,7 +13,6 @@
   --summary-lg-fontSize: 1.25em;
   --summary-lg-lineHeight: 200%;
 
-
   --container-padding-desktop: 12rem 0rem 11rem;
   --container-padding-mobile: 4rem 1rem 5rem;
 
@@ -213,7 +212,7 @@ p {
   font-size: var(--summary-lg-fontSize);
   line-height: var(--summary-lg-lineHeight);
   font-weight: normal;
-  letter-spacing: 0.04em
+  letter-spacing: 0.04em;
 }
 h1{
   font-size: 2.25rem;

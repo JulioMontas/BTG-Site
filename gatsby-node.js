@@ -8,6 +8,9 @@ exports.createPages = async ({ graphql, actions }) => {
           slug
           title
           subtitle
+          content {
+            value
+          }
         }
       }
     }
@@ -48,6 +51,10 @@ exports.createPages = async ({ graphql, actions }) => {
           id
           slug
           title
+          subtitle
+          content {
+            value
+          }
         }
       }
     }
