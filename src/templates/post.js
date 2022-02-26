@@ -4,6 +4,7 @@ import Seo from "../components/seo"
 import GlobalHero from "../components/globalHero"
 import GlobalContact from "../components/globalContact"
 import { StructuredText } from "react-datocms"
+import * as caseResultsArticleStyles from "../styles/caseResultsArticle.module.css"
 
 const theme = {
   colorsBG: {
@@ -29,9 +30,9 @@ const BlogPost = ({ pageContext: { node } }) => (
       color: theme.colorsText.primary,
     }}>
       <div className="container">
-        <div>
+        <article className={caseResultsArticleStyles.intro}>
           <StructuredText data={node.content}/>
-        </div>
+        </article>
       </div>
     </div>
 

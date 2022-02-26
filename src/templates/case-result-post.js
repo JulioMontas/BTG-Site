@@ -20,7 +20,8 @@ const theme = {
 const CaseResult = ({ pageContext: { node } }) => {
   return(
     <Layout>
-      <Seo title="CaseResult" />
+      <Seo title={node.title} />
+
       <GlobalHero
         title={node.title}
         summary={node.subtitle}
@@ -35,6 +36,7 @@ const CaseResult = ({ pageContext: { node } }) => {
           </div>
         </div>
       </div>
+
       <GlobalContact />
     </Layout>
   )

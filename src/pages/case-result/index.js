@@ -4,7 +4,6 @@ import Seo from "../../components/seo"
 import CaseResultBtn from "../../components/caseResultBtn"
 import GlobalHero from "../../components/globalHero"
 import GlobalContact from "../../components/globalContact"
-import * as praticeAreasStyles from "../../components/praticeAreasList.module.css"
 import { graphql } from 'gatsby'
 
 const CaseResultsPage = ({data}) => (
@@ -17,7 +16,7 @@ const CaseResultsPage = ({data}) => (
     <div>
     <div className="container">
       <div
-        className={praticeAreasStyles.wrapper}
+        className="gridLayout"
         style={{padding:`6rem 1rem 6rem`}}
       >
         {data.allDatoCmsCaseResult.nodes.map(data => (

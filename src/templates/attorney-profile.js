@@ -58,6 +58,7 @@ const AttorneyProfile = ({ pageContext: { node } }) => {
           <h2 className={Styles.title}>
             Practice Area
           </h2>
+          <div className="gridLayout">
           {node.practiceArea.map(data => (
             <PracticeAreasBtn
               key={data.id}
@@ -66,6 +67,7 @@ const AttorneyProfile = ({ pageContext: { node } }) => {
               title={data.title}
             />
           ))}
+          </div>
         </div>
       </div>
 
@@ -74,6 +76,7 @@ const AttorneyProfile = ({ pageContext: { node } }) => {
           <h2 className={Styles.title}>
             Case Result
           </h2>
+          <div className="gridLayout">
           {node.caseResult.map(data => (
             <CaseResultBtn
               key={data.id}
@@ -82,8 +85,10 @@ const AttorneyProfile = ({ pageContext: { node } }) => {
               title={data.title}
             />
           ))}
+          </div>
         </div>
       </div>
+      <pre>{JSON.stringify(node, null, 4)}</pre>
       <GlobalContact />
 
     </Layout>

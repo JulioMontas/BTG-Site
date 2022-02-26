@@ -44,60 +44,49 @@ const AboutPage = ({data}) => (
       </div>
     </div>
 
-    <div
-      className={aboutStyles.attorneys}
-      style={{
-        background: data.datoCmsAbout.attorneyBdColor.hex,
-        color: data.datoCmsAbout.attorneyTColor.hex
-    }}>
+    <div className={aboutStyles.attorneys} style={{ background: data.datoCmsAbout.attorneyBdColor.hex, color: data.datoCmsAbout.attorneyTColor.hex}}>
       <div className="container">
         <h2 className={aboutStyles.attorneysTitle}>
           {data.datoCmsAbout.attorneyTitle}
         </h2>
-        {data.allDatoCmsAttorney.nodes.map(data => (
-          <AttorneyBtn
-            key={data.id}
-            url={data.slug}
-            location={data.location}
-            title={data.name}
-          />
-        ))}
+
+        <div className="gridLayout">
+          {data.allDatoCmsAttorney.nodes.map(data => (
+            <AttorneyBtn
+              key={data.id}
+              url={data.slug}
+              location={data.location}
+              title={data.name}
+            />
+          ))}
+        </div>
+
       </div>
     </div>
 
-    <div
-      className={aboutStyles.secondIntro}
-      style={{
-        background: data.datoCmsAbout.historyBgColor.hex,
-        color: data.datoCmsAbout.historyTColor.hex
-      }}>
+    <div className={aboutStyles.secondIntro} style={{ background: data.datoCmsAbout.historyBgColor.hex, color: data.datoCmsAbout.historyTColor.hex}}>
       <div className="container">
-        <p>
-          <StructuredText data={data.datoCmsAbout.historyContent} />
-        </p>
+        <StructuredText data={data.datoCmsAbout.historyContent} />
       </div>
     </div>
 
-    <div
-      className={aboutStyles.caseResultsList}
-      style={{
-        background: data.datoCmsAbout.caseResultBgColor.hex,
-        color: data.datoCmsAbout.caseResultTColor.hex
-    }}>
+    <div className={aboutStyles.caseResultsList} style={{ background: data.datoCmsAbout.caseResultBgColor.hex, color: data.datoCmsAbout.caseResultTColor.hex}}>
       <div className="container">
         <h2 className={aboutStyles.attorneysTitle}>
           {data.datoCmsAbout.caseResultTitle}
         </h2>
-        {data.allDatoCmsCaseResult.nodes.map(data => (
-          <CaseResultBtn
-            key={data.id}
-            url={data.slug}
-            description={data.subtitle}
-            title={data.title}
-          />
-        ))}
+        <div className="gridLayout">
+          {data.allDatoCmsCaseResult.nodes.map(data => (
+            <CaseResultBtn
+              url={data.slug}
+              description={data.subtitle}
+              title={data.title}
+            />
+          ))}
+         </div>
       </div>
     </div>
+
 
     <div
       className={aboutStyles.testimonial}

@@ -4,7 +4,6 @@ import Seo from "../../components/seo"
 import PracticeAreasBtn from "../../components/practiceAreasBtn"
 import GlobalHero from "../../components/globalHero"
 import GlobalContact from "../../components/globalContact"
-import * as praticeAreasStyles from "../../components/praticeAreasList.module.css"
 import { graphql } from 'gatsby'
 
 const PraticeAreasPage = ({ data }) => (
@@ -15,10 +14,7 @@ const PraticeAreasPage = ({ data }) => (
       summary= "Ipsum at enim fermentum, et molestie dui semper. Quis auctor augue rhoncus in."
     />
     <div className="container">
-      <div
-        className={praticeAreasStyles.wrapper}
-        style={{padding:`6rem 1rem 6rem`}}
-      >
+      <div className="gridLayout" style={{padding:`6rem 1rem 6rem`}}>
         {data.allDatoCmsPracticeArea.nodes.map(data => (
           <PracticeAreasBtn
             key={data.id}

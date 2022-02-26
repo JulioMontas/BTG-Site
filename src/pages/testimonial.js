@@ -5,6 +5,19 @@ import GlobalContact from "../components/globalContact"
 import { graphql } from 'gatsby'
 import { HelmetDatoCms } from 'gatsby-source-datocms'
 import { StructuredText } from "react-datocms";
+import * as stylesTestimonial from "../styles/caseResultsArticle.module.css"
+import { GatsbyImage } from 'gatsby-plugin-image';
+
+const theme = {
+  colorsBG: {
+    primary: `#1d3851`,
+    secondary: `#FFF`,
+  },
+  colorsText: {
+    primary: `#333`,
+    secondary: `#FFF`,
+  },
+}
 
 const TestimonialPage = ({ data: {site, siteTag, allTestimonials} }) => (
   <Layout>
@@ -13,14 +26,24 @@ const TestimonialPage = ({ data: {site, siteTag, allTestimonials} }) => (
       title={allTestimonials.title}
       summary={allTestimonials.description}
     />
-    <div style={{ }}>
+    <div style={{ background: theme.colorsBG.secondary, color: theme.colorsText.primary }}>
       <div className="container">
-        {allTestimonials.content.map(data => (
-          <div>
-            <small>{data.date}</small>
-            <StructuredText data={data.content} />
-          </div>
-        ))}
+        <div className={stylesTestimonial.quote}>
+          {allTestimonials.content.map(data => (
+            <div>
+              <GatsbyImage image={data.photo.gatsbyImageData} />
+              <StructuredText data={data.content} />
+              <small>{data.date}</small>
+                {data.socialMediaUrl.map(data => (
+                  <p>
+                    <a href={data.url}>
+                      {data.label}
+                    </a>
+                  </p>
+                ))}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
     <GlobalContact />
@@ -47,6 +70,15 @@ export const query = graphql`{
       socialMediaUrl {
         label
         url
+      }
+      photo {
+        gatsbyImageData(
+          width: 130
+          height: 130
+          placeholder: BLURRED
+          layout: FIXED
+          forceBlurhash: false
+        )
       }
     }
   }

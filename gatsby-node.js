@@ -1,19 +1,23 @@
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
-  const queryCaseResult = await graphql(`
-    {
-      allDatoCmsCaseResult {
-        nodes {
-          id
-          slug
-          title
-          subtitle
-          content {
-            value
-          }
+  const queryCaseResult = await graphql(`{
+    allDatoCmsCaseResult {
+      nodes {
+        id
+        slug
+        title
+        subtitle
+        content {
+          value
         }
       }
     }
+    siteTag: datoCmsCaseResult {
+      seoMetaTags {
+        tags
+      }
+    }
+  }
   `)
   const queryAttorney = await graphql(`
     {
@@ -77,7 +81,6 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
-
   queryCaseResult.data.allDatoCmsCaseResult.nodes.forEach(node => {
     createPage({
       path: `/case-result/${node.slug}`,

@@ -17,57 +17,22 @@
   display: grid;
   grid-template-columns: 1fr;
 }
-.summary{
-  font-size: 20px;
-  line-height: 160%;
+.intro p,
+.skills p{
+  font-size: var(--summary-lg-fontSize);
+  line-height: var(--summary-lg-lineHeight);
   margin-bottom: 1em;
 }
-.descriptio button{
-  color: var(--primary-cta-color);
-  font-weight: bold;
-  border: none;
-  background: none;
-  border-radius: 25px;
-  border: 1px solid var(--primary-cta-color);
-  padding: 1em 2em;
-}
-/* awards Section */
-.awards{
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: left;
-  row-gap: 3.438em;
-}
-.awards b{
-  display: block;
-  margin-bottom: 0.25em;
-}
-.awards li{
-  list-style: inside;
-}
-/* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { }
-/* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .descriptio{
     grid-template-columns: 1fr 3fr;
   }
-  .awards{
-    grid-template-columns: 1fr 1fr;
-  }
 }
-/* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   .descriptio{
     grid-template-columns: 1fr 4fr;
   }
-  .awards{
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: left;
-    row-gap: 3.438em;
-  }
 }
-/* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { }
-/* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) { }

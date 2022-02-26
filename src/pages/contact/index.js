@@ -3,7 +3,6 @@ import { navigate } from "gatsby-link";
 import Layout from "../../components/layout";
 import Seo from "../../components/seo"
 import GlobalHero from "../../components/globalHero"
-import GlobalContact from "../../components/globalContact"
 
 function encode(data) {
   return Object.keys(data)
@@ -127,7 +126,6 @@ export default class Index extends React.Component {
         </div>
 
         </div>
-        <GlobalContact />
       </Layout>
     );
   }

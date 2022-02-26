@@ -46,13 +46,9 @@
   line-height: var(--summary-lg-lineHeight);
   margin-bottom: 1em;
 }
-/* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { }
-/* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { }
-/* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  /* Hero Section */
   .homeHeroPhoto,
   .homeHeroBG::before{
     height: var(--size-hero-desktop);
@@ -61,7 +57,5 @@
     padding: 3.6rem 0rem 0rem;
   }
 }
-/* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { }
-/* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) { }
