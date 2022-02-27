@@ -1,7 +1,8 @@
 import * as React from "react"
+import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import { StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage } from 'gatsby-plugin-image'
 import CaseResultBtn from "../components/caseResultBtn"
 import AttorneyBtn from "../components/attorneyBtn"
 import ButtonCta from "../components/buttonCta"
@@ -10,24 +11,19 @@ import IntroText from "../components/introText"
 import * as aboutStyles from "../styles/about.module.css"
 import { graphql } from 'gatsby'
 import { StructuredText } from "react-datocms";
+import { HelmetDatoCms } from 'gatsby-source-datocms'
 
 const AboutPage = ({data}) => (
   <Layout>
-    <Seo title="The Firm" />
+    <HelmetDatoCms seo={data.siteTag.seoMetaTags} />
     <div className={aboutStyles.heroBG}>
-      <StaticImage
-        src="../images/the-team.jpg"
-        alt="hero background"
-        placeholder="blurred"
-        layout="fullWidth"
-        className={aboutStyles.heroPhoto}
-      />
-        <div className="container">
-          <div className={aboutStyles.wrapper}>
-            <h2 className="globalHero__text--title">{data.datoCmsAbout.title}</h2>
-            <p className="globalHero__text--summary">{data.datoCmsAbout.description}</p>
-          </div>
+      <GatsbyImage image={data.datoCmsAbout.coverImage.gatsbyImageData} className={aboutStyles.heroPhoto} />
+      <div className="container">
+        <div className={aboutStyles.wrapper}>
+          <h2 className="globalHero__text--title">{data.datoCmsAbout.title}</h2>
+          <p className="globalHero__text--summary">{data.datoCmsAbout.description}</p>
         </div>
+      </div>
     </div>
 
     <div
@@ -49,18 +45,24 @@ const AboutPage = ({data}) => (
         <h2 className={aboutStyles.attorneysTitle}>
           {data.datoCmsAbout.attorneyTitle}
         </h2>
-
         <div className="gridLayout">
           {data.allDatoCmsAttorney.nodes.map(data => (
-            <AttorneyBtn
-              key={data.id}
-              url={data.slug}
-              location={data.location}
-              title={data.name}
-            />
+            <div className={aboutStyles.attorneyCta}>
+            <Link to={'/attorney/' + data.slug}>
+              <div>
+                <GatsbyImage image={data.picture.gatsbyImageData} className={aboutStyles.attorneyCoverImage} />
+                <p className={aboutStyles.attorneyDescription}>{data.location}</p>
+                <h3 className={aboutStyles.attorneyTitle}>{data.name}</h3>
+                <ul className={aboutStyles.attorneyTag}>
+                  {data.practiceArea.map(data => (
+                    <li>{data.title}</li>
+                  ))}
+                </ul>
+              </div>
+            </Link>
+            </div>
           ))}
         </div>
-
       </div>
     </div>
 
@@ -87,22 +89,19 @@ const AboutPage = ({data}) => (
       </div>
     </div>
 
-
-    <div
-      className={aboutStyles.testimonial}
-      style={{
-        background: data.datoCmsAbout.testimonialBdColor.hex,
-        color: data.datoCmsAbout.testimonialTColor.hex
-    }}>
+    <div className={aboutStyles.testimonial} style={{ background: data.datoCmsAbout.testimonialBdColor.hex, color: data.datoCmsAbout.testimonialTColor.hex}}>
       <div className="container">
         <h2 className={aboutStyles.testimonialTitle}>
           {data.datoCmsAbout.testimonialTitle}
         </h2>
-        <div className="cta">
-          <ButtonCta
-            url="/testimonial"
-            title={"Testimonial"}
-          />
+        <div>
+        {data.allDatoCmsTestimonial.nodes.map(data => (
+          <div>
+            {data.content.map(data => (
+              <StructuredText data={data.content} />
+            ))}
+          </div>
+        ))}
         </div>
       </div>
     </div>
@@ -111,10 +110,18 @@ const AboutPage = ({data}) => (
 )
 
 export const query = graphql`{
+  siteTag: datoCmsAbout {
+    seoMetaTags {
+      tags
+    }
+  }
   datoCmsAbout {
     id
     title
     description
+    coverImage {
+      gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+    }
     gradientTColor {
       alpha
       rgb
@@ -168,6 +175,14 @@ export const query = graphql`{
       slug
       name
       location
+      picture {
+        gatsbyImageData(
+          width: 100,
+          height: 100,
+          placeholder: BLURRED,
+          layout: FIXED
+        )
+      }
       caseResult {
         title
         slug
@@ -175,9 +190,6 @@ export const query = graphql`{
       practiceArea {
         title
         slug
-      }
-      picture {
-        url
       }
     }
   }
@@ -194,6 +206,14 @@ export const query = graphql`{
       content {
         content {
           value
+        }
+        socialMediaUrl {
+          label
+          url
+        }
+        date
+        photo {
+          gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
         }
       }
     }

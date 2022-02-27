@@ -6,22 +6,25 @@ import GlobalHero from "../../components/globalHero"
 import GlobalContact from "../../components/globalContact"
 import { graphql } from 'gatsby'
 
-const PraticeAreasPage = ({ data }) => (
+
+const PraticeAreasPage = ({ data: { allData } }) => (
   <Layout>
-    <Seo title="Pratice Areas" />
+    <Seo title="Pratice Area" />
     <GlobalHero
-      title= "Pratice Areas"
-      summary= "Ipsum at enim fermentum, et molestie dui semper. Quis auctor augue rhoncus in."
+      title="Pratice Area"
+      summary="Ipsum at enim fermentum, et molestie dui semper. Quis auctor augue rhoncus in."
     />
     <div className="container">
       <div className="gridLayout" style={{padding:`6rem 1rem 6rem`}}>
-        {data.allDatoCmsPracticeArea.nodes.map(data => (
+        {allData.nodes.map(data => (
+          <div>
           <PracticeAreasBtn
-            key={data.id}
             url={data.slug}
             description={data.description}
             title={data.title}
+            image={data.coverImage.gatsbyImageData}
           />
+          </div>
         ))}
       </div>
     </div>
@@ -30,15 +33,24 @@ const PraticeAreasPage = ({ data }) => (
 )
 
 export const query = graphql`{
-    allDatoCmsPracticeArea {
-      nodes {
-        id
-        slug
-        title
-        subtitle
+  allData: allDatoCmsPracticeArea {
+    nodes {
+      id
+      slug
+      title
+      subtitle
+      coverImage {
+        gatsbyImageData(
+          width: 300
+          height: 250
+          layout: CONSTRAINED
+          forceBlurhash: false
+          placeholder: BLURRED
+        )
       }
     }
   }
+}
 `
 
 export default PraticeAreasPage

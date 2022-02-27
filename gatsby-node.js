@@ -12,11 +12,6 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       }
     }
-    siteTag: datoCmsCaseResult {
-      seoMetaTags {
-        tags
-      }
-    }
   }
   `)
   const queryAttorney = await graphql(`
@@ -37,12 +32,23 @@ exports.createPages = async ({ graphql, actions }) => {
             slug
             title
             subtitle
+            coverImage {
+              gatsbyImageData(width: 300, height: 300, placeholder: BLURRED, layout: FIXED)
+            }
           }
           content {
             value
           }
           achievement {
             value
+          }
+          picture {
+            gatsbyImageData(
+              width: 200,
+              height: 200,
+              placeholder: BLURRED,
+              layout: FIXED
+            )
           }
         }
       }
@@ -58,6 +64,15 @@ exports.createPages = async ({ graphql, actions }) => {
           subtitle
           content {
             value
+          }
+          coverImage {
+            gatsbyImageData(
+              placeholder: BLURRED
+              width: 300
+              height: 300
+              forceBlurhash: false
+              layout: CONSTRAINED
+            )
           }
         }
       }

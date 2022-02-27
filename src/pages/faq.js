@@ -4,6 +4,7 @@ import GlobalHero from "../components/globalHero"
 import GlobalContact from "../components/globalContact"
 import { graphql } from 'gatsby'
 import { HelmetDatoCms } from 'gatsby-source-datocms'
+import * as stylesConsultation from "../styles/caseResultsArticle.module.css"
 
 const FAQPage = ({ data: {site, siteTag, allFaqs} }) => (
   <Layout>
@@ -15,14 +16,22 @@ const FAQPage = ({ data: {site, siteTag, allFaqs} }) => (
     <div
       style={{
         background: allFaqs.backgroundColor.hex,
-        color: allFaqs.textColor.hex
+        color: allFaqs.textColor.hex,
+        padding:`5rem 1em 5rem`,
       }}
     >
       <div className="container">
         {allFaqs.content.map(data => (
-          <div>
-            <p><b>{data.title}?</b></p>
-            <p>{data.content}</p>
+          <div
+            style={{
+              border:`1px solid #f3f4f6`,
+              padding:`1em`,
+              borderRadius:`10px`,
+              marginBottom:`1.4em`,
+            }}
+          >
+            <h2 style={{color:`rgb(29, 56, 81)`, fontSize:`1.25em`}}><b>{data.title}?</b></h2>
+            <p style={{color:`rgb(61, 88, 107)`, fontSize:`1.125em`}}>{data.content}</p>
           </div>
         ))}
       </div>

@@ -23,7 +23,6 @@ const theme = {
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
-
     <div className={homeStyles.homeHeroBG}>
       <StaticImage
         src="../images/hero-bg.jpg"

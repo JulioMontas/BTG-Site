@@ -8,6 +8,7 @@ import CaseResultBtn from "../components/caseResultBtn"
 import PracticeAreasBtn from "../components/practiceAreasBtn"
 import { StructuredText } from "react-datocms";
 import * as Styles from "../styles/attorneySinglePage.module.css"
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 const theme = {
   colorsBG: {
@@ -22,7 +23,6 @@ const theme = {
 }
 
 const AttorneyProfile = ({ pageContext: { node } }) => {
-  console.log(node);
   return (
     <Layout>
       <Seo title="Attorney Profile" />
@@ -33,8 +33,8 @@ const AttorneyProfile = ({ pageContext: { node } }) => {
 
       <div className={Styles.intro} style={{background: theme.colorsBG.secondary, color: theme.colorsText.primary}}>
         <div className="container">
-          <div className={Styles.descriptio}>
-            <Avator />
+          <div className={Styles.description}>
+            <GatsbyImage image={node.picture.gatsbyImageData}/>
             <div>
               <StructuredText data={node.content} />
             </div>
@@ -53,7 +53,7 @@ const AttorneyProfile = ({ pageContext: { node } }) => {
         </div>
       </div>
 
-      <div className={Styles.attorneys}>
+      <div className={Styles.skills} style={{background: theme.colorsBG.secondary, color: theme.colorsText.primary}}>
         <div className="container">
           <h2 className={Styles.title}>
             Practice Area
@@ -61,7 +61,6 @@ const AttorneyProfile = ({ pageContext: { node } }) => {
           <div className="gridLayout">
           {node.practiceArea.map(data => (
             <PracticeAreasBtn
-              key={data.id}
               url={data.slug}
               description={data.description}
               title={data.title}
@@ -78,19 +77,18 @@ const AttorneyProfile = ({ pageContext: { node } }) => {
           </h2>
           <div className="gridLayout">
           {node.caseResult.map(data => (
+            <div>
             <CaseResultBtn
-              key={data.id}
               url={data.slug}
               description={data.subtitle}
               title={data.title}
             />
+            </div>
           ))}
           </div>
         </div>
       </div>
-      <pre>{JSON.stringify(node, null, 4)}</pre>
       <GlobalContact />
-
     </Layout>
   )
 }
