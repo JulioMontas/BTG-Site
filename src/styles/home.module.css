@@ -113,6 +113,15 @@ https://fireship.io/lessons/wavy-backgrounds/
   height: 30px;
   fill: #1d3851;
 }
+.heroPhoto{
+  border-radius: 100%;
+  transform: scale(0.9);
+  transition: 0.3s;
+}
+.heroPhoto:hover{
+  transform: scale(1.1);
+}
+
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { }
 /* Medium devices (tablets, 768px and up) */

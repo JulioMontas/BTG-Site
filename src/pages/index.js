@@ -5,8 +5,14 @@ import { StaticImage } from "gatsby-plugin-image"
 import ButtonCta from "../components/buttonCta"
 import CaseResultList from "../components/caseResultList"
 import PraticeAreasList from "../components/praticeAreasList"
+import PracticeAreasBtn from "../components/practiceAreasBtn"
+import CaseResultBtn from "../components/caseResultBtn"
 import Avator from "../components/avator";
 import * as homeStyles from "../styles/home.module.css"
+import { graphql } from 'gatsby'
+import { GatsbyImage } from 'gatsby-plugin-image'
+import { Link } from "gatsby"
+import GlobalContact from "../components/globalContact"
 
 const theme = {
   colorsBG: {
@@ -20,69 +26,78 @@ const theme = {
   },
 }
 
-const IndexPage = () => (
+const IndexPage = ({ data: {siteColor, siteData, allCaseResult, allAttorney, allPracticeArea, allBlogPost} }) => (
   <Layout>
-    <Seo title="Home" />
+    <Seo title="BTG Homepage" />
     <div className={homeStyles.homeHeroBG}>
-      <StaticImage
-        src="../images/hero-bg.jpg"
-        alt="hero background"
-        placeholder="blurred"
-        layout="fullWidth"
-        className={homeStyles.homeHeroPhoto}
-      />
+      <GatsbyImage image={siteData.coverImage.gatsbyImageData} className={homeStyles.homeHeroPhoto} />
       <div className="container">
         <div className={homeStyles.homeWrapper}>
-          <h2 className={homeStyles.homeHeroTitle}>Securing The Results Our Clients Deserve</h2>
-          <p className={homeStyles.homeHeroDescription}>Our goal is to secure the compensation you need to help rebuild your life.</p>
+          <h2 className={homeStyles.homeHeroTitle}>{siteData.title}</h2>
+          <p className={homeStyles.homeHeroDescription}>{siteData.description}</p>
           <div className={homeStyles.homeHeroCTA}>
-            <ButtonCta
-              url="/contact/consultation/"
-              title={"Free Consultation"}
-            />
+            {siteData.ctaIntro.map(data => (
+              <div>
+                <ButtonCta
+                  url={data.url}
+                  title={data.label}
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>
     </div>
 
-    <div className={homeStyles.caseResultList} style={{background: theme.colorsBG.primary, }}>
+    <div className={homeStyles.caseResultList} style={{background: siteData.caseResultBgColor.hex, color: siteData.caseResultTextColor.hex }}>
       <div className="container">
-        <p className={homeStyles.featureSummary}>A serious injury can easily derail a person’s life. We know how to fight for our clients and win.</p>
-        <CaseResultList />
+        <p className={homeStyles.featureSummary}>{siteData.caseResultDescription}</p>
+        <div className="gridLayout">
+          {allCaseResult.nodes.map(data => (
+            <CaseResultBtn
+              url={data.slug}
+              description={data.subtitle}
+              title={data.title}
+            />
+          ))}
+        </div>
       </div>
     </div>
 
-    <div className={homeStyles.homeTheFirmBG} style={{background: theme.colorsBG.secondary, color: theme.colorsText.primary, }}>
+    <div className={homeStyles.homeTheFirmBG} style={{background: siteData.aboutBgColor.hex, color: siteData.aboutTextColor.hex }}>
       <div className="container">
         <div className={homeStyles.twoColumnsGrid}>
           <div className={homeStyles.avatorList}>
-            <Avator />
-            <Avator />
-            <Avator />
-            <Avator />
-            <Avator />
+            {allAttorney.nodes.map(data => (
+              <div>
+              <Link to={'/attorney/' + data.slug}>
+                <GatsbyImage image={data.picture.gatsbyImageData} className={homeStyles.heroPhoto}/>
+              </Link>
+              </div>
+            ))}
           </div>
           <div className={homeStyles.avatorSummary}>
-            <h2 className={homeStyles.avatorTitle}>Trial Lawyer Committed to Serving the Injured</h2>
-            <p>Our firm is dedicated to creating the positive results people need after they have been hurt in serious accidents. We know that most people simply want to recover the life they had before an accident. We have the experience and skill necessary to secure the full compensation people will need to be able to overcome the obstacles that stand in their way. </p>
+            <h2 className={homeStyles.avatorTitle}>{siteData.aboutTitle}</h2>
+            <p>{siteData.aboutSummary}</p>
             <div className="cta">
-              <ButtonCta
-                url="/about"
-                title={"The Firm"}
-              />
+              {siteData.ctaAbout.map(data => (
+                <div>
+                  <ButtonCta
+                    url={data.url}
+                    title={data.label}
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div className={homeStyles.homeTestimonial}>
+    <div className={homeStyles.homeTestimonial} style={{background: siteData.testimonialBdColor.hex, color: siteData.testimonialTextColor.hex }}>
       <div className="container">
       <div className="wrapper">
-      <h2 className={homeStyles.testimonialTitle}>Testimonial</h2>
-        <div className="image">
-
-        </div>
+      <h2 className={homeStyles.testimonialTitle}>{siteData.testimonialTitle}</h2>
         <div className="cta">
           <ButtonCta
             url="/testimonial"
@@ -93,18 +108,29 @@ const IndexPage = () => (
       </div>
     </div>
 
-    <div className={homeStyles.homePraticeAreasList} style={{background: theme.colorsBG.primary,}}>
+    <div className={homeStyles.homePraticeAreasList} style={{background: siteData.praticeAreaBdColor.hex, color: siteData.praticeAreaTextColor.hex }}>
       <div className="container">
-        <p className={homeStyles.featureSummary}>Personal injury representation that can help you secure the best possible outcome to your situation.</p>
-        <PraticeAreasList />
+        <p className={homeStyles.featureSummary}>{siteData.praticeAreaDescription}</p>
+        <div className="gridLayout">
+        {allPracticeArea.nodes.map(data => (
+          <div>
+            <PracticeAreasBtn
+              url={data.slug}
+              description={data.description}
+              title={data.title}
+              image={data.coverImage.gatsbyImageData}
+            />
+          </div>
+        ))}
+        </div>
       </div>
     </div>
 
-    <div className={homeStyles.homeBlogLatestPost} style={{ background: theme.colorsBG.secondary, color: theme.colorsText.primary, }}>
+    <div className={homeStyles.homeBlogLatestPost} style={{background: siteData.blogBdColor.hex, color: siteData.blogTextColor.hex }}>
       <div className="container">
       <div className={homeStyles.twoColumnsGrid}>
         <h2 className={homeStyles.blogTitle}>
-          Read our latest Article
+          {siteData.blogTitle}
         </h2>
         <div className={homeStyles.blogCTA}>
          <ButtonCta
@@ -116,31 +142,139 @@ const IndexPage = () => (
       </div>
     </div>
 
-    <div className={homeStyles.homeContact} style={{background: theme.colorsBG.primary, }}>
-      <div className="container">
-        <div className={homeStyles.twoColumnsGrid}>
-          <div>
-            <h2 className={homeStyles.contactTitle}>
-              BTG in Tampa serves clients in Clearwater, Hillsborough County, Pinellas County and throughout Central Florida.
-            </h2>
-          </div>
-          <div className={homeStyles.contactCTA}>
-            <ButtonCta
-              url="/contact"
-              title={"Contact Us"}
-            />
-          </div>
-        </div>
-
-        <div className={homeStyles.customWaveBottom}>
-          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" className="shape-fill"></path>
-          </svg>
-        </div>
-
-      </div>
-    </div>
+    <GlobalContact />
   </Layout>
 )
+
+export const query = graphql`
+  {
+    siteColor: datoCmsThemeColor {
+      primaryBgColor {
+        hex
+      }
+      secondaryBgColor {
+        hex
+      }
+      tertiaryBgColor {
+        hex
+      }
+      quaternaryBgColor {
+        hex
+      }
+      primaryTextColor {
+        hex
+      }
+      secondaryTextColor {
+        hex
+      }
+    }
+    siteData: datoCmsHomepage {
+      id
+      title
+      description
+      ctaIntro {
+        label
+        url
+      }
+      caseResultDescription
+      caseResultBgColor {
+        hex
+      }
+      caseResultTextColor {
+        hex
+      }
+      aboutTitle
+      aboutSummary
+      ctaAbout {
+        label
+        url
+      }
+      aboutBgColor {
+        hex
+      }
+      aboutTextColor {
+        hex
+      }
+      testimonialTitle
+      testimonialBdColor {
+        hex
+      }
+      testimonialTextColor {
+        hex
+      }
+      praticeAreaDescription
+      praticeAreaBdColor {
+        hex
+      }
+      praticeAreaTextColor {
+        hex
+      }
+      blogTitle
+      blogBdColor {
+        hex
+      }
+      blogTextColor {
+        hex
+      }
+      coverImage {
+        gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
+      }
+    }
+    allCaseResult: allDatoCmsCaseResult {
+      nodes {
+        title
+        subtitle
+        slug
+      }
+    }
+    allPracticeArea: allDatoCmsPracticeArea {
+      nodes {
+        title
+        slug
+        coverImage {
+          gatsbyImageData(
+            width: 300
+            height: 250
+            layout: CONSTRAINED
+            forceBlurhash: false
+            placeholder: BLURRED
+          )
+        }
+      }
+    }
+    allAttorney: allDatoCmsAttorney {
+      nodes {
+        name
+        slug
+        picture {
+          gatsbyImageData(width: 100, height: 100, placeholder: TRACED_SVG, layout: FIXED)
+        }
+      }
+    }
+    allTestimonial: allDatoCmsTestimonial(limit: 1) {
+      nodes {
+        content {
+          id
+          content {
+            value
+          }
+          photo {
+            gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
+          }
+        }
+      }
+    }
+    allBlogPost: allDatoCmsPost(limit: 4) {
+      nodes {
+        title
+        excerpt
+        slug
+        coverImage {
+          gatsbyImageData
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage
