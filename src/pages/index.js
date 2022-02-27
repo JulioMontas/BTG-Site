@@ -13,6 +13,7 @@ import { graphql } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import { Link } from "gatsby"
 import GlobalContact from "../components/globalContact"
+import { StructuredText } from "react-datocms"
 
 const theme = {
   colorsBG: {
@@ -26,7 +27,7 @@ const theme = {
   },
 }
 
-const IndexPage = ({ data: {siteColor, siteData, allCaseResult, allAttorney, allPracticeArea, allBlogPost} }) => (
+const IndexPage = ({ data: {siteColor, siteData, allCaseResult, allAttorney, allTestimonial, allPracticeArea, allBlogPost} }) => (
   <Layout>
     <Seo title="BTG Homepage" />
     <div className={homeStyles.homeHeroBG}>
@@ -99,6 +100,13 @@ const IndexPage = ({ data: {siteColor, siteData, allCaseResult, allAttorney, all
       <div className="wrapper">
       <h2 className={homeStyles.testimonialTitle}>{siteData.testimonialTitle}</h2>
         <div className="cta">
+          {allTestimonial.nodes.map(data => (
+            <div>
+              {data.content.map(data => (
+                <StructuredText data={data.content} />
+              ))}
+            </div>
+          ))}
           <ButtonCta
             url="/testimonial"
             title={"Testimonial"}
@@ -128,14 +136,21 @@ const IndexPage = ({ data: {siteColor, siteData, allCaseResult, allAttorney, all
 
     <div className={homeStyles.homeBlogLatestPost} style={{background: siteData.blogBdColor.hex, color: siteData.blogTextColor.hex }}>
       <div className="container">
-      <div className={homeStyles.twoColumnsGrid}>
+      <div>
         <h2 className={homeStyles.blogTitle}>
           {siteData.blogTitle}
         </h2>
+        {allBlogPost.nodes.map(data => (
+          <Link to={'/blog/' + data.slug}>
+            <h3 style={{ fontSize: `1.2em`, lineHeight: `160%`, color:`#1d3851` }}>
+              {data.title}
+            </h3>
+          </Link>
+        ))}
         <div className={homeStyles.blogCTA}>
          <ButtonCta
             url="/blog"
-            title={"Blog"}
+            title={"Read More Article"}
           />
         </div>
         </div>

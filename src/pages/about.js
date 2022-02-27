@@ -10,7 +10,7 @@ import GlobalContact from "../components/globalContact"
 import IntroText from "../components/introText"
 import * as aboutStyles from "../styles/about.module.css"
 import { graphql } from 'gatsby'
-import { StructuredText } from "react-datocms";
+import { StructuredText } from "react-datocms"
 import { HelmetDatoCms } from 'gatsby-source-datocms'
 
 const AboutPage = ({data}) => (
