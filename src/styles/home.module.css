@@ -52,24 +52,20 @@
 .avatorList{
   display: flex;
   justify-content: center;
-  column-gap: 10px;
   flex-wrap: wrap ;
 }
-.avatorList div:nth-child(03){z-index: 900;}
-.avatorList div:nth-child(04){z-index: 1;}
 .avatorSummary {
   display: flex;
   flex-direction: column;
   row-gap: 25px;
 }
-.blogTitle,
-.avatorTitle,
 .sectionSummary,
 .testimonialTitle{
   letter-spacing: 0.02em;
   font-weight: normal;
   font-size: 1.4em;
   line-height: 130%;
+  text-align: center;
 }
 /*
 https://www.shapedivider.app/
@@ -98,8 +94,12 @@ https://fireship.io/lessons/wavy-backgrounds/
   transition: 0.3s;
 }
 .heroPhoto:hover{
-  transform: scale(1.1);
+  transform: scale(1);
+  z-index: 30;
 }
+.avatorList div:nth-child(03){z-index: 20;}
+.avatorList div:nth-child(04){z-index: 1;}
+
 @media (min-width: 576px) { }
 @media (min-width: 768px) { }
 @media (min-width: 992px) {
@@ -133,8 +133,6 @@ https://fireship.io/lessons/wavy-backgrounds/
     line-height: 170%;
     letter-spacing: 0.01em;
   }
-
-
   .avatorTitle{
     letter-spacing: 0.02em;
     font-size: 2.25em;
@@ -156,6 +154,14 @@ https://fireship.io/lessons/wavy-backgrounds/
     justify-content: center;
     align-items: center;
   }
+  .heroPhoto{
+    transform: scale(1.3);
+  }
+  .heroPhoto:hover{
+    transform: scale(1.4);
+  }
+  .avatorList div:nth-child(03){z-index: 20;}
+  .avatorList div:nth-child(04){z-index: 1;}
 }
 @media (min-width: 1200px) {
   .homeWrapper{

@@ -74,7 +74,7 @@ const IndexPage = ({ data: {siteColor, siteData, allCaseResult, allAttorney, all
             ))}
           </div>
           <div className={homeStyles.avatorSummary}>
-            <h2 className={homeStyles.avatorTitle}>{siteData.aboutTitle}</h2>
+            <h2>{siteData.aboutTitle}</h2>
             <p>{siteData.aboutSummary}</p>
             <div className="cta">
               {siteData.ctaAbout.map(data => (
