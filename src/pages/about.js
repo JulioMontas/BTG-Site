@@ -83,13 +83,7 @@ const AboutPage = ({data}) => (
           {data.datoCmsAbout.testimonialTitle}
         </h2>
         <div>
-        {data.allDatoCmsTestimonial.nodes.map(data => (
-          <div>
-            {data.content.map(data => (
-              <StructuredText data={data.content} />
-            ))}
-          </div>
-        ))}
+
         </div>
       </div>
     </div>
@@ -179,23 +173,6 @@ export const query = graphql`{
       title
       subtitle
       slug
-    }
-  }
-  allDatoCmsTestimonial {
-    nodes {
-      content {
-        content {
-          value
-        }
-        socialMediaUrl {
-          label
-          url
-        }
-        date
-        photo {
-          gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
-        }
-      }
     }
   }
 }`

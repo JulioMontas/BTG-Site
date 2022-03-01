@@ -93,20 +93,19 @@ const IndexPage = ({ data: {siteColor, siteData, allCaseResult, allAttorney, all
 
     <div className={homeStyles.homePadding} style={{background: siteData.testimonialBdColor.hex, color: siteData.testimonialTextColor.hex }}>
       <div className="container">
-      <div className="wrapper">
-        <div className="cta">
-          {allTestimonial.nodes.map(data => (
-            <div>
-              {data.content.map(data => (
-                <StructuredText data={data.content} />
-              ))}
-            </div>
-          ))}
+      <div className={homeStyles.cardTestimonial}>
+        {allTestimonial.nodes.map(data => (
+          <div>
+            <GatsbyImage image={data.coverImage.gatsbyImageData} className={homeStyles.cardTestimonial__img}/>
+            <h2 className={homeStyles.cardTestimonial__title}>{data.title}</h2>
+            <small className={homeStyles.cardTestimonial__date}>{data.date}</small>
+            <p className={homeStyles.cardTestimonial__quote}><b>"</b>{data.quote}<b>"</b></p>
+          </div>
+        ))}
           <ButtonCta
             url="/testimonial"
-            title={"Testimonial"}
+            title={siteData.testimonialTitle}
           />
-        </div>
       </div>
       </div>
     </div>
@@ -133,10 +132,9 @@ const IndexPage = ({ data: {siteColor, siteData, allCaseResult, allAttorney, all
       <div className="container">
         <div className="twoColumnsGrid">
           <div>
-            <h2>{siteData.blogTitle}</h2>
               {allBlogPost.nodes.map(data => (
                 <AniLink paintDrip to={'/blog/' + data.slug} hex="#3d586b">
-                  <h3 style={{ fontSize: `1.2em`, lineHeight: `160%`, color:`#1d3851` }}>
+                  <h3 className={homeStyles.blog__link}>
                     {data.title}
                   </h3>
                 </AniLink>
@@ -252,6 +250,17 @@ export const query = graphql`
         }
       }
     }
+    allTestimonial: allDatoCmsTestimonial(sort: {order: DESC, fields: meta___updatedAt}, limit: 1) {
+      nodes {
+        id
+        title
+        date
+        quote
+        coverImage {
+          gatsbyImageData(width: 100, height: 100, placeholder: TRACED_SVG, layout: FIXED)
+        }
+      }
+    }
     allAttorney: allDatoCmsAttorney {
       nodes {
         name
@@ -261,20 +270,7 @@ export const query = graphql`
         }
       }
     }
-    allTestimonial: allDatoCmsTestimonial(limit: 1) {
-      nodes {
-        content {
-          id
-          content {
-            value
-          }
-          photo {
-            gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
-          }
-        }
-      }
-    }
-    allBlogPost: allDatoCmsPost(limit: 4) {
+    allBlogPost: allDatoCmsPost(limit: 3) {
       nodes {
         title
         excerpt

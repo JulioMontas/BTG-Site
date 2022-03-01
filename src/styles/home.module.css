@@ -21,7 +21,7 @@
 }
 /* INTRO SECTION */
 .homePadding{
-  padding: 4rem 1rem 4rem;;
+  padding: 4rem 1rem 4rem;
 }
 .homeHeroTitle{
   font-size: 2.1rem;
@@ -49,6 +49,17 @@
   text-align: left;
 }
 /* THE FIRM SECTION  */
+.heroPhoto{
+  border-radius: 100%;
+  transform: scale(0.9);
+  transition: 0.3s;
+  border: 2px solid #BCA360;
+  background: #BCA360;
+}
+.heroPhoto:hover{
+  transform: scale(1);
+  border: 2px solid var(--primary-cta-color-hover);
+}
 .avatorList{
   display: flex;
   justify-content: center;
@@ -88,17 +99,66 @@ https://fireship.io/lessons/wavy-backgrounds/
   height: 30px;
   fill: #1d3851;
 }
-.heroPhoto{
-  border-radius: 100%;
-  transform: scale(0.9);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.avatorList div:nth-child(03){z-index: 10;}
+.avatorList div:nth-child(04){z-index: 1;}
+
+/* Testimonial SECTION */
+.cardTestimonial{
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+.cardTestimonial a,
+.cardTestimonial__img{
+  margin: 0 auto;
+}
+.cardTestimonial__img{
+  border-radius: 100%
+}
+.cardTestimonial__title{
+  font-size: 21px;
+  line-height: 155%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.cardTestimonial__date{
+  font-size: 14px;
+  line-height: 155%;
+  letter-spacing: 1px;
+}
+.cardTestimonial__quote{
+  font-size: 16px;
+  line-height: 155%;
+  margin: 1em 0 2em;
+}
+
+/* Blog SECTION */
+.blog__link{
+  font-weight: normal;
+  color: #1d3851;
+  font-size: 1.8em;
+  margin-bottom: 1.5em;
+  text-decoration: underline;
   transition: 0.3s;
 }
-.heroPhoto:hover{
-  transform: scale(1);
-  z-index: 30;
+.blog__link:hover{
+    color: #BCA360;
 }
-.avatorList div:nth-child(03){z-index: 20;}
-.avatorList div:nth-child(04){z-index: 1;}
 
 @media (min-width: 576px) { }
 @media (min-width: 768px) { }
@@ -162,6 +222,15 @@ https://fireship.io/lessons/wavy-backgrounds/
   }
   .avatorList div:nth-child(03){z-index: 20;}
   .avatorList div:nth-child(04){z-index: 1;}
+
+  .cardTestimonial{
+    width: 400px;
+  }
+
+  /* INTRO SECTION */
+  .homePadding{
+    padding: 6.5rem 1rem 6.5rem;
+  }
 }
 @media (min-width: 1200px) {
   .homeWrapper{
