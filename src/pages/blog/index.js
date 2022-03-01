@@ -1,10 +1,10 @@
 import * as React from "react"
+import { graphql } from 'gatsby'
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 import GlobalHero from "../../components/globalHero"
 import GlobalContact from "../../components/globalContact"
-import { graphql } from 'gatsby'
-import { Link } from "gatsby"
+import PracticeAreasBtn from "../../components/practiceAreasBtn"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const theme = {
@@ -30,28 +30,10 @@ const BlogPage = ({data}) => (
     <div className="container">
       <div className="gridLayout" style={{padding:`6rem 1rem 6rem`}}>
       {data.allDatoCmsPost.nodes.map(data => (
-        <AniLink
-          paintDrip
-          hex="#3d586b"
-          to={'/blog/' + data.slug}
-          style={{
-            color: `#FFF`,
-            background: `#bca360`,
-            padding: `1rem`,
-            borderRadius: `10px`,
-          }}
-        >
-          <h3
-          style={{
-            fontSize: `1.2em`,
-            lineHeight: `160%`,
-            color:`#1d3851`
-          }}
-
-          >
-            {data.title}
-          </h3>
-        </AniLink>
+        <PracticeAreasBtn
+          url={'/blog/' + data.slug}
+          title={data.title}
+        />
       ))}
       </div>
     </div>

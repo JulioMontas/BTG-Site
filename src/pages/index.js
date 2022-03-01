@@ -1,19 +1,15 @@
 import * as React from "react"
+import { Link, graphql } from "gatsby"
+import { GatsbyImage } from 'gatsby-plugin-image'
+import { StructuredText } from "react-datocms"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import { StaticImage } from "gatsby-plugin-image"
+import GlobalContact from "../components/globalContact"
 import ButtonCta from "../components/buttonCta"
-import CaseResultList from "../components/caseResultList"
 import PracticeAreasBtn from "../components/practiceAreasBtn"
 import CaseResultBtn from "../components/caseResultBtn"
-import Avator from "../components/avator";
-import * as homeStyles from "../styles/home.module.css"
-import { graphql } from 'gatsby'
-import { GatsbyImage } from 'gatsby-plugin-image'
-import { Link } from "gatsby"
-import GlobalContact from "../components/globalContact"
-import { StructuredText } from "react-datocms"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import * as homeStyles from "../styles/home.module.css"
 
 const theme = {
   colorsBG: {
@@ -39,11 +35,10 @@ const IndexPage = ({ data: {siteColor, siteData, allCaseResult, allAttorney, all
           <div className={homeStyles.homeHeroCTA}>
             {siteData.ctaIntro.map(data => (
               <div>
-                <AniLink cover to={data.url} bg="#3d586b">
-                  <ButtonCta
-                    title={data.label}
-                  />
-                </AniLink>
+                <ButtonCta
+                  url={data.url}
+                  title={data.label}
+                />
               </div>
             ))}
           </div>
@@ -51,11 +46,9 @@ const IndexPage = ({ data: {siteColor, siteData, allCaseResult, allAttorney, all
       </div>
     </div>
 
-
-
-    <div className={homeStyles.caseResultList} style={{background: siteData.caseResultBgColor.hex, color: siteData.caseResultTextColor.hex }}>
+    <div className={homeStyles.homePadding} style={{background: siteData.caseResultBgColor.hex, color: siteData.caseResultTextColor.hex }}>
       <div className="container">
-        <p className={homeStyles.featureSummary}>{siteData.caseResultDescription}</p>
+        <p className={homeStyles.sectionSummary}>{siteData.caseResultDescription}</p>
         <div className="gridLayout">
           {allCaseResult.nodes.map(data => (
             <CaseResultBtn
@@ -68,9 +61,9 @@ const IndexPage = ({ data: {siteColor, siteData, allCaseResult, allAttorney, all
       </div>
     </div>
 
-    <div className={homeStyles.homeTheFirmBG} style={{background: siteData.aboutBgColor.hex, color: siteData.aboutTextColor.hex }}>
+    <div className={homeStyles.homePadding} style={{background: siteData.aboutBgColor.hex, color: siteData.aboutTextColor.hex }}>
       <div className="container">
-        <div className={homeStyles.twoColumnsGrid}>
+        <div className="twoColumnsGrid">
           <div className={homeStyles.avatorList}>
             {allAttorney.nodes.map(data => (
               <div>
@@ -98,7 +91,7 @@ const IndexPage = ({ data: {siteColor, siteData, allCaseResult, allAttorney, all
       </div>
     </div>
 
-    <div className={homeStyles.homeTestimonial} style={{background: siteData.testimonialBdColor.hex, color: siteData.testimonialTextColor.hex }}>
+    <div className={homeStyles.homePadding} style={{background: siteData.testimonialBdColor.hex, color: siteData.testimonialTextColor.hex }}>
       <div className="container">
       <div className="wrapper">
       <h2 className={homeStyles.testimonialTitle}>{siteData.testimonialTitle}</h2>
@@ -119,14 +112,14 @@ const IndexPage = ({ data: {siteColor, siteData, allCaseResult, allAttorney, all
       </div>
     </div>
 
-    <div className={homeStyles.homePraticeAreasList} style={{background: siteData.praticeAreaBdColor.hex, color: siteData.praticeAreaTextColor.hex }}>
+    <div className={homeStyles.homePadding} style={{background: siteData.praticeAreaBdColor.hex, color: siteData.praticeAreaTextColor.hex }}>
       <div className="container">
-        <p className={homeStyles.featureSummary}>{siteData.praticeAreaDescription}</p>
+        <p className={homeStyles.sectionSummary}>{siteData.praticeAreaDescription}</p>
         <div className="gridLayout">
         {allPracticeArea.nodes.map(data => (
           <div>
             <PracticeAreasBtn
-              url={data.slug}
+              url={'/practice-area/' + data.slug}
               description={data.description}
               title={data.title}
               image={data.coverImage.gatsbyImageData}
@@ -137,25 +130,25 @@ const IndexPage = ({ data: {siteColor, siteData, allCaseResult, allAttorney, all
       </div>
     </div>
 
-    <div className={homeStyles.homeBlogLatestPost} style={{background: siteData.blogBdColor.hex, color: siteData.blogTextColor.hex }}>
+    <div className={homeStyles.homePadding} style={{background: siteData.blogBdColor.hex, color: siteData.blogTextColor.hex }}>
       <div className="container">
-      <div>
-        <h2 className={homeStyles.blogTitle}>
-          {siteData.blogTitle}
-        </h2>
-        {allBlogPost.nodes.map(data => (
-          <Link to={'/blog/' + data.slug}>
-            <h3 style={{ fontSize: `1.2em`, lineHeight: `160%`, color:`#1d3851` }}>
-              {data.title}
-            </h3>
-          </Link>
-        ))}
-        <div className={homeStyles.blogCTA}>
-         <ButtonCta
-            url="/blog"
-            title={"Read More Article"}
-          />
-        </div>
+        <div className="twoColumnsGrid">
+          <div>
+            <h2>{siteData.blogTitle}</h2>
+              {allBlogPost.nodes.map(data => (
+                <AniLink paintDrip to={'/blog/' + data.slug} hex="#3d586b">
+                  <h3 style={{ fontSize: `1.2em`, lineHeight: `160%`, color:`#1d3851` }}>
+                    {data.title}
+                  </h3>
+                </AniLink>
+              ))}
+          </div>
+          <div className={homeStyles.blogCTA}>
+            <ButtonCta
+              url="/blog"
+              title={"Read More Article"}
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -235,7 +228,7 @@ export const query = graphql`
         hex
       }
       coverImage {
-        gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
+        gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
       }
     }
     allCaseResult: allDatoCmsCaseResult {

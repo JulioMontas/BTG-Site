@@ -2,11 +2,6 @@
   background: blue;
   padding: 5.5rem 1rem 6rem;
 }
-.twoColumnsGrid{
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-row-gap: 3em;
-}
 .contactTitle{
   letter-spacing: 0.02em;
   font-weight: normal;
@@ -38,10 +33,6 @@ https://fireship.io/lessons/wavy-backgrounds/
 @media (min-width: 992px) {
   .homeContact{
     padding: 6rem 1rem 6rem;
-  }
-  .twoColumnsGrid{
-    grid-template-columns:1fr 1fr;
-    column-gap: 5em;
   }
   .contactCTA{
     display: flex;

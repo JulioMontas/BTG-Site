@@ -1,18 +1,16 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import { Link, graphql } from "gatsby"
 import { GatsbyImage } from 'gatsby-plugin-image'
-import CaseResultBtn from "../components/caseResultBtn"
-import AttorneyBtn from "../components/attorneyBtn"
-import ButtonCta from "../components/buttonCta"
-import GlobalContact from "../components/globalContact"
-import IntroText from "../components/introText"
-import * as aboutStyles from "../styles/about.module.css"
-import { graphql } from 'gatsby'
 import { StructuredText } from "react-datocms"
 import { HelmetDatoCms } from 'gatsby-source-datocms'
+import Layout from "../components/layout"
+import Seo from "../components/seo"
+import GlobalContact from "../components/globalContact"
+import ButtonCta from "../components/buttonCta"
+import CaseResultBtn from "../components/caseResultBtn"
+import AttorneyBtn from "../components/attorneyBtn"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import * as aboutStyles from "../styles/about.module.css"
 
 const AboutPage = ({data}) => (
   <Layout>
@@ -27,47 +25,36 @@ const AboutPage = ({data}) => (
       </div>
     </div>
 
-    <div
-      className={aboutStyles.intro}
-      style={{
-        background: data.datoCmsAbout.topicBgColor.hex,
-        color: data.datoCmsAbout.topicTColor.hex
-      }}>
+    <div className={aboutStyles.intro} style={{ background: data.datoCmsAbout.topicBgColor.hex, color: data.datoCmsAbout.topicTColor.hex }}>
       <div className="container">
-        <IntroText
-          title={data.datoCmsAbout.topicTitle}
-          summary={data.datoCmsAbout.topicDescription}
-        />
+        <div className="twoColumnsGrid">
+          <h2>{data.datoCmsAbout.topicTitle}</h2>
+          <p>{data.datoCmsAbout.topicDescription}</p>
+        </div>
       </div>
     </div>
 
-    <div className={aboutStyles.attorneys} style={{ background: data.datoCmsAbout.attorneyBdColor.hex, color: data.datoCmsAbout.attorneyTColor.hex}}>
+
+
+    <div className={aboutStyles.intro} style={{ background: data.datoCmsAbout.attorneyBdColor.hex, color: data.datoCmsAbout.attorneyTColor.hex}}>
       <div className="container">
         <h2 className={aboutStyles.attorneysTitle}>
           {data.datoCmsAbout.attorneyTitle}
         </h2>
         <div className="gridLayout">
           {data.allDatoCmsAttorney.nodes.map(data => (
-            <div className={aboutStyles.attorneyCta}>
-            <AniLink paintDrip to={'/attorney/' + data.slug} hex="#3d586b">
-              <div>
-                <GatsbyImage image={data.picture.gatsbyImageData} className={aboutStyles.attorneyCoverImage} />
-                <p className={aboutStyles.attorneyDescription}>{data.location}</p>
-                <h3 className={aboutStyles.attorneyTitle}>{data.name}</h3>
-                <ul className={aboutStyles.attorneyTag}>
-                  {data.practiceArea.map(data => (
-                    <li>{data.title}</li>
-                  ))}
-                </ul>
-              </div>
-            </AniLink>
-            </div>
+            <AttorneyBtn
+              slug={data.slug}
+              image={data.picture.gatsbyImageData}
+              location={data.location}
+              title={data.name}
+            />
           ))}
         </div>
       </div>
     </div>
 
-    <div className={aboutStyles.secondIntro} style={{ background: data.datoCmsAbout.historyBgColor.hex, color: data.datoCmsAbout.historyTColor.hex}}>
+    <div className={aboutStyles.intro} style={{ background: data.datoCmsAbout.historyBgColor.hex, color: data.datoCmsAbout.historyTColor.hex}}>
       <div className="container">
         <StructuredText data={data.datoCmsAbout.historyContent} />
       </div>
@@ -183,14 +170,6 @@ export const query = graphql`{
           placeholder: BLURRED,
           layout: FIXED
         )
-      }
-      caseResult {
-        title
-        slug
-      }
-      practiceArea {
-        title
-        slug
       }
     }
   }

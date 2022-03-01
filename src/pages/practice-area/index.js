@@ -1,11 +1,10 @@
 import * as React from "react"
+import { graphql } from 'gatsby'
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 import PracticeAreasBtn from "../../components/practiceAreasBtn"
 import GlobalHero from "../../components/globalHero"
 import GlobalContact from "../../components/globalContact"
-import { graphql } from 'gatsby'
-
 
 const PraticeAreasPage = ({ data: { allData } }) => (
   <Layout>

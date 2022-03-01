@@ -1,7 +1,6 @@
 import * as React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import Avator from "../components/avator"
 import GlobalContact from "../components/globalContact"
 import GlobalHero from "../components/globalHero"
 import CaseResultBtn from "../components/caseResultBtn"

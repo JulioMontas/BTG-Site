@@ -29,6 +29,12 @@
 .subFooterCTA{
   color: var(--primary-cta-color);
   fill: var(--primary-cta-color);
+  transition: 0.3s;
+}
+.phoneNumber:hover,
+.subFooterCTA:hover{
+  color: var(--primary-cta-color-hover);
+  fill: var(--primary-cta-color-hover);
 }
 /* F O N T */
 .address,

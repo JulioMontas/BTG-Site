@@ -7,6 +7,10 @@
   padding: 0.8em 0;
   letter-spacing: 1px;
   display: block;
+  transition: 0.3s;
+}
+.buttonCTA:hover{
+    background: var(--primary-cta-color-hover);
 }
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {

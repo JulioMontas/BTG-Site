@@ -20,7 +20,7 @@
 }
 .heroPhoto,
 .heroBG::before{
-  height: var(--size-hero-mobile);
+  height: 54vh;
 }
 .heroBG{
   margin-top: var(--globalHero-header-margin-top);
@@ -90,7 +90,7 @@
 @media (min-width: 992px) {
   .homeHeroPhoto,
   .homeHeroBG::before{
-    height: var(--size-hero-desktop);
+    height: 54vh;
   }
   .wrapper{
     padding: 3.6rem 0rem 0rem;

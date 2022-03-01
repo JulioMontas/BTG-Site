@@ -7,6 +7,8 @@
   --tertiary-bg-color: #1d3851;
 
   --primary-cta-color:  #BCA360;
+  --primary-cta-color-hover: #A78D49;
+
   --jlo-color-gradient: linear-gradient(180deg, #FFAB49 -4.03%, #FF8C04 100%);
   --jlo-color-solid: #FF971C;
 
@@ -43,6 +45,30 @@ body {
   color: var(--primary-text-color);
   margin: 0;
 }
+
+.twoColumnsGrid{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 3em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 article,
 aside,
 details,
@@ -325,6 +351,10 @@ li > p {
     column-gap: 2em;
     row-gap: 2em;
   }
+  .twoColumnsGrid{
+    grid-template-columns:1fr 1fr;
+    column-gap: 5em;
+  }
 }
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
@@ -334,6 +364,7 @@ li > p {
   .gridLayout{
     grid-template-columns: 1fr 1fr 1fr;
   }
+
 }
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {
