@@ -1,18 +1,20 @@
-.subSection{
+.sectionPadding{
   background: blue;
   padding: 5.5rem 1rem 6rem;
 }
-.contactTitle{
+.title{
   letter-spacing: 0.02em;
   font-weight: normal;
   font-size: 2em;
   line-height: 150%;
 }
+
+
 /*
 https://www.shapedivider.app/
 https://fireship.io/lessons/wavy-backgrounds/
 */
-.customWaveBottom {
+.wave__Bottom {
   position: absolute;
   top: 1;
   left: 0;
@@ -22,7 +24,7 @@ https://fireship.io/lessons/wavy-backgrounds/
   transform: rotate(180deg);
   margin-top: 96px;
 }
-.customWaveBottom svg {
+.wave__Bottom svg {
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
@@ -34,7 +36,7 @@ https://fireship.io/lessons/wavy-backgrounds/
   .homeContact{
     padding: 6rem 1rem 6rem;
   }
-  .contactCTA{
+  .cta{
     display: flex;
     justify-content: center;
     align-items: center;

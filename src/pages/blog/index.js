@@ -26,9 +26,13 @@ const BlogPage = ({data}) => (
       title= "Blog"
       summary= "Etiam hendrerit ipsum at enim fermentum."
     />
-    <div style={{background: theme.colorsBG.secondary}}>
+    <div style={{
+      background:`#1d3851`,
+      borderBottom:`1px solid rgba(188, 163, 96, 0.2)`,
+      padding:`3rem 1rem 5rem`
+    }}>
     <div className="container">
-      <div className="gridLayout" style={{padding:`6rem 1rem 6rem`}}>
+      <div className="gridLayout">
       {data.allDatoCmsPost.nodes.map(data => (
         <PracticeAreasBtn
           url={'/blog/' + data.slug}

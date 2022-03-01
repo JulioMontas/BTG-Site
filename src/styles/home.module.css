@@ -150,14 +150,14 @@ https://fireship.io/lessons/wavy-backgrounds/
 /* Blog SECTION */
 .blog__link{
   font-weight: normal;
-  color: #1d3851;
+  color: #BCA360;
   font-size: 1.8em;
   margin-bottom: 1.5em;
-  text-decoration: underline;
   transition: 0.3s;
+  text-decoration: underline;
 }
 .blog__link:hover{
-    color: #BCA360;
+  color: var(--primary-cta-color-hover);
 }
 
 @media (min-width: 576px) { }

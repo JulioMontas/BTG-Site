@@ -1,5 +1,25 @@
-.globalHero{
-  padding: 2rem 1rem 2rem;
-  background: #1d3851;
-  margin-top: var(--globalHero-header-margin-top);
+.title{
+  padding-top: 1em;
+}
+/*
+https://www.shapedivider.app/
+https://fireship.io/lessons/wavy-backgrounds/
+*/
+.wave__tilt {
+  position: absolute;
+  top: 1;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  margin-top: -33px;
+}
+
+.wave__tilt svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 20px;
+  transform: rotateY(180deg);
+  fill: #3D586B;
 }

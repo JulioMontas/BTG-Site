@@ -43,9 +43,11 @@ export default class Index extends React.Component {
           title= "Contact"
           summary= "Etiam hendrerit ipsum fermentum."
         />
-        <div
-        style={{padding:`6rem 1rem 6rem`}}
-        >
+        <div style={{
+          background:`#1d3851`,
+          borderBottom:`1px solid rgba(188, 163, 96, 0.2)`,
+          padding:`3rem 1rem 5rem`
+        }}>
 
         <div className="container">
           <div className="top-0 absolute w-full md:w-2/3">

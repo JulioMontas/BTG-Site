@@ -13,18 +13,24 @@ const PraticeAreasPage = ({ data: { allData } }) => (
       title="Pratice Area"
       summary="Ipsum at enim fermentum, et molestie dui semper. Quis auctor augue rhoncus in."
     />
-    <div className="container">
-      <div className="gridLayout" style={{padding:`6rem 1rem 6rem`}}>
-        {allData.nodes.map(data => (
-          <div>
-          <PracticeAreasBtn
-            url={data.slug}
-            description={data.description}
-            title={data.title}
-            image={data.coverImage.gatsbyImageData}
-          />
-          </div>
-        ))}
+    <div style={{
+      background:`#1d3851`,
+      borderBottom:`1px solid rgba(188, 163, 96, 0.2)`,
+      padding:`3rem 1rem 5rem`
+    }}>
+      <div className="container">
+        <div className="gridLayout">
+          {allData.nodes.map(data => (
+            <div>
+            <PracticeAreasBtn
+              url={data.slug}
+              description={data.description}
+              title={data.title}
+              image={data.coverImage.gatsbyImageData}
+            />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
     <GlobalContact />

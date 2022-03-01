@@ -13,12 +13,13 @@ const CaseResultsPage = ({data}) => (
       title= "Case Results"
       summary= "Et molestie dui semper. quis auctor augue rhoncus in. Duis tristique accumsan."
     />
-    <div>
+    <div style={{
+      background:`#1d3851`,
+      borderBottom:`1px solid rgba(188, 163, 96, 0.2)`,
+      padding:`3rem 1rem 5rem`
+    }}>
     <div className="container">
-      <div
-        className="gridLayout"
-        style={{padding:`6rem 1rem 6rem`}}
-      >
+      <div className="gridLayout">
         {data.allDatoCmsCaseResult.nodes.map(data => (
           <CaseResultBtn
             key={data.id}

@@ -15,10 +15,13 @@ const AttorneysPage = ({ data: { siteData } }) => (
       title="Attorneys"
       summary= "Summary text"
     />
-    <div className="attorneys">
+    <div style={{
+      background:`#1d3851`,
+      borderBottom:`1px solid rgba(188, 163, 96, 0.2)`,
+      padding:`3rem 1rem 5rem`
+    }}>
       <div className="container">
-
-      <div className="gridLayout" style={{padding:`6rem 1rem 6rem`}}>
+      <div className="gridLayout">
         {siteData.nodes.map(data => (
           <AttorneyBtn
             slug={data.slug}
