@@ -5,6 +5,7 @@ import GlobalHero from "../../components/globalHero"
 import GlobalContact from "../../components/globalContact"
 import { graphql } from 'gatsby'
 import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const theme = {
   colorsBG: {
@@ -29,7 +30,9 @@ const BlogPage = ({data}) => (
     <div className="container">
       <div className="gridLayout" style={{padding:`6rem 1rem 6rem`}}>
       {data.allDatoCmsPost.nodes.map(data => (
-        <Link
+        <AniLink
+          paintDrip
+          hex="#3d586b"
           to={'/blog/' + data.slug}
           style={{
             color: `#FFF`,
@@ -48,7 +51,7 @@ const BlogPage = ({data}) => (
           >
             {data.title}
           </h3>
-        </Link>
+        </AniLink>
       ))}
       </div>
     </div>

@@ -2,6 +2,35 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import * as headerStyles from "./header.module.css"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+
+const desktopLink = [
+  {
+    slug: `/about`,
+    name: `The Firm`,
+    bg: `#3d586b`,
+  },
+  {
+    url: `/case-result`,
+    name: `Case Result`,
+    bg: `#3d586b`,
+  },
+  {
+    url: `/practice-area"`,
+    name: `Practice Area`,
+    bg: `#3d586b`,
+  },
+  {
+    url: `/blog`,
+    name: `Blog`,
+    bg: `#3d586b`,
+  },
+  {
+    url: `/contact`,
+    name: `Contact`,
+    bg: `#3d586b`,
+  }
+]
 
 const Header = ({ siteTitle }) => (
   <div className={headerStyles.header}>
@@ -9,7 +38,7 @@ const Header = ({ siteTitle }) => (
       <div className={headerStyles.wrapper}>
 
         <div>
-          <Link to="/" aria-label="logo">
+          <AniLink cover to="/" bg="#3d586b">
           <svg className={headerStyles.desktopLogo} width="240" height="43" viewBox="0 0 240 43" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M114.149 22.7921H114.653C114.995 24.8108 116.437 26.9739 118.689 26.9739C120.041 26.9739 121.374 26.091 121.374 24.6313C121.374 20.5762 114.167 22.9732 114.167 18.1797C114.167 16.0171 116.095 14.7558 118.023 14.7558C119.663 14.7558 120.528 15.8004 120.96 15.8004C121.23 15.8004 121.464 15.1514 121.518 14.9714H122.131V19.1532H121.627C121.158 17.369 120.131 15.3692 118.041 15.3692C116.671 15.3692 115.644 16.1077 115.644 17.549C115.644 20.9907 122.852 19.1348 122.852 23.5678C122.852 26.0726 120.923 27.5862 118.528 27.5862C116.834 27.5862 116.186 26.6494 115.5 26.6494C115.032 26.6494 114.87 27.0272 114.653 27.4784H114.149V22.7921Z" fill="white"/>
           <path fill-rule="evenodd" clip-rule="evenodd" d="M62.3016 26.7577C60.7877 26.7577 60.4455 26.4516 60.4455 25.5142V21.1707H63.3099C65.0761 21.1707 65.8327 22.2881 65.8327 23.9817C65.8327 25.7659 65.0399 26.7577 62.3016 26.7577ZM60.4455 16.4855C60.4455 15.981 60.6077 15.5848 62.0855 15.5848C64.2833 15.5848 65.22 16.3055 65.22 18.1796C65.22 19.5854 64.6433 20.5584 62.2288 20.5584H60.4455V16.4855ZM63.7788 20.7934V20.7562C65.6883 20.7562 67.3099 19.621 67.3099 18.0357C67.3099 16.5577 66.1933 14.9713 62.7694 14.9713H56.95V15.5848C58.3011 15.5848 58.6077 15.9093 58.6077 16.7744L58.6072 27.3706H63.8144C66.8605 27.3706 67.9233 25.1347 67.9233 23.9817C67.9233 22.072 66.4455 20.8829 63.7788 20.7934Z" fill="white"/>
@@ -39,7 +68,7 @@ const Header = ({ siteTitle }) => (
           <path fill-rule="evenodd" clip-rule="evenodd" d="M28.5488 10.7492C28.5488 13.114 29.5871 14.2381 31.1438 14.2381C32.6999 14.2381 33.7382 13.114 33.7382 10.7492C33.7382 8.38434 32.6999 7.26027 31.1438 7.26027C29.5871 7.26027 28.5488 8.38434 28.5488 10.7492ZM30.9705 25.0226C34.1416 25.0226 35.9293 23.6096 35.9293 22.0521C35.9293 20.6391 34.2571 19.7168 30.6538 19.7168C27.9727 19.7168 26.8188 20.8703 26.8188 21.9938C26.8188 23.6096 28.7221 25.0226 30.9705 25.0226ZM28.6066 19.1683C27.3666 19.1405 25.781 18.7077 25.781 17.178C25.781 15.9106 28.001 15.0454 29.0393 14.8426V14.7859C27.1938 14.152 25.6082 12.7673 25.6082 10.663C25.6082 8.52825 27.6843 6.2801 30.8843 6.2801C32.5277 6.2801 33.3343 6.5107 34.0843 6.9141C34.0843 5.52998 34.8916 4.72263 36.2749 4.72263C37.1399 4.72263 38.0338 5.01101 38.0338 6.33789C38.0338 6.97133 37.5438 7.49086 36.8805 7.49086C36.2171 7.49086 35.7277 7.11524 35.7277 6.53904C35.7277 6.25066 35.7849 5.99117 35.8138 5.84725C35.7277 5.81836 35.641 5.81836 35.5832 5.81836C35.2949 5.81836 34.8332 6.19398 34.8332 6.9141V7.28916C35.4393 7.72145 35.871 8.21209 36.1888 8.73106C36.506 9.24948 36.6788 9.85514 36.6788 10.6053C36.6788 12.4506 35.0349 14.8426 32.1816 15.0454C28.8949 15.276 27.9143 15.5927 27.9143 16.3718C27.9143 18.3321 38.0043 15.7944 38.0043 21.1003C38.0043 24.5325 33.9688 26.0017 30.9705 26.0017C27.511 26.0017 24.7427 24.3881 24.7427 22.3127C24.7427 20.5536 26.9343 19.3422 28.6066 19.2272V19.1683Z" fill="white"/>
           <path fill-rule="evenodd" clip-rule="evenodd" d="M41.4999 19.1017C41.4999 19.9846 40.8633 20.5224 40.0794 20.5224C39.2949 20.5224 38.6577 19.9846 38.6577 19.1017C38.6577 18.2187 39.2949 17.6814 40.0794 17.6814C40.8633 17.6814 41.4999 18.2187 41.4999 19.1017Z" fill="white"/>
           </svg>
-          </Link>
+          </AniLink>
         </div>
 
         <button type="button" className={headerStyles.cta}>
@@ -50,13 +79,32 @@ const Header = ({ siteTitle }) => (
         </button>
 
         <ul className="hidden lg:block">
-          <li><Link to="/about">The Firm</Link></li>
-          <li><Link to="/case-result">Case Results</Link></li>
-          <li><Link to="/practice-area">Practice Areas</Link></li>
-          <li><Link to="/blog">Blog</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
+          <li>
+            <AniLink cover direction="left" to="/about" bg="#3d586b">
+              The Firm
+            </AniLink>
+          </li>
+          <li>
+            <AniLink cover direction="left" to="/case-result" bg="#3d586b">
+              Case Results
+            </AniLink>
+          </li>
+          <li>
+            <AniLink cover direction="left" to="/practice-area" bg="#3d586b">
+              Practice Areas
+            </AniLink>
+          </li>
+          <li>
+            <AniLink cover direction="left" to="/blog" bg="#3d586b">
+              Blog
+            </AniLink>
+          </li>
+          <li>
+            <AniLink cover direction="left" to="/contact" bg="#3d586b">
+              Contact
+            </AniLink>
+          </li>
         </ul>
-
       </div>
     </div>
 

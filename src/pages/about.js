@@ -12,6 +12,7 @@ import * as aboutStyles from "../styles/about.module.css"
 import { graphql } from 'gatsby'
 import { StructuredText } from "react-datocms"
 import { HelmetDatoCms } from 'gatsby-source-datocms'
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const AboutPage = ({data}) => (
   <Layout>
@@ -48,7 +49,7 @@ const AboutPage = ({data}) => (
         <div className="gridLayout">
           {data.allDatoCmsAttorney.nodes.map(data => (
             <div className={aboutStyles.attorneyCta}>
-            <Link to={'/attorney/' + data.slug}>
+            <AniLink paintDrip to={'/attorney/' + data.slug} hex="#3d586b">
               <div>
                 <GatsbyImage image={data.picture.gatsbyImageData} className={aboutStyles.attorneyCoverImage} />
                 <p className={aboutStyles.attorneyDescription}>{data.location}</p>
@@ -59,7 +60,7 @@ const AboutPage = ({data}) => (
                   ))}
                 </ul>
               </div>
-            </Link>
+            </AniLink>
             </div>
           ))}
         </div>

@@ -4,7 +4,6 @@ import Seo from "../components/seo"
 import { StaticImage } from "gatsby-plugin-image"
 import ButtonCta from "../components/buttonCta"
 import CaseResultList from "../components/caseResultList"
-import PraticeAreasList from "../components/praticeAreasList"
 import PracticeAreasBtn from "../components/practiceAreasBtn"
 import CaseResultBtn from "../components/caseResultBtn"
 import Avator from "../components/avator";
@@ -14,6 +13,7 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 import { Link } from "gatsby"
 import GlobalContact from "../components/globalContact"
 import { StructuredText } from "react-datocms"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const theme = {
   colorsBG: {
@@ -39,16 +39,19 @@ const IndexPage = ({ data: {siteColor, siteData, allCaseResult, allAttorney, all
           <div className={homeStyles.homeHeroCTA}>
             {siteData.ctaIntro.map(data => (
               <div>
-                <ButtonCta
-                  url={data.url}
-                  title={data.label}
-                />
+                <AniLink cover to={data.url} bg="#3d586b">
+                  <ButtonCta
+                    title={data.label}
+                  />
+                </AniLink>
               </div>
             ))}
           </div>
         </div>
       </div>
     </div>
+
+
 
     <div className={homeStyles.caseResultList} style={{background: siteData.caseResultBgColor.hex, color: siteData.caseResultTextColor.hex }}>
       <div className="container">
@@ -71,9 +74,9 @@ const IndexPage = ({ data: {siteColor, siteData, allCaseResult, allAttorney, all
           <div className={homeStyles.avatorList}>
             {allAttorney.nodes.map(data => (
               <div>
-              <Link to={'/attorney/' + data.slug}>
+              <AniLink paintDrip to={'/attorney/' + data.slug} hex="#3d586b">
                 <GatsbyImage image={data.picture.gatsbyImageData} className={homeStyles.heroPhoto}/>
-              </Link>
+              </AniLink>
               </div>
             ))}
           </div>
