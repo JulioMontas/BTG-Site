@@ -24,7 +24,6 @@ const BlogPost = ({ pageContext: { node } }) => (
       title={node.title}
       summary={node.excerpt}
     />
-
     <div style={{
       background: theme.colorsBG.secondary,
       color: theme.colorsText.primary,

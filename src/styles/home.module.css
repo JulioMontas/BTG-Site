@@ -1,14 +1,6 @@
-:root {
-  --size-hero-mobile: 60vh;
-  --size-hero-desktop: 30vh;
-}
-/* INTRO SECTION */
-.homePadding{
-  padding: 4rem 1rem 4rem;;
-}
 .homeHeroPhoto,
 .homeHeroBG::before{
-  height: 40vh;
+  height: 55vh;
 }
 .homeHeroBG{
   margin-top: var(--globalHero-header-margin-top);
@@ -25,6 +17,11 @@
   padding: 0rem 1rem 0rem;
   position: absolute;
   z-index: 10;
+  top: 10vh;
+}
+/* INTRO SECTION */
+.homePadding{
+  padding: 4rem 1rem 4rem;;
 }
 .homeHeroTitle{
   font-size: 46px;
@@ -103,12 +100,8 @@ https://fireship.io/lessons/wavy-backgrounds/
 .heroPhoto:hover{
   transform: scale(1.1);
 }
-
-/* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { }
-/* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { }
-/* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   .caseResultList,
   .homeTheFirmBG,
@@ -140,16 +133,15 @@ https://fireship.io/lessons/wavy-backgrounds/
     line-height: 170%;
     letter-spacing: 0.01em;
   }
-  .homeHeroCTA{
-    margin-top: 34%;
-    float: right;
-  }
   .avatorTitle{
     letter-spacing: 0.02em;
     font-size: 2.25em;
   }
   .homeWrapper{
-    top: 200px;
+    top: 17vh;
+  }
+  .homeHeroCTA{
+    margin-top: 5%;
   }
   .avatorList{
     justify-content: center;
@@ -163,19 +155,17 @@ https://fireship.io/lessons/wavy-backgrounds/
     align-items: center;
   }
 }
-/* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+  .homeWrapper{
+    top: 16vh;
+  }
   .homeHeroCTA{
-    margin-top: 26%;
+    margin-top: 12%;
   }
 }
-/* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {
-  .homeHeroCTA{
-    margin-top: 15%;
-  }
   .homeHeroPhoto,
   .homeHeroBG::before{
-    height: 54vh;
+    height: 58vh;
   }
 }
