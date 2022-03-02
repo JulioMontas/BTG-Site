@@ -4,13 +4,12 @@ import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 import GlobalHero from "../../components/globalHero"
 import GlobalContact from "../../components/globalContact"
-import PracticeAreasBtn from "../../components/practiceAreasBtn"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const theme = {
   colorsBG: {
     primary: `#1d3851`,
-     v: `#FFF`,
+    secondary: `#FFF`,
     test: `green`,
   },
   colorsText: {
@@ -34,10 +33,9 @@ const BlogPage = ({data}) => (
     <div className="container">
       <div className="gridLayout">
       {data.allDatoCmsPost.nodes.map(data => (
-        <PracticeAreasBtn
-          url={'/blog/' + data.slug}
-          title={data.title}
-        />
+        <AniLink paintDrip to={'/blog/' + data.slug} hex="#3d586b">
+          {data.title}
+        </AniLink>
       ))}
       </div>
     </div>

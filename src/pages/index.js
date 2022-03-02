@@ -117,7 +117,7 @@ const IndexPage = ({ data: {siteColor, siteData, allCaseResult, allAttorney, all
         {allPracticeArea.nodes.map(data => (
           <div>
             <PracticeAreasBtn
-              url={'/practice-area/' + data.slug}
+              url={data.slug}
               description={data.description}
               title={data.title}
               image={data.coverImage.gatsbyImageData}

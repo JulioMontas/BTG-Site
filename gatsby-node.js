@@ -10,6 +10,15 @@ exports.createPages = async ({ graphql, actions }) => {
         content {
           value
         }
+        attorney {
+          id
+          slug
+          name
+          location
+          picture {
+            gatsbyImageData(width: 100, height: 100, placeholder: BLURRED, layout: FIXED)
+          }
+        }
       }
     }
   }
@@ -27,14 +36,20 @@ exports.createPages = async ({ graphql, actions }) => {
           practiceArea {
             slug
             title
+            coverImage {
+              gatsbyImageData(
+                width: 300
+                height: 250
+                layout: CONSTRAINED
+                forceBlurhash: false
+                placeholder: BLURRED
+              )
+            }
           }
           caseResult {
             slug
             title
             subtitle
-            coverImage {
-              gatsbyImageData(width: 300, height: 300, placeholder: BLURRED, layout: FIXED)
-            }
           }
           content {
             value
@@ -56,27 +71,23 @@ exports.createPages = async ({ graphql, actions }) => {
   `)
   const queryPracticeArea = await graphql(`
     {
-      allDatoCmsPracticeArea {
-        nodes {
+    allDatoCmsPracticeArea {
+      nodes {
+        id
+        slug
+        title
+        subtitle
+        attorney {
           id
-          slug
-          title
-          subtitle
-          content {
-            value
-          }
-          coverImage {
-            gatsbyImageData(
-              placeholder: BLURRED
-              width: 300
-              height: 300
-              forceBlurhash: false
-              layout: CONSTRAINED
-            )
+          name
+          location
+          picture {
+            gatsbyImageData
           }
         }
       }
     }
+  }
   `)
   const queryBlogPost = await graphql(`
     {

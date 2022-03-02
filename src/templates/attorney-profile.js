@@ -13,7 +13,7 @@ const theme = {
   colorsBG: {
     primary: `#1d3851`,
     secondary: `#FFF`,
-    test: `green`,
+    tertiary: `#3d586b`,
   },
   colorsText: {
     primary: `#333`,
@@ -29,41 +29,40 @@ const AttorneyProfile = ({ pageContext: { node } }) => {
         title={node.name}
         summary={node.location}
       />
-
       <div className={Styles.intro} style={{background: theme.colorsBG.secondary, color: theme.colorsText.primary}}>
         <div className="container">
           <div className={Styles.description}>
-            <GatsbyImage image={node.picture.gatsbyImageData}/>
             <div>
               <StructuredText data={node.content} />
             </div>
+                        <GatsbyImage image={node.picture.gatsbyImageData} className={Styles.roundImage}/>
           </div>
         </div>
       </div>
 
-      <div className={Styles.skills} style={{background: theme.colorsBG.primary}}>
+      <div className={Styles.skills}>
         <div className="container">
-          <h2 className={Styles.title}>
-            Achievement
-          </h2>
           <div>
             <StructuredText data={node.achievement} />
           </div>
         </div>
       </div>
 
-      <div className={Styles.skills} style={{background: theme.colorsBG.secondary, color: theme.colorsText.primary}}>
+      <div className={Styles.skills} style={{background: theme.colorsBG.primary, color: theme.colorsText.secondary}}>
         <div className="container">
           <h2 className={Styles.title}>
             Practice Area
           </h2>
           <div className="gridLayout">
           {node.practiceArea.map(data => (
+            <div>
             <PracticeAreasBtn
               url={data.slug}
               description={data.description}
               title={data.title}
+              image={data.coverImage.gatsbyImageData}
             />
+            </div>
           ))}
           </div>
         </div>
