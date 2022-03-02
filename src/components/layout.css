@@ -45,30 +45,11 @@ body {
   color: var(--primary-text-color);
   margin: 0;
 }
-
 .twoColumnsGrid{
   display: grid;
   grid-template-columns: 1fr;
   grid-row-gap: 3em;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 article,
 aside,
 details,
@@ -152,25 +133,6 @@ button,
 select {
   text-transform: none;
 }
-[type="reset"],
-[type="submit"],
-button,
-html [type="button"] {
-  -webkit-appearance: button;
-}
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner,
-button::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring,
-button:-moz-focusring {
-  outline: 1px dotted ButtonText;
-}
 fieldset {
   border: 1px solid silver;
   padding: 0.35em 0.625em 0.75em;
@@ -186,31 +148,6 @@ legend {
 textarea {
   overflow: auto;
 }
-[type="checkbox"],
-[type="radio"] {
-  box-sizing: border-box;
-  padding: 0;
-}
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
-[type="search"] {
-  -webkit-appearance: textfield;
-  outline-offset: -2px;
-}
-[type="search"]::-webkit-search-cancel-button,
-[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-::-webkit-input-placeholder {
-  color: inherit;
-  opacity: 0.54;
-}
-::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  font: inherit;
-}
 * {
   box-sizing: inherit;
 }
@@ -219,20 +156,6 @@ textarea {
 }
 *:after {
   box-sizing: inherit;
-}
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-hgroup,
-img
-figure,
-fieldset{
-  margin: 0;
-  padding: 0;
 }
 p {
   font-size: var(--summary-lg-fontSize);
@@ -246,14 +169,16 @@ h1{
 h2 {
   font-size: 1.62671rem;
   font-weight: normal;
-  font-size: 26px;
+  line-height: 150%;
   letter-spacing: 1px;
 }
 h3 {
   font-size: 1.38316rem;
+  font-weight: normal;
 }
 h4 {
   font-size: 1rem;
+  font-weight: normal;
 }
 h5 {
   font-size: 0.85028rem;
@@ -266,30 +191,6 @@ ul {
   padding: 0;
   list-style-position: outside;
   list-style-image: none;
-}
-form,
-noscript,
-iframe,
-address,
-table,
-dl,
-dd {
-  margin-left: 0;
-  margin-right: 0;
-}
-form,
-noscript,
-iframe,
-address,
-table,
-dl,
-dd {
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
 }
 b,
 strong,

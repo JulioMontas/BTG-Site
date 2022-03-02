@@ -8,6 +8,7 @@ import GlobalContact from "../components/globalContact"
 import ButtonCta from "../components/buttonCta"
 import PracticeAreasBtn from "../components/practiceAreasBtn"
 import CaseResultBtn from "../components/caseResultBtn"
+import TestimonialBlock from "../components/testimonialBlock"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import * as homeStyles from "../styles/home.module.css"
 
@@ -91,24 +92,27 @@ const IndexPage = ({ data: {siteColor, siteData, allCaseResult, allAttorney, all
       </div>
     </div>
 
+
+
+
     <div className={homeStyles.homePadding} style={{background: siteData.testimonialBdColor.hex, color: siteData.testimonialTextColor.hex }}>
       <div className="container">
-      <div className={homeStyles.cardTestimonial}>
         {allTestimonial.nodes.map(data => (
-          <div>
-            <GatsbyImage image={data.coverImage.gatsbyImageData} className={homeStyles.cardTestimonial__img}/>
-            <h2 className={homeStyles.cardTestimonial__title}>{data.title}</h2>
-            <small className={homeStyles.cardTestimonial__date}>{data.date}</small>
-            <p className={homeStyles.cardTestimonial__quote}><b>"</b>{data.quote}<b>"</b></p>
-          </div>
+          <TestimonialBlock
+            image={data.coverImage.gatsbyImageData}
+            title={data.title}
+            date={data.date}
+            quote={data.quote}
+           />
         ))}
-          <ButtonCta
-            url="/testimonial"
-            title={siteData.testimonialTitle}
-          />
-      </div>
       </div>
     </div>
+
+
+
+
+
+
 
     <div className={homeStyles.homePadding} style={{background: siteData.praticeAreaBdColor.hex, color: siteData.praticeAreaTextColor.hex }}>
       <div className="container">

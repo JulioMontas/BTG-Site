@@ -77,12 +77,16 @@ exports.createPages = async ({ graphql, actions }) => {
         slug
         title
         subtitle
+        content {
+          value
+        }
         attorney {
           id
+          slug
           name
           location
           picture {
-            gatsbyImageData
+            gatsbyImageData(width: 100, height: 100, placeholder: BLURRED, layout: FIXED)
           }
         }
       }

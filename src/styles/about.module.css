@@ -45,6 +45,7 @@
   font-size: var(--summary-lg-fontSize);
   line-height: var(--summary-lg-lineHeight);
   margin-bottom: 1em;
+  background: red;
 }
 
 .attorneyCta a{
@@ -83,6 +84,9 @@
   border: 1px solid rgb(243, 244, 246);
   padding: 0.3em 0.8em 0.4em;
   border-radius: 10px
+}
+.intro__summaryText p{
+  background: red;
 }
 
 @media (min-width: 576px) { }

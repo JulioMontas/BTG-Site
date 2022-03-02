@@ -1,0 +1,33 @@
+.cardTestimonial{
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+.cardTestimonial a,
+.cardTestimonial__img{
+  margin: 0 auto;
+}
+.cardTestimonial__img{
+  border-radius: 100%
+}
+.cardTestimonial__title{
+  font-size: 21px;
+  line-height: 155%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.cardTestimonial__date{
+  font-size: 14px;
+  line-height: 155%;
+  letter-spacing: 1px;
+}
+.cardTestimonial__quote{
+  font-size: 16px;
+  line-height: 155%;
+  margin: 1em 0 2em;
+}
+@media (min-width: 992px) {
+  .cardTestimonial{
+    width: 400px;
+  }
+}

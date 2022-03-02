@@ -100,52 +100,8 @@ https://fireship.io/lessons/wavy-backgrounds/
   fill: #1d3851;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .avatorList div:nth-child(03){z-index: 10;}
 .avatorList div:nth-child(04){z-index: 1;}
-
-/* Testimonial SECTION */
-.cardTestimonial{
-  text-align: center;
-  width: 100%;
-  margin: 0 auto;
-}
-.cardTestimonial a,
-.cardTestimonial__img{
-  margin: 0 auto;
-}
-.cardTestimonial__img{
-  border-radius: 100%
-}
-.cardTestimonial__title{
-  font-size: 21px;
-  line-height: 155%;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-.cardTestimonial__date{
-  font-size: 14px;
-  line-height: 155%;
-  letter-spacing: 1px;
-}
-.cardTestimonial__quote{
-  font-size: 16px;
-  line-height: 155%;
-  margin: 1em 0 2em;
-}
 
 /* Blog SECTION */
 .blog__link{
@@ -222,11 +178,6 @@ https://fireship.io/lessons/wavy-backgrounds/
   }
   .avatorList div:nth-child(03){z-index: 20;}
   .avatorList div:nth-child(04){z-index: 1;}
-
-  .cardTestimonial{
-    width: 400px;
-  }
-
   /* INTRO SECTION */
   .homePadding{
     padding: 6.5rem 1rem 6.5rem;

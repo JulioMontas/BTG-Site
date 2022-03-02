@@ -19,14 +19,13 @@ const theme = {
   },
 }
 
-const AttorneyAreaPost = ({ pageContext: { node } }) => (
+const AttorneyAreaPost = ({ pageContext: { node} }) => (
   <Layout>
     <Seo title="Attorney Area Post" />
     <GlobalHero
       title={node.title}
       summary={node.subtitle}
     />
-
 
     <div style={{background: theme.colorsBG.secondary, color: theme.colorsText.primary,}}>
       <div className="container">
@@ -50,12 +49,6 @@ const AttorneyAreaPost = ({ pageContext: { node } }) => (
       </div>
       </div>
     </div>
-
-
-
-
-
-
     <GlobalContact />
   </Layout>
 )

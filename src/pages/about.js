@@ -9,6 +9,7 @@ import GlobalContact from "../components/globalContact"
 import ButtonCta from "../components/buttonCta"
 import CaseResultBtn from "../components/caseResultBtn"
 import AttorneyBtn from "../components/attorneyBtn"
+import TestimonialBlock from "../components/testimonialBlock"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import * as aboutStyles from "../styles/about.module.css"
 
@@ -34,8 +35,6 @@ const AboutPage = ({data}) => (
       </div>
     </div>
 
-
-
     <div className={aboutStyles.intro} style={{ background: data.datoCmsAbout.attorneyBdColor.hex, color: data.datoCmsAbout.attorneyTColor.hex}}>
       <div className="container">
         <h2 className={aboutStyles.attorneysTitle}>
@@ -56,7 +55,7 @@ const AboutPage = ({data}) => (
 
     <div className={aboutStyles.intro} style={{ background: data.datoCmsAbout.historyBgColor.hex, color: data.datoCmsAbout.historyTColor.hex}}>
       <div className="container">
-        <StructuredText data={data.datoCmsAbout.historyContent} />
+        <StructuredText data={data.datoCmsAbout.historyContent} className={aboutStyles.intro__summaryText} />
       </div>
     </div>
 
@@ -79,11 +78,15 @@ const AboutPage = ({data}) => (
 
     <div className={aboutStyles.testimonial} style={{ background: data.datoCmsAbout.testimonialBdColor.hex, color: data.datoCmsAbout.testimonialTColor.hex}}>
       <div className="container">
-        <h2 className={aboutStyles.testimonialTitle}>
-          {data.datoCmsAbout.testimonialTitle}
-        </h2>
         <div>
-
+          {data.allTestimonial.nodes.map(data => (
+            <TestimonialBlock
+              image={data.coverImage.gatsbyImageData}
+              title={data.title}
+              date={data.date}
+              quote={data.quote}
+             />
+          ))}
         </div>
       </div>
     </div>
@@ -149,6 +152,17 @@ export const query = graphql`{
     }
     testimonialTColor {
       hex
+    }
+  }
+  allTestimonial: allDatoCmsTestimonial(sort: {order: DESC, fields: meta___updatedAt}, limit: 1) {
+    nodes {
+      id
+      title
+      date
+      quote
+      coverImage {
+        gatsbyImageData(width: 100, height: 100, placeholder: TRACED_SVG, layout: FIXED)
+      }
     }
   }
   allDatoCmsAttorney {
