@@ -11,10 +11,6 @@ const TestimonialBlock = (props) => {
       <h3 className={Styles.cardTestimonial__title}>{props.title}</h3>
       <small className={Styles.cardTestimonial__date}>{props.date}</small>
       <p className={Styles.cardTestimonial__quote}><b>"</b>{props.quote}<b>"</b></p>
-      <ButtonCta
-        url="/testimonial"
-        title="Read more testimonial"
-      />
     </div>
   )
 }

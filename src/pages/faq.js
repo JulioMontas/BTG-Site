@@ -24,14 +24,14 @@ const FAQPage = ({ data: {site, siteTag, allFaqs} }) => (
         {allFaqs.content.map(data => (
           <div
             style={{
-              border:`1px solid #f3f4f6`,
+              border:`1px solid #BCA360`,
               padding:`1em`,
               borderRadius:`10px`,
               marginBottom:`1.4em`,
             }}
           >
             <h2 style={{color:`rgb(29, 56, 81)`, fontSize:`1.25em`}}><b>{data.title}?</b></h2>
-            <p style={{color:`rgb(61, 88, 107)`, fontSize:`1.125em`}}>{data.content}</p>
+            <p style={{color:`rgb(61, 88, 107)`, fontSize:`1.125em`, padding: `0.5em 1em 0;`}}>{data.content}</p>
           </div>
         ))}
       </div>

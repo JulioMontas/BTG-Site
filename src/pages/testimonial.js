@@ -2,10 +2,10 @@ import * as React from "react"
 import Layout from "../components/layout"
 import GlobalHero from "../components/globalHero"
 import GlobalContact from "../components/globalContact"
+import TestimonialBlock from "../components/testimonialBlock"
 import { graphql } from 'gatsby'
 import { HelmetDatoCms } from 'gatsby-source-datocms'
 import { StructuredText } from "react-datocms";
-import * as stylesTestimonial from "../styles/caseResultsArticle.module.css"
 import { GatsbyImage } from 'gatsby-plugin-image';
 
 const theme = {
@@ -19,22 +19,45 @@ const theme = {
   },
 }
 
-const TestimonialPage = () => (
+const TestimonialPage = ({data}) => (
   <Layout>
     <GlobalHero
       title="Testimonial"
       summary="Summary"
     />
-
-    <div style={{ background: theme.colorsBG.secondary, color: theme.colorsText.primary }}>
+    <div style={{ background: theme.colorsBG.primary, color: theme.colorsText.secondary }}>
       <div className="container">
-        <div className={stylesTestimonial.quote}>
-
-        </div>
+      <div className="gridLayout">
+       {data.allTestimonial.nodes.map(data => (
+         <TestimonialBlock
+           image={data.coverImage.gatsbyImageData}
+           title={data.title}
+           date={data.date}
+           quote={data.quote}
+          />
+       ))}
+       </div>
       </div>
     </div>
     <GlobalContact />
   </Layout>
 )
+
+export const query = graphql`
+  {
+    allTestimonial: allDatoCmsTestimonial(
+      sort: {order: DESC, fields: meta___updatedAt}){
+      nodes {
+        id
+        title
+        date
+        quote
+        coverImage {
+          gatsbyImageData(width: 100, height: 100, placeholder: TRACED_SVG, layout: FIXED)
+        }
+      }
+    }
+  }
+`
 
 export default TestimonialPage

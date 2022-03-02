@@ -41,7 +41,7 @@ export default class Index extends React.Component {
         <Seo title="Contact" />
         <GlobalHero
           title= "Contact"
-          summary= "Etiam hendrerit ipsum fermentum."
+          summary= "To schedule a meeting with our attorney, please fill the form below or call us at 813-251-0777"
         />
         <div style={{
           background:`#1d3851`,
@@ -50,7 +50,7 @@ export default class Index extends React.Component {
         }}>
 
         <div className="container">
-          <div className="top-0 absolute w-full md:w-2/3">
+          <div className="top-0 absolute w-full md:w-2/3" style={{width:`100%`}}>
 
             <div className="mt-64 w-5/6 md:w-1/3">
               <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 "
@@ -70,9 +70,13 @@ export default class Index extends React.Component {
                   </label>
                 </div>
                 <div className="field mb-4">
+
+                  {/*
                   <label className="label block text-gray-700 text-sm font-bold mb-2" htmlFor={"name"}>
                     Your Name
                   </label>
+                  */}
+
                   <div className="control">
                     <input
                       className="input bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
@@ -85,14 +89,17 @@ export default class Index extends React.Component {
                     />
                   </div>
                 </div>
+
                 <div className="field mb-6">
+                {/*
                   <label className="label block text-gray-700 text-sm font-bold mb-2" htmlFor={"email"}>
-                    Email
+                    E-mail
                   </label>
+                  */}
                   <div className="control">
                     <input
                       className="input bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
-                      placeholder="Email"
+                      placeholder="E-mail"
                       type={"email"}
                       name={"email"}
                       onChange={this.handleChange}
@@ -102,13 +109,15 @@ export default class Index extends React.Component {
                   </div>
                 </div>
                 <div className="field mb-4">
+                {/*
                   <label className="label block text-gray-700 text-sm font-bold mb-2" htmlFor={"message"}>
                     Message
                   </label>
+                    */}
                   <div className="control">
                     <textarea
                       className="textarea bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
-                      placeholder="Message"
+                      placeholder="Brief description of your legal issue"
                       name={"message"}
                       onChange={this.handleChange}
                       id={"message"}
@@ -118,7 +127,7 @@ export default class Index extends React.Component {
                 </div>
                 <div className="field">
                   <button className="button is-link bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
-                    Send
+                    Submit
                   </button>
                 </div>
               </form>

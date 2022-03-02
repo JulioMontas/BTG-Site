@@ -92,9 +92,6 @@ const IndexPage = ({ data: {siteColor, siteData, allCaseResult, allAttorney, all
       </div>
     </div>
 
-
-
-
     <div className={homeStyles.homePadding} style={{background: siteData.testimonialBdColor.hex, color: siteData.testimonialTextColor.hex }}>
       <div className="container">
         {allTestimonial.nodes.map(data => (
@@ -105,14 +102,14 @@ const IndexPage = ({ data: {siteColor, siteData, allCaseResult, allAttorney, all
             quote={data.quote}
            />
         ))}
+        <div className="centerLink">
+          <ButtonCta
+            url="/testimonial"
+            title="Read more testimonial"
+          />
+        </div>
       </div>
     </div>
-
-
-
-
-
-
 
     <div className={homeStyles.homePadding} style={{background: siteData.praticeAreaBdColor.hex, color: siteData.praticeAreaTextColor.hex }}>
       <div className="container">
@@ -121,7 +118,7 @@ const IndexPage = ({ data: {siteColor, siteData, allCaseResult, allAttorney, all
         {allPracticeArea.nodes.map(data => (
           <div>
             <PracticeAreasBtn
-              url={data.slug}
+              url={'/practice-area/' + data.slug}
               description={data.description}
               title={data.title}
               image={data.coverImage.gatsbyImageData}

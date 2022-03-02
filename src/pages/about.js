@@ -87,6 +87,12 @@ const AboutPage = ({data}) => (
               quote={data.quote}
              />
           ))}
+          <div className="centerLink">
+            <ButtonCta
+              url="/testimonial"
+              title="Read more testimonial"
+            />
+          </div>
         </div>
       </div>
     </div>

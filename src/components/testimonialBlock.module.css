@@ -3,7 +3,6 @@
   width: 100%;
   margin: 0 auto;
 }
-.cardTestimonial a,
 .cardTestimonial__img{
   margin: 0 auto;
 }
@@ -22,12 +21,15 @@
   letter-spacing: 1px;
 }
 .cardTestimonial__quote{
-  font-size: 16px;
+  font-size: 1em;
   line-height: 155%;
   margin: 1em 0 2em;
 }
 @media (min-width: 992px) {
   .cardTestimonial{
-    width: 400px;
+    width: 350px;
+  }
+  .cardTestimonial__quote{
+    font-size: 1.15em;
   }
 }
