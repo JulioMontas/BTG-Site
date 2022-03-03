@@ -129,6 +129,7 @@ const IndexPage = ({ data: {siteColor, siteData, allCaseResult, allAttorney, all
       </div>
     </div>
 
+    {/*
     <div className={homeStyles.homePadding} style={{background: siteData.blogBdColor.hex, color: siteData.blogTextColor.hex }}>
       <div className="container">
         <div className="twoColumnsGrid">
@@ -150,6 +151,7 @@ const IndexPage = ({ data: {siteColor, siteData, allCaseResult, allAttorney, all
         </div>
       </div>
     </div>
+    */}
 
     <GlobalContact />
   </Layout>

@@ -3,6 +3,7 @@ import { navigate } from "gatsby-link";
 import Layout from "../../components/layout";
 import Seo from "../../components/seo"
 import GlobalHero from "../../components/globalHero"
+import * as Styles from "../../styles/contact.css"
 
 function encode(data) {
   return Object.keys(data)

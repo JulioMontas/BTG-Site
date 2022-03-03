@@ -45,64 +45,6 @@ body {
 .centerLink a{
   margin: 0 auto;
 }
-.field{
-  margin-bottom: 2em;
-}
-form {
-  position: relative;
-  width: 100%;
-  /* margin: 0 auto; */
-  box-sizing: border-box;
-  border-radius: 10px;
-}
-
-input, textarea, select, button {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-input{
-  height: 50px;
-  background: none;
-  color: #FFF;
-  border-color: #c2ac71;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom-width: thick;
-}
-textarea{
-  height: 150px;
-  background: none;
-  padding: 1em;
-  color: #FFF;
-  border: 4px solid #c2ac71;
-}
-
-fieldset {
-  position: relative;
-  border: 1px solid silver;
-  padding: 0.35em 0.625em 0.75em;
-}
-legend {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  box-sizing: border-box;
-  color: inherit;
-  display: table;
-  max-width: 100%;
-  padding: 0;
-  white-space: normal;
-}
-.field button{
-  color: #FFF;
-  background: #c2ac71;
-  border: none;
-  padding: 1em;
-  border-radius: 10px;
-}
 article,
 aside,
 details,
@@ -278,9 +220,6 @@ li > p {
   .container{
     margin: 0 auto;
     max-width: 768px;
-  }
-  form {
-    width: 755px;
   }
 }
 /* Large devices (desktops, 992px and up) */

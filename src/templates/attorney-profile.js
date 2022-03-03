@@ -35,7 +35,7 @@ const AttorneyProfile = ({ pageContext: { node } }) => {
             <div>
               <StructuredText data={node.content} />
             </div>
-                        <GatsbyImage image={node.picture.gatsbyImageData} className={Styles.roundImage}/>
+            <GatsbyImage image={node.picture.gatsbyImageData} className={Styles.roundImage}/>
           </div>
         </div>
       </div>
