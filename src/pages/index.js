@@ -68,7 +68,7 @@ const IndexPage = ({ data: {siteColor, siteData, allCaseResult, allAttorney, all
           <div className={homeStyles.avatorList}>
             {allAttorney.nodes.map(data => (
               <div>
-              <AniLink paintDrip to={'/attorney/' + data.slug} hex="#3d586b">
+              <AniLink paintDrip to={'about-us/attorney/' + data.slug} hex="#3d586b">
                 <GatsbyImage image={data.picture.gatsbyImageData} className={homeStyles.heroPhoto}/>
               </AniLink>
               </div>
@@ -104,7 +104,7 @@ const IndexPage = ({ data: {siteColor, siteData, allCaseResult, allAttorney, all
         ))}
         <div className="centerLink">
           <ButtonCta
-            url="/testimonial"
+            url="/case-study-and-testimonial/testimonial"
             title="Read more testimonial"
           />
         </div>

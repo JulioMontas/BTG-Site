@@ -42,7 +42,7 @@ export default class Index extends React.Component {
         <Seo title="Contact" />
         <GlobalHero
           title= "Contact"
-          summary= "To schedule a meeting with our attorney, please fill the form below or call us at 813-251-0777"
+          summary= "Fill the form below or call us at 813-251-0777"
         />
         <div style={{
           background:`#1d3851`,

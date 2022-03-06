@@ -113,28 +113,28 @@ exports.createPages = async ({ graphql, actions }) => {
   `)
   queryCaseResult.data.allDatoCmsCaseResult.nodes.forEach(node => {
     createPage({
-      path: `/case-result/${node.slug}`,
+      path: `/case-study-and-testimonial/${node.slug}`,
       component: require.resolve(`./src/templates/case-result-post.js`),
       context: { node },
     })
   })
   queryAttorney.data.allDatoCmsAttorney.nodes.forEach(node => {
     createPage({
-      path: `/attorney/${node.slug}`,
+      path: `/about-us/attorney/${node.slug}`,
       component: require.resolve(`./src/templates/attorney-profile.js`),
       context: { node },
     })
   })
   queryPracticeArea.data.allDatoCmsPracticeArea.nodes.forEach(node => {
     createPage({
-      path: `/practice-area/${node.slug}`,
+      path: `/services/${node.slug}`,
       component: require.resolve(`./src/templates/pratice-area-post.js`),
       context: { node },
     })
   })
   queryBlogPost.data.allDatoCmsPost.nodes.forEach(node => {
     createPage({
-      path: `/blog/${node.slug}`,
+      path: `/guide-and-resources/${node.slug}`,
       component: require.resolve(`./src/templates/post.js`),
       context: { node },
     })

@@ -3,15 +3,15 @@ import { Link, graphql } from "gatsby"
 import { GatsbyImage } from 'gatsby-plugin-image'
 import { StructuredText } from "react-datocms"
 import { HelmetDatoCms } from 'gatsby-source-datocms'
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-import GlobalContact from "../components/globalContact"
-import ButtonCta from "../components/buttonCta"
-import CaseResultBtn from "../components/caseResultBtn"
-import AttorneyBtn from "../components/attorneyBtn"
-import TestimonialBlock from "../components/testimonialBlock"
+import Layout from "../../components/layout"
+import Seo from "../../components/seo"
+import GlobalContact from "../../components/globalContact"
+import ButtonCta from "../../components/buttonCta"
+import CaseResultBtn from "../../components/caseResultBtn"
+import AttorneyBtn from "../../components/attorneyBtn"
+import TestimonialBlock from "../../components/testimonialBlock"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
-import * as aboutStyles from "../styles/about.module.css"
+import * as aboutStyles from "../../styles/about.module.css"
 
 const AboutPage = ({data}) => (
   <Layout>
@@ -76,26 +76,6 @@ const AboutPage = ({data}) => (
       </div>
     </div>
 
-    <div className={aboutStyles.testimonial} style={{ background: data.datoCmsAbout.testimonialBdColor.hex, color: data.datoCmsAbout.testimonialTColor.hex}}>
-      <div className="container">
-        <div>
-          {data.allTestimonial.nodes.map(data => (
-            <TestimonialBlock
-              image={data.coverImage.gatsbyImageData}
-              title={data.title}
-              date={data.date}
-              quote={data.quote}
-             />
-          ))}
-          <div className="centerLink">
-            <ButtonCta
-              url="/testimonial"
-              title="Read more testimonial"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
     <GlobalContact />
   </Layout>
 )

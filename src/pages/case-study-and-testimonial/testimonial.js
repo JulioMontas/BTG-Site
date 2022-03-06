@@ -1,8 +1,8 @@
 import * as React from "react"
-import Layout from "../components/layout"
-import GlobalHero from "../components/globalHero"
-import GlobalContact from "../components/globalContact"
-import TestimonialBlock from "../components/testimonialBlock"
+import Layout from "../../components/layout"
+import GlobalHero from "../../components/globalHero"
+import GlobalContact from "../../components/globalContact"
+import TestimonialBlock from "../../components/testimonialBlock"
 import { graphql } from 'gatsby'
 import { HelmetDatoCms } from 'gatsby-source-datocms'
 import { StructuredText } from "react-datocms";

@@ -8,10 +8,10 @@ import GlobalContact from "../../components/globalContact"
 
 const PraticeAreasPage = ({ data: { allData } }) => (
   <Layout>
-    <Seo title="Pratice Area" />
+    <Seo title="Services" />
     <GlobalHero
-      title="Pratice Area"
-      summary="Ipsum at enim fermentum, et molestie dui semper. Quis auctor augue rhoncus in."
+      title="Services"
+      summary="Pratice Area"
     />
     <div style={{
       background:`#1d3851`,

@@ -23,7 +23,7 @@ const AttorneyAreaPost = ({ pageContext: { node} }) => (
   <Layout>
     <Seo title="Attorney Area Post" />
     <GlobalHero
-      title={node.title}
+      title={"Practice Area: " + node.title}
       summary={node.subtitle}
     />
 

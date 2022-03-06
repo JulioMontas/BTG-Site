@@ -57,7 +57,7 @@ const AttorneyProfile = ({ pageContext: { node } }) => {
           {node.practiceArea.map(data => (
             <div>
             <PracticeAreasBtn
-              url={'/practice-area/' + data.slug}
+              url={'/services/' + data.slug}
               description={data.description}
               title={data.title}
               image={data.coverImage.gatsbyImageData}

@@ -5,7 +5,7 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 
 const AttorneyBtn = (props) => {
   return (
-    <AniLink paintDrip to={'/attorney/' + props.slug} hex="#3d586b" className={attorneyBtnStyles.cta}>
+    <AniLink paintDrip to={'/about-us/attorney/' + props.slug} hex="#3d586b" className={attorneyBtnStyles.cta}>
       <div>
         <GatsbyImage image={props.image} className={attorneyBtnStyles.coverImage} />
         <p className={attorneyBtnStyles.description}>{props.location}</p>

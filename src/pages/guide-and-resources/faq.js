@@ -1,10 +1,10 @@
 import * as React from "react"
-import Layout from "../components/layout"
-import GlobalHero from "../components/globalHero"
-import GlobalContact from "../components/globalContact"
+import Layout from "../../components/layout"
+import GlobalHero from "../../components/globalHero"
+import GlobalContact from "../../components/globalContact"
 import { graphql } from 'gatsby'
 import { HelmetDatoCms } from 'gatsby-source-datocms'
-import * as stylesConsultation from "../styles/caseResultsArticle.module.css"
+import * as stylesConsultation from "../../styles/caseResultsArticle.module.css"
 
 const FAQPage = ({ data: {site, siteTag, allFaqs} }) => (
   <Layout>

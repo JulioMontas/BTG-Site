@@ -80,23 +80,28 @@ const Header = ({ siteTitle }) => (
 
         <ul className="hidden lg:block">
           <li>
-            <AniLink cover direction="left" to="/about" bg="#3d586b">
-              The Firm
+            <AniLink cover direction="left" to="/about-us" bg="#3d586b">
+              About Us
             </AniLink>
           </li>
           <li>
-            <AniLink cover direction="left" to="/case-result" bg="#3d586b">
-              Case Results
+            <AniLink cover direction="left" to="/services" bg="#3d586b">
+              Services
             </AniLink>
           </li>
           <li>
-            <AniLink cover direction="left" to="/practice-area" bg="#3d586b">
-              Practice Areas
+            <AniLink cover direction="left" to="/case-study-and-testimonial" bg="#3d586b">
+              Case Study & Testimonial
+            </AniLink>
+          </li>
+          <li>
+            <AniLink cover direction="left" to="/guide-and-resources" bg="#3d586b">
+              Guide & Resources
             </AniLink>
           </li>
           <li>
             <AniLink cover direction="left" to="/contact" bg="#3d586b">
-              Contact
+              Contact Us
             </AniLink>
           </li>
         </ul>
