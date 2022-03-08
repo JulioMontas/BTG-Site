@@ -5,6 +5,7 @@ import GlobalHero from "../../components/globalHero"
 import GlobalContact from "../../components/globalContact"
 import { StructuredText } from "react-datocms"
 import * as caseResultsArticleStyles from "../../styles/caseResultsArticle.module.css"
+import { graphql } from "gatsby"
 
 const theme = {
   colorsBG: {
@@ -17,15 +18,27 @@ const theme = {
   },
 }
 
+export const query = graphql`
+{
+  datoCmsDisclaimer {
+    title
+    summary
+    content {
+      value
+    }
+  }
+}
+`
+
 const Disclaimer = ({ data }) => (
   <Layout>
     <Seo title="Post" />
     <GlobalHero
-      title="Disclaimer"
-      summary="Text"
+      title={data.datoCmsDisclaimer.title}
+      summary={data.datoCmsDisclaimer.summary}
     />
     <div className="container">
-      Disclaimer
+      <StructuredText data={data.datoCmsDisclaimer.content} />
     </div>
     <GlobalContact />
   </Layout>

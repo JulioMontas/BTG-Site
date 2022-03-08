@@ -24,22 +24,30 @@ const TermsAndConditions = () => (
       title="Terms & Conditions"
       summary="Text"
     />
-    <div className="container">
-      <div className="twoColumnsGrid">
-        <h2>Disclaimer</h2>
-        <ButtonCta
-          url="/terms-and-conditions/disclaimer"
-          title={"Disclaimer"}
-        />
-      </div>
-      <div className="twoColumnsGrid">
-        <h2>Privacy Policy</h2>
-        <ButtonCta
-          url="/terms-and-conditions/privacy-policy"
-          title={"Privacy Policy"}
-        />
+    <div style={{padding:`5rem 1rem 5rem`, background:`#FFF`, color:`#333`}}>
+      <div className="container">
+        <div className="twoColumnsGrid">
+          <h2>Disclaimer</h2>
+          <ButtonCta
+            url="/terms-and-conditions/disclaimer"
+            title={"Disclaimer"}
+          />
+        </div>
       </div>
     </div>
+
+    <div style={{padding:`5rem 1rem 5rem`}}>
+      <div className="container">
+        <div className="twoColumnsGrid">
+          <h2>Privacy Policy</h2>
+          <ButtonCta
+            url="/terms-and-conditions/privacy-policy"
+            title={"Privacy Policy"}
+          />
+        </div>
+      </div>
+    </div>
+
     <GlobalContact />
   </Layout>
 )
