@@ -111,6 +111,17 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
+
+  const queryDisclaimer = await graphql(`
+    {
+      datoCmsDisclaimer {
+        title
+        content {
+          value
+        }
+      }
+    }
+  `)
   queryCaseResult.data.allDatoCmsCaseResult.nodes.forEach(node => {
     createPage({
       path: `/testimonial-and-case-study/${node.slug}`,
