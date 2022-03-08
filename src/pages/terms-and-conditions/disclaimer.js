@@ -42,9 +42,9 @@ const Disclaimer = ({ data }) => (
       color: theme.colorsText.primary,
     }}>
       <div className="container">
-        <div className={caseResultsArticleStyles.intro}>
+        <article className={caseResultsArticleStyles.intro}>
           <StructuredText data={data.datoCmsDisclaimer.content} />
-        </div>
+        </article>
       </div>
     </div>
     <GlobalContact />

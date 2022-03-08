@@ -1,7 +1,7 @@
 .wrapper{
-    display: grid;
-    grid-template-columns: 1fr;
-    row-gap: 2em;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 2em;
 }
 .intro,
 .quote{
@@ -27,12 +27,11 @@
   margin-top: 3em;
 }
 .intro h2:first-child{
-    margin-top: 0em;
+  margin-top: 0em;
 }
 .intro li{
   list-style-type: disc;
 }
-
 /* QUOTE Block */
 .quote div{
   background: #EDEDED;
@@ -79,6 +78,7 @@
   }
   .intro{
     padding: 4rem 0rem 3rem;
+    width: 800px;
   }
 }
 @media (min-width: 1200px) {

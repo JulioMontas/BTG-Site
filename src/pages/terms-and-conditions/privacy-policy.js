@@ -41,13 +41,11 @@ const PrivacyPolicy = ({ data }) => (
       background: theme.colorsBG.secondary,
       color: theme.colorsText.primary,
     }}>
-
       <div className="container">
-        <div className={caseResultsArticleStyles.intro}>
+        <article className={caseResultsArticleStyles.intro}>
           <StructuredText data={data.datoCmsPrivacyPolicy.content} />
-        </div>
+        </article>
       </div>
-
     </div>
     <GlobalContact />
   </Layout>

@@ -35,7 +35,7 @@
 }
 @media (min-width: 992px) {
   .description{
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 4fr 2fr;
   }
 }
 @media (min-width: 1200px) { }

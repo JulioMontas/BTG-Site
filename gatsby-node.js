@@ -108,6 +108,12 @@ exports.createPages = async ({ graphql, actions }) => {
             }
           }
         }
+        edges {
+          next {
+            title
+            slug
+          }
+        }
       }
     }
   `)
