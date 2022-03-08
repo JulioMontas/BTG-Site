@@ -103,7 +103,7 @@
 @media (min-width: 992px) {
   .address,
   .phoneNumber {
-    font-size: 1.3em;
+    font-size: 1.1em;
   }
   .wrapper{
       grid-template-columns: 2fr 2fr 1fr;
