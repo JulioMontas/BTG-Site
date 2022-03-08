@@ -37,8 +37,15 @@ const Disclaimer = ({ data }) => (
       title={data.datoCmsDisclaimer.title}
       summary={data.datoCmsDisclaimer.summary}
     />
-    <div className="container">
-      <StructuredText data={data.datoCmsDisclaimer.content} />
+    <div style={{
+      background: theme.colorsBG.secondary,
+      color: theme.colorsText.primary,
+    }}>
+      <div className="container">
+        <div className={caseResultsArticleStyles.intro}>
+          <StructuredText data={data.datoCmsDisclaimer.content} />
+        </div>
+      </div>
     </div>
     <GlobalContact />
   </Layout>
