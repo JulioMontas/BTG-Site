@@ -41,7 +41,7 @@ const MenuLinks = styled.nav`
   align-items: center;
   text-align: center;
   height: 100vh;
-  width: 35%;
+  width: 90%;
   background: #1d3851;
   position: fixed;
   top: 0;
@@ -52,18 +52,29 @@ const MenuLinks = styled.nav`
   transform: ${({nav}) => (nav ? "translateX(0)": "translateX(100%)")};
   ul {
     list-style-type:none;
+    margin: 0 auto;
   }
   li{
-    margin-top: 1rem;
+    margin-top: 2rem;
+    @media (min-width: 768px) {
+      margin-top: 3rem;
+    }
   }
   a{
-    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 2rem;
     color: #BCA360;
-    font-size: 1.5rem;
+    text-decoration: none;
     transition: color 300ms;
     :hover{
       color:#A78D49;
     }
+    @media (min-width: 768px) {
+      font-size: 3rem;
+    }
+  }
+  @media (min-width: 768px) {
+    width: 100%;
   }
 `
 const Navbar = () => {
@@ -102,6 +113,14 @@ const Navbar = () => {
             <AniLink cover direction="left" to="/contact" bg="#3d586b">
               Contact Us
             </AniLink>
+          </li>
+          <li>
+            <a href="tel:5554280940">813-251-0777</a>
+          </li>
+          <li>
+            <address>
+              <span>Tampa, Florida Attorneys (FL)</span>
+            </address>
           </li>
         </ul>
       </MenuLinks>
