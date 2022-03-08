@@ -10,37 +10,11 @@ import TestimonialBlock from "../../components/testimonialBlock"
 
 const CaseResultsPage = ({data}) => (
   <Layout>
-    <Seo title="Case Results" />
+    <Seo title="Testimonial & Case Study" />
     <GlobalHero
       title= "Testimonial & Case Study"
       summary= "Latest review"
     />
-
-    <div style={{
-      background:`#1d3851`,
-      color: `#FFF`,
-      padding:`3rem 1rem 5rem`
-    }}
-    >
-      <div className="container">
-        <div>
-          {data.allTestimonial.nodes.map(data => (
-            <TestimonialBlock
-              image={data.coverImage.gatsbyImageData}
-              title={data.title}
-              date={data.date}
-              quote={data.quote}
-             />
-          ))}
-          <div className="centerLink">
-            <ButtonCta
-              url="/case-study-and-testimonial/testimonial"
-              title="Read more testimonial"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
 
     <div style={{
       background:`#1d3851`,
@@ -58,6 +32,33 @@ const CaseResultsPage = ({data}) => (
         ))}
       </div>
     </div>
+    </div>
+
+    <div style={{
+      background:`#1d3851`,
+      color: `#FFF`,
+      padding:`3rem 1rem 5rem`,
+      borderTop:`1px solid rgba(188, 163, 96, 0.2)`
+    }}
+    >
+      <div className="container">
+        <div>
+          {data.allTestimonial.nodes.map(data => (
+            <TestimonialBlock
+              image={data.coverImage.gatsbyImageData}
+              title={data.title}
+              date={data.date}
+              quote={data.quote}
+             />
+          ))}
+          <div className="centerLink">
+            <ButtonCta
+              url="/testimonial-and-case-study/testimonial"
+              title="Read more testimonial"
+            />
+          </div>
+        </div>
+      </div>
     </div>
 
     <GlobalContact />

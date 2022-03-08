@@ -17,7 +17,6 @@ const AttorneysPage = ({ data: { siteData } }) => (
     />
     <div style={{
       background:`#1d3851`,
-      borderBottom:`1px solid rgba(188, 163, 96, 0.2)`,
       padding:`3rem 1rem 5rem`
     }}>
       <div className="container">

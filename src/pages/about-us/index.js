@@ -55,7 +55,9 @@ const AboutPage = ({data}) => (
 
     <div className={aboutStyles.intro} style={{ background: data.datoCmsAbout.historyBgColor.hex, color: data.datoCmsAbout.historyTColor.hex}}>
       <div className="container">
-        <StructuredText data={data.datoCmsAbout.historyContent} className={aboutStyles.intro__summaryText} />
+        <div className={aboutStyles.intro__summaryText}>
+        <StructuredText data={data.datoCmsAbout.historyContent}/>
+        </div>
       </div>
     </div>
 

@@ -81,7 +81,7 @@ const IndexPage = ({ data: {siteColor, siteData, allCaseResult, allAttorney, all
               {siteData.ctaAbout.map(data => (
                 <div>
                   <ButtonCta
-                    url={data.url}
+                    url="about-us"
                     title={data.label}
                   />
                 </div>
@@ -104,7 +104,7 @@ const IndexPage = ({ data: {siteColor, siteData, allCaseResult, allAttorney, all
         ))}
         <div className="centerLink">
           <ButtonCta
-            url="/case-study-and-testimonial/testimonial"
+            url="/testimonial-and-case-study/testimonial"
             title="Read more testimonial"
           />
         </div>

@@ -14,7 +14,12 @@ const theme = {
 }
 
 const GlobalContact = (props) => (
-  <div className={globalContactStyles.sectionPadding} style={{background: theme.colorsBG.primary, color: theme.colorsText.secondary, }}>
+  <div
+    className={globalContactStyles.sectionPadding}
+    style={{
+      background: theme.colorsBG.primary, color: theme.colorsText.secondary,
+      borderTop:`1px solid rgba(188, 163, 96, 0.2)` 
+  }}>
     <div className="container">
       <div className="twoColumnsGrid">
         <div>

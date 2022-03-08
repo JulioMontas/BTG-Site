@@ -85,8 +85,14 @@
   padding: 0.3em 0.8em 0.4em;
   border-radius: 10px
 }
+.intro__summaryText p:first-child{
+  font-size: 1.62671rem;
+}
 .intro__summaryText p{
-  background: red;
+  margin-bottom: 1em;
+}
+.intro__summaryText p:last-child{
+  margin-bottom: 0;
 }
 
 @media (min-width: 576px) { }

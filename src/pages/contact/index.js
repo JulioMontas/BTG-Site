@@ -42,11 +42,10 @@ export default class Index extends React.Component {
         <Seo title="Contact" />
         <GlobalHero
           title= "Contact"
-          summary= "Fill the form below or call us at 813-251-0777"
+          summary= "To schedule a meeting with an attorney, please call at 813-251-0777 or complete the form below."
         />
         <div style={{
           background:`#1d3851`,
-          borderBottom:`1px solid rgba(188, 163, 96, 0.2)`,
           padding:`3rem 1rem 5rem`
         }}>
 
@@ -133,7 +132,9 @@ export default class Index extends React.Component {
                 </div>
               </form>
             </div>
-
+            <small style={{ letterSpacing:`1px`}} >
+              *The use of this form for communication with the firm or any individual member of the firm does not establish an attorney-client relationship. Confidential or time-sensitive information should not be sent through this form.
+            </small>
           </div>
         </div>
 

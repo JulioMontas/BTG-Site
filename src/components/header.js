@@ -90,8 +90,8 @@ const Header = ({ siteTitle }) => (
             </AniLink>
           </li>
           <li>
-            <AniLink cover direction="left" to="/case-study-and-testimonial" bg="#3d586b">
-              Case Study & Testimonial
+            <AniLink cover direction="left" to="/testimonial-and-case-study" bg="#3d586b">
+              Testimonial & Case Study
             </AniLink>
           </li>
           <li>

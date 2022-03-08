@@ -5,6 +5,7 @@ import Seo from "../../components/seo"
 import GlobalHero from "../../components/globalHero"
 import GlobalContact from "../../components/globalContact"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 const theme = {
   colorsBG: {
@@ -26,6 +27,23 @@ const BlogPage = ({data}) => (
       summary= "Frequently Asked Questions (FAQ)"
     />
 
+    <div style={{
+      background:`#1d3851`,
+      padding:`6rem 1rem 6rem`
+    }}>
+    <div className="container">
+      <div className="gridLayout">
+      {data.allDatoCmsPost.nodes.map(data => (
+        <AniLink paintDrip to={'/guide-and-resources/' + data.slug} hex="#3d586b">
+          <GatsbyImage image={data.coverImage.gatsbyImageData} style={{borderRadius:`15px`}} />
+          <h3 style={{fontSize:`1em`, marginTop:`0.5em`}}>{data.title}</h3>
+        </AniLink>
+      ))}
+      </div>
+    </div>
+    </div>
+    
+
     <div
       style={{
         background: `#FFF`,
@@ -34,7 +52,7 @@ const BlogPage = ({data}) => (
       }}
     >
       <div className="container">
-        <p>We have created a list of some of the most commonly asked questions and answered them below to better assist our clients.</p>
+        <h3 style={{marginBottom:`1em`}}>We have created a list of some of the most commonly asked questions and answered them below to better assist our clients.</h3>
         {data.datoCmsFaq.content.map(data => (
           <div
             style={{
@@ -51,33 +69,20 @@ const BlogPage = ({data}) => (
       </div>
     </div>
 
-    <div style={{
-      background:`#1d3851`,
-      borderBottom:`1px solid rgba(188, 163, 96, 0.2)`,
-      padding:`3rem 1rem 5rem`
-    }}>
-    <div className="container">
-      <div className="gridLayout">
-      {data.allDatoCmsPost.nodes.map(data => (
-        <AniLink paintDrip to={'/guide-and-resources/' + data.slug} hex="#3d586b">
-          {data.title}
-        </AniLink>
-      ))}
-      </div>
-    </div>
-    </div>
-
     <GlobalContact />
   </Layout>
 )
 
 export const query = graphql`{
-  allDatoCmsPost {
+  allDatoCmsPost(limit: 4) {
     nodes {
       id
       slug
       title
       excerpt
+      coverImage {
+        gatsbyImageData(width: 600, height: 400, placeholder: BLURRED, layout: CONSTRAINED)
+      }
     }
   }
   datoCmsFaq {

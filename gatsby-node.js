@@ -113,7 +113,7 @@ exports.createPages = async ({ graphql, actions }) => {
   `)
   queryCaseResult.data.allDatoCmsCaseResult.nodes.forEach(node => {
     createPage({
-      path: `/case-study-and-testimonial/${node.slug}`,
+      path: `/testimonial-and-case-study/${node.slug}`,
       component: require.resolve(`./src/templates/case-result-post.js`),
       context: { node },
     })
