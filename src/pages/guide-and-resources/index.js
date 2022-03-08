@@ -24,7 +24,7 @@ const BlogPage = ({data}) => (
     <Seo title="Blog" />
     <GlobalHero
       title= "Guide & Resources"
-      summary= "Frequently Asked Questions (FAQ)"
+      summary= "Text"
     />
 
     <div style={{
@@ -42,7 +42,6 @@ const BlogPage = ({data}) => (
       </div>
     </div>
     </div>
-    
 
     <div
       style={{
@@ -52,13 +51,13 @@ const BlogPage = ({data}) => (
       }}
     >
       <div className="container">
-        <h3 style={{marginBottom:`1em`}}>We have created a list of some of the most commonly asked questions and answered them below to better assist our clients.</h3>
+        <h2 style={{marginBottom:`0.4em`}}>Frequently Asked Questions (FAQ)</h2>
         {data.datoCmsFaq.content.map(data => (
           <div
             style={{
               border:`1px solid #BCA360`,
               padding:`1em`,
-              borderRadius:`10px`,
+              borderRadius:`8px`,
               marginBottom:`1.4em`,
             }}
           >

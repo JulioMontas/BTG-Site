@@ -2,6 +2,7 @@ import * as React from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as footerStyles from "./subFooter.module.css"
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const SubFooter = () => (
   <div className={footerStyles.lastFooter}>
@@ -151,9 +152,18 @@ const SubFooter = () => (
         </div>
 
       <div className={footerStyles.subFooter}>
-        <p>© {new Date().getFullYear()}, Barnes Trial Group. All Rights Reserved. Attorney Advertising. Past results do not guarantee future outcome.</p>
         <div>
-          <p>How was your experience?</p>
+          <p style={{fontSize:`1em`}}>
+            © {new Date().getFullYear()}, Barnes Trial Group. All Rights Reserved. Attorney Advertising. Past results do not guarantee future outcome.
+          </p>
+          <AniLink paintDrip to="/terms-and-conditions" hex="#3d586b" className={footerStyles.subFooterCTA} style={{float:`left`}}>
+            Terms & Conditions
+          </AniLink>
+        </div>
+
+
+        <div>
+          <p style={{fontSize:`1em`}}>How was your experience?</p>
           <a href="/" className={footerStyles.subFooterCTA}>Give feedback about our website</a>
         </div>
       </div>
