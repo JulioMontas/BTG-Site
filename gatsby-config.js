@@ -20,6 +20,7 @@ module.exports = {
       },
     },
   },
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-fontawesome-css`,
