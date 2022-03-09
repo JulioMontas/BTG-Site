@@ -20,8 +20,8 @@ const AboutPage = ({data}) => (
       <GatsbyImage image={data.datoCmsAbout.coverImage.gatsbyImageData} className={aboutStyles.heroPhoto} />
       <div className="container">
         <div className={aboutStyles.wrapper}>
-          <h2 className="globalHero__text--title">{data.datoCmsAbout.title}</h2>
-          <p className="globalHero__text--summary">{data.datoCmsAbout.description}</p>
+          <h2>{data.datoCmsAbout.title}</h2>
+          <p>{data.datoCmsAbout.description}</p>
         </div>
       </div>
     </div>

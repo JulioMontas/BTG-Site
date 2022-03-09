@@ -12,9 +12,8 @@
 }
 /* Hero Section */
 .wrapper{
-  padding: 3.6rem 1rem 0rem;
   position: absolute;
-  top: 80px;
+  top: 20px;
   width: 80%;
   z-index: 20;
 }
