@@ -41,7 +41,7 @@ const MenuLinks = styled.nav`
   align-items: center;
   text-align: center;
   height: 100vh;
-  width: 90%;
+  width: 80%;
   background: #1d3851;
   position: fixed;
   top: 0;
@@ -62,7 +62,7 @@ const MenuLinks = styled.nav`
   }
   a{
     letter-spacing: 1px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #BCA360;
     text-decoration: none;
     transition: color 300ms;
@@ -75,6 +75,7 @@ const MenuLinks = styled.nav`
   }
   @media (min-width: 768px) {
     width: 100%;
+    border: 10px solid #BCA360;
   }
 `
 const Navbar = () => {
