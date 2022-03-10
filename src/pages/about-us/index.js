@@ -18,12 +18,15 @@ const AboutPage = ({data}) => (
     <HelmetDatoCms seo={data.siteTag.seoMetaTags} />
     <div className={aboutStyles.heroBG}>
       <GatsbyImage image={data.datoCmsAbout.coverImage.gatsbyImageData} className={aboutStyles.heroPhoto} />
+
       <div className="container">
         <div className={aboutStyles.wrapper}>
           <h2>{data.datoCmsAbout.title}</h2>
           <p>{data.datoCmsAbout.description}</p>
         </div>
       </div>
+
+
     </div>
 
     <div className={aboutStyles.intro} style={{ background: data.datoCmsAbout.topicBgColor.hex, color: data.datoCmsAbout.topicTColor.hex }}>
