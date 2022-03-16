@@ -26,6 +26,7 @@ module.exports = {
       siteUrl: `https://btg-site.netlify.app/`,
     },
   },
+    `gatsby-plugin-robots-txt`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-gatsby-cloud`,
