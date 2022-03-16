@@ -4,10 +4,10 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Barnes Trial Group`,
+    title: `BTG | Barnes Trial Group`,
     description: `If you have been injured in an accident, turn to the Barnes Trial Group in Tampa. Twenty years of trial experience. Call 813-251-0777.`,
     author: `@BTGLaw`,
-    siteUrl: `https://btgsite.gatsbyjs.io/`,
+    siteUrl: `https://btg-site.netlify.app/`,
   },
   plugins: [{
     resolve: `gatsby-source-datocms`,
@@ -18,6 +18,12 @@ module.exports = {
       localeFallbacks: {
         it: ['en'],
       },
+    },
+  },
+  {
+    resolve: `gatsby-plugin-canonical-urls`,
+    options: {
+      siteUrl: `https://btg-site.netlify.app/`,
     },
   },
     `gatsby-plugin-styled-components`,

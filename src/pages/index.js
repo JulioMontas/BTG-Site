@@ -250,6 +250,7 @@ export const query = graphql`
             forceBlurhash: false
             placeholder: BLURRED
           )
+          alt
         }
       }
     }
@@ -261,6 +262,7 @@ export const query = graphql`
         quote
         coverImage {
           gatsbyImageData(width: 100, height: 100, placeholder: TRACED_SVG, layout: FIXED)
+          alt
         }
       }
     }
@@ -270,6 +272,7 @@ export const query = graphql`
         slug
         picture {
           gatsbyImageData(width: 100, height: 100, placeholder: TRACED_SVG, layout: FIXED)
+          alt
         }
       }
     }
@@ -280,6 +283,7 @@ export const query = graphql`
         slug
         coverImage {
           gatsbyImageData
+          alt
         }
       }
     }
