@@ -6,7 +6,19 @@ import GlobalHero from "../../components/globalHero"
 import GlobalContact from "../../components/globalContact"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { GatsbyImage } from 'gatsby-plugin-image'
+import styled from "styled-components"
 
+const BlogLink = styled.div`
+  color: #bca360;
+  transform: scale(0.9);
+  transition: 0.3s;
+  opacity: 0.8;
+    &:hover {
+      color: #A78D49;
+      transform: scale(1);
+      opacity: 1;
+    }
+`
 const theme = {
   colorsBG: {
     primary: `#1d3851`,
@@ -27,46 +39,51 @@ const BlogPage = ({data}) => (
       summary= "Text"
     />
 
+    <div
+      style={{
+        background: `#1d3851`,
+        color: `#FFF`,
+        padding:`2rem 1em 1rem`,
+      }}
+    >
+      <div className="container">
+        <h2 style={{marginBottom:`0.7em`}}>Frequently Asked Questions (FAQ)</h2>
+        {data.datoCmsFaq.content.map(data => (
+          <div
+            style={{
+              border:`2px solid #BCA360`,
+              padding:`1em`,
+              borderRadius:`8px`,
+              marginBottom:`1em`,
+              letterSpacing:`2px`,
+            }}
+          >
+            <h2 style={{fontSize:`1.25rem`,letterSpacing:`1px`}}><b>{data.title}?</b></h2>
+            <p style={{color:`rgb(206, 206, 207)`, fontSize:`1.125rem`, letterSpacing:`1px`}}>{data.content}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
     <div style={{
       background:`#1d3851`,
       padding:`6rem 1rem 6rem`
     }}>
     <div className="container">
+      <h2 style={{marginBottom:`0.7em`}}>Latest Article</h2>
       <div className="gridLayout">
       {data.allDatoCmsPost.nodes.map(data => (
         <AniLink paintDrip to={'/guide-and-resources/' + data.slug} hex="#3d586b">
+          <BlogLink>
           <GatsbyImage image={data.coverImage.gatsbyImageData} style={{borderRadius:`15px`}} />
-          <h3 style={{fontSize:`1em`, marginTop:`0.5em`}}>{data.title}</h3>
+          <h3 style={{fontSize:`1.2rem`, marginTop:`0.5em`}}>{data.title}</h3>
+          </BlogLink>
         </AniLink>
       ))}
       </div>
     </div>
     </div>
 
-    <div
-      style={{
-        background: `#FFF`,
-        color: `#333`,
-        padding:`5rem 1em 5rem`,
-      }}
-    >
-      <div className="container">
-        <h2 style={{marginBottom:`0.4em`}}>Frequently Asked Questions (FAQ)</h2>
-        {data.datoCmsFaq.content.map(data => (
-          <div
-            style={{
-              border:`1px solid #BCA360`,
-              padding:`1em`,
-              borderRadius:`8px`,
-              marginBottom:`1.4em`,
-            }}
-          >
-            <h2 style={{color:`rgb(29, 56, 81)`, fontSize:`1.25em`}}><b>{data.title}?</b></h2>
-            <p style={{color:`rgb(61, 88, 107)`, fontSize:`1.125em`, padding: `0.5em 1em 0;`}}>{data.content}</p>
-          </div>
-        ))}
-      </div>
-    </div>
 
     <GlobalContact />
   </Layout>

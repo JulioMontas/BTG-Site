@@ -6,6 +6,16 @@ import Seo from "../../components/seo"
 import GlobalHero from "../../components/globalHero"
 import GoogleMap from "../../components/googleMap"
 import * as Styles from "../../styles/contact.css"
+import styled from "styled-components"
+
+const LinkButton = styled.button`
+  background: #bca360;
+  transition: 0.3s;
+  cursor: pointer;
+    &:hover {
+      background: #A78D49;
+    }
+`
 
 function encode(data) {
   return Object.keys(data)
@@ -53,10 +63,10 @@ export default class Index extends React.Component {
         }}>
 
         <div className="container">
-          <div className="top-0 absolute w-full md:w-2/3" style={{width:`100%`}}>
+          <div style={{width:`100%`}}>
 
-            <div className="mt-64 w-5/6 md:w-1/3">
-              <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 "
+            <div>
+              <form
                 name="contact"
                 method="post"
                 action="/contact/thanks/"
@@ -72,18 +82,15 @@ export default class Index extends React.Component {
                     <input name="bot-field" onChange={this.handleChange} />
                   </label>
                 </div>
-                <div className="field mb-4">
+                <div className="field">
 
-                  {/*
-                  <label className="label block text-gray-700 text-sm font-bold mb-2" htmlFor={"name"}>
+                  <label className="label" htmlFor={"name"}>
                     Your Name
                   </label>
-                  */}
 
                   <div className="control">
                     <input
-                      className="input bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
-                      placeholder="Your Name"
+                      placeholder="First and Last name"
                       type={"text"}
                       name={"name"}
                       onChange={this.handleChange}
@@ -93,16 +100,15 @@ export default class Index extends React.Component {
                   </div>
                 </div>
 
-                <div className="field mb-6">
-                {/*
-                  <label className="label block text-gray-700 text-sm font-bold mb-2" htmlFor={"email"}>
+                <div className="field">
+
+                  <label className="label" htmlFor={"email"}>
                     E-mail
                   </label>
-                  */}
+
                   <div className="control">
                     <input
-                      className="input bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
-                      placeholder="E-mail"
+                      placeholder="hello@domain.com"
                       type={"email"}
                       name={"email"}
                       onChange={this.handleChange}
@@ -111,15 +117,14 @@ export default class Index extends React.Component {
                     />
                   </div>
                 </div>
-                <div className="field mb-4">
-                {/*
-                  <label className="label block text-gray-700 text-sm font-bold mb-2" htmlFor={"message"}>
-                    Message
-                  </label>
-                    */}
+                <div className="field">
+                  <div style={{marginBottom:`1.2em`}}>
+                    <label htmlFor={"message"}>
+                      Message
+                    </label>
+                  </div>
                   <div className="control">
                     <textarea
-                      className="textarea bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
                       placeholder="Brief description of your legal issue"
                       name={"message"}
                       onChange={this.handleChange}
@@ -128,15 +133,16 @@ export default class Index extends React.Component {
                     />
                   </div>
                 </div>
+
                 <div className="field">
-                  <button className="button is-link bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                  <LinkButton type="submit">
                     Submit
-                  </button>
+                  </LinkButton>
                 </div>
               </form>
             </div>
             <small style={{ letterSpacing:`1px`}} >
-              *The use of this form for communication with the firm or any individual member of the firm does not establish an attorney-client relationship. Confidential or time-sensitive information should not be sent through this form.
+              * The use of this form for communication with the firm or any individual member of the firm does not establish an attorney-client relationship. Confidential or time-sensitive information should not be sent through this form.
             </small>
           </div>
         </div>
