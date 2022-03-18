@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Julio Montas <hello@juliomontas.com>",
   "dependencies": {
+    "@ccalamos/gatsby-source-googlemaps-static": "^3.1.1",
     "@fontsource/oswald": "^4.5.4",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",

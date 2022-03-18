@@ -1,8 +1,10 @@
 import * as React from "react";
+import { graphql } from 'gatsby'
 import { navigate } from "gatsby-link";
 import Layout from "../../components/layout";
 import Seo from "../../components/seo"
 import GlobalHero from "../../components/globalHero"
+import GoogleMap from "../../components/googleMap"
 import * as Styles from "../../styles/contact.css"
 
 function encode(data) {
@@ -44,6 +46,7 @@ export default class Index extends React.Component {
           title= "Contact"
           summary= "To schedule a meeting with an attorney, please call at 813-251-0777 or complete the form below."
         />
+        <GoogleMap />
         <div style={{
           background:`#1d3851`,
           padding:`3rem 1rem 5rem`

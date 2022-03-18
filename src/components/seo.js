@@ -1,7 +1,8 @@
 import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import { Helmet } from "react-helmet"
 import PropTypes from "prop-types"
+import { Helmet } from "react-helmet"
+import { useLocation } from "@reach/router"
+import { useStaticQuery, graphql } from "gatsby"
 
 function Seo({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
@@ -11,7 +12,7 @@ function Seo({ description, lang, meta, title }) {
           siteMetadata {
             title
             description
-            author
+            twitterUsername
           }
         }
       }
@@ -51,7 +52,7 @@ function Seo({ description, lang, meta, title }) {
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata?.author || ``,
+          content: site.siteMetadata?.twitterUsername || ``,
         },
         {
           name: `twitter:title`,

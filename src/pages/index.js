@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 import { GatsbyImage } from 'gatsby-plugin-image'
+import { StaticImage } from "gatsby-plugin-image"
 import { StructuredText } from "react-datocms"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -11,6 +12,7 @@ import CaseResultBtn from "../components/caseResultBtn"
 import TestimonialBlock from "../components/testimonialBlock"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import * as homeStyles from "../styles/home.module.css"
+
 
 const theme = {
   colorsBG: {
@@ -24,7 +26,7 @@ const theme = {
   },
 }
 
-const IndexPage = ({ data: {siteColor, siteData, allCaseResult, allAttorney, allTestimonial, allPracticeArea, allBlogPost} }) => (
+const IndexPage = ({ data: {siteColor, siteData, allCaseResult, allAttorney, allTestimonial, allPracticeArea, allBlogPost, map} }) => (
   <Layout>
     <Seo title="BTG Homepage" />
     <div className={homeStyles.homeHeroBG}>
