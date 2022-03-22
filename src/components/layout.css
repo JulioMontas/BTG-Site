@@ -213,21 +213,12 @@ li > p {
   grid-template-columns: 1fr;
   row-gap: 2em;
 }
-
 .navbar .navbar-menu{
   box-shadow: none !important
 }
 .navbar-brand .navbar-item.logo{
   padding: 0 1rem
 }
-
-
-
-
-
-
-
-
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { }
 /* Medium devices (tablets, 768px and up) */

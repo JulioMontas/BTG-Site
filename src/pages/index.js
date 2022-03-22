@@ -28,12 +28,12 @@ const theme = {
 
 const IndexPage = ({ data: {siteColor, siteData, allCaseResult, allAttorney, allTestimonial, allPracticeArea, allBlogPost, map} }) => (
   <Layout>
-    <Seo title="BTG Homepage" />
+    <Seo title="Homepage" />
     <div className={homeStyles.homeHeroBG}>
       <GatsbyImage image={siteData.coverImage.gatsbyImageData} className={homeStyles.homeHeroPhoto} />
       <div className="container">
         <div className={homeStyles.homeWrapper}>
-          <h2 className={homeStyles.homeHeroTitle}>{siteData.title}</h2>
+          <h1 className={homeStyles.homeHeroTitle}>{siteData.title}</h1>
           <p className={homeStyles.homeHeroDescription}>{siteData.description}</p>
           <div className={homeStyles.homeHeroCTA}>
             {siteData.ctaIntro.map(data => (
@@ -51,7 +51,7 @@ const IndexPage = ({ data: {siteColor, siteData, allCaseResult, allAttorney, all
 
     <div className={homeStyles.homePadding} style={{background: siteData.caseResultBgColor.hex, color: siteData.caseResultTextColor.hex }}>
       <div className="container">
-        <p className={homeStyles.sectionSummary}>{siteData.caseResultDescription}</p>
+        <h2 className={homeStyles.sectionSummary}>{siteData.caseResultDescription}</h2>
         <div className="gridLayout">
           {allCaseResult.nodes.map(data => (
             <CaseResultBtn
@@ -115,7 +115,7 @@ const IndexPage = ({ data: {siteColor, siteData, allCaseResult, allAttorney, all
 
     <div className={homeStyles.homePadding} style={{background: siteData.praticeAreaBdColor.hex, color: siteData.praticeAreaTextColor.hex }}>
       <div className="container">
-        <p className={homeStyles.sectionSummary}>{siteData.praticeAreaDescription}</p>
+        <h2 className={homeStyles.sectionSummary}>{siteData.praticeAreaDescription}</h2>
         <div className="gridLayout">
         {allPracticeArea.nodes.map(data => (
           <div>

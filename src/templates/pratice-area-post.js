@@ -21,7 +21,7 @@ const theme = {
 
 const AttorneyAreaPost = ({ pageContext: { node} }) => (
   <Layout>
-    <Seo title="Attorney Area Post" />
+    <Seo title={"Practice Area: " + node.title} />
     <GlobalHero
       title={"Practice Area: " + node.title}
       summary={node.subtitle}
@@ -34,7 +34,8 @@ const AttorneyAreaPost = ({ pageContext: { node} }) => (
         </div>
       </div>
     </div>
-
+    
+    {node.attorney.length > 0 &&
     <div style={{background: theme.colorsBG.tertiary, color: theme.colorsText.primary,  padding:`5rem 1rem 5rem`}}>
       <div className="container">
       <div className="gridLayout">
@@ -49,6 +50,7 @@ const AttorneyAreaPost = ({ pageContext: { node} }) => (
       </div>
       </div>
     </div>
+    }
     <GlobalContact />
   </Layout>
 )

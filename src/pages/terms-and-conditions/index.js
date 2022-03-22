@@ -19,7 +19,7 @@ const theme = {
 
 const TermsAndConditions = () => (
   <Layout>
-    <Seo title="Post" />
+    <Seo title="Terms & Conditions" />
     <GlobalHero
       title="Terms & Conditions"
       summary="Text"

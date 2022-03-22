@@ -12,7 +12,7 @@ const BlogLink = styled.div`
   color: #bca360;
   transform: scale(0.9);
   transition: 0.3s;
-  opacity: 0.8;
+  opacity: 0.95;
     &:hover {
       color: #A78D49;
       transform: scale(1);
@@ -76,7 +76,7 @@ const BlogPage = ({data}) => (
         <AniLink paintDrip to={'/guide-and-resources/' + data.slug} hex="#3d586b">
           <BlogLink>
           <GatsbyImage image={data.coverImage.gatsbyImageData} style={{borderRadius:`15px`}} />
-          <h3 style={{fontSize:`1.2rem`, marginTop:`0.5em`}}>{data.title}</h3>
+          <h2 style={{fontSize:`1.2rem`, marginTop:`0.5em`}}>{data.title}</h2>
           </BlogLink>
         </AniLink>
       ))}

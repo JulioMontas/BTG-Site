@@ -1,49 +1,163 @@
 import * as React from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import * as footerStyles from "./subFooter.module.css"
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import styled from "styled-components"
+
+const Footer = styled.div`
+  background: #eef0f2;
+  color: #333;
+  padding: 2rem 1rem 2rem;
+`
+const Top = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+  "textLink address"
+  "socialMedia socialMedia";
+  row-gap: 3em;
+  padding: 3em 0;
+  align-items: center;
+  @media (min-width: 992px) {
+    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-areas:
+      "textLink address socialMedia";
+    row-gap: 1em;
+    padding: 3.5em 0px 3.5em;
+  }
+`
+const TextLink = styled.address`
+  grid-area: textLink;
+  div {
+    margin-bottom: 0.65em;
+    span div span:first-child{
+      margin-bottom: 0.65em;
+    }
+    :last-child{
+      margin-bottom: 0;
+    }
+  }
+  svg{
+    margin-bottom: -6px;
+    margin-right: 10px;
+  }
+`
+const Address = styled.address`
+  grid-area: address;
+  font-size: 1.125em;
+  div{
+    display: inline-flex;
+    flex-direction: column;
+  }
+  svg{
+    margin-bottom: -12px;
+    margin-right: 11px;
+  }
+  @media (min-width: 992px) {
+    font-size: 1.1em;
+  }
+`
+const SocialMedia = styled.address`
+  grid-area: socialMedia;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  li{
+    margin-right: 0.5em;
+    :nth-child(1) a svg{
+      padding-top: 2px;
+    }
+    :nth-child(2) a svg{
+      padding-top: 7px;
+    }
+    :nth-child(4) a svg{
+      padding-top: 5px;
+    }
+    a{
+      display: block;
+      background: var(--primary-cta-color);
+      width: 83px;
+      height: 83px;
+      padding: 1.4em 0;
+      text-align: center;
+      border-radius: 100px;
+    }
+  }
+`
+const Bottom = styled.div`
+  display: flex;
+  flex-direction: column-reverse;
+  row-gap: 2em;
+  div{
+    text-align: right;
+  }
+  a{
+    color: var(--primary-cta-color);
+    fill: var(--primary-cta-color);
+    transition: 0.3s;
+    :hover{
+      color: var(--primary-cta-color-hover);
+      fill: var(--primary-cta-color-hover);
+    }
+  }
+  @media (min-width: 992px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+`
+
+const SvgColor = styled.path`
+  color: var(--primary-cta-color);
+  fill: var(--primary-cta-color);
+  transition: 0.3s;
+  :hover{
+    color: var(--primary-cta-color-hover);
+    fill: var(--primary-cta-color-hover);
+  }
+`
+
 
 const SubFooter = () => (
-  <div className={footerStyles.lastFooter}>
+  <Footer>
     <div className="container">
 
-    <div className={footerStyles.wrapper}>
-      <address className={footerStyles.textLink}>
+      <Top>
+        <TextLink>
         <div>
           <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M27.9992 21.2147V25.2793C28.0007 25.6566 27.9233 26.0301 27.7718 26.3758C27.6203 26.7216 27.3982 27.0319 27.1196 27.287C26.841 27.5421 26.5121 27.7363 26.1539 27.8572C25.7958 27.9781 25.4162 28.023 25.0397 27.989C20.8623 27.536 16.8496 26.1114 13.324 23.8296C10.0439 21.7494 7.263 18.974 5.17871 15.7004C2.88441 12.1658 1.45663 8.14161 1.01102 3.95373C0.977094 3.57907 1.02171 3.20146 1.14202 2.84495C1.26234 2.48843 1.45571 2.16083 1.70984 1.88299C1.96397 1.60515 2.27328 1.38316 2.61808 1.23117C2.96288 1.07917 3.33561 1.00049 3.71255 1.00013H7.78521C8.44404 0.99366 9.08274 1.2265 9.58228 1.65525C10.0818 2.084 10.4081 2.67941 10.5003 3.3305C10.6722 4.63125 10.991 5.90843 11.4506 7.13766C11.6332 7.6226 11.6728 8.14963 11.5645 8.6563C11.4562 9.16297 11.2047 9.62805 10.8397 9.99642L9.11561 11.7171C11.0482 15.1091 13.8622 17.9176 17.2609 19.8463L18.985 18.1256C19.3541 17.7613 19.8201 17.5103 20.3278 17.4022C20.8355 17.2942 21.3635 17.3336 21.8494 17.5159C23.0811 17.9746 24.3608 18.2928 25.6642 18.4643C26.3236 18.5572 26.9259 18.8887 27.3564 19.3958C27.7869 19.9029 28.0157 20.5502 27.9992 21.2147Z" fill="#BCA360" stroke="black" stroke-linecap="round" stroke-linejoin="round" className={footerStyles.svgColorChange} />
+            <SvgColor d="M27.9992 21.2147V25.2793C28.0007 25.6566 27.9233 26.0301 27.7718 26.3758C27.6203 26.7216 27.3982 27.0319 27.1196 27.287C26.841 27.5421 26.5121 27.7363 26.1539 27.8572C25.7958 27.9781 25.4162 28.023 25.0397 27.989C20.8623 27.536 16.8496 26.1114 13.324 23.8296C10.0439 21.7494 7.263 18.974 5.17871 15.7004C2.88441 12.1658 1.45663 8.14161 1.01102 3.95373C0.977094 3.57907 1.02171 3.20146 1.14202 2.84495C1.26234 2.48843 1.45571 2.16083 1.70984 1.88299C1.96397 1.60515 2.27328 1.38316 2.61808 1.23117C2.96288 1.07917 3.33561 1.00049 3.71255 1.00013H7.78521C8.44404 0.99366 9.08274 1.2265 9.58228 1.65525C10.0818 2.084 10.4081 2.67941 10.5003 3.3305C10.6722 4.63125 10.991 5.90843 11.4506 7.13766C11.6332 7.6226 11.6728 8.14963 11.5645 8.6563C11.4562 9.16297 11.2047 9.62805 10.8397 9.99642L9.11561 11.7171C11.0482 15.1091 13.8622 17.9176 17.2609 19.8463L18.985 18.1256C19.3541 17.7613 19.8201 17.5103 20.3278 17.4022C20.8355 17.2942 21.3635 17.3336 21.8494 17.5159C23.0811 17.9746 24.3608 18.2928 25.6642 18.4643C26.3236 18.5572 26.9259 18.8887 27.3564 19.3958C27.7869 19.9029 28.0157 20.5502 27.9992 21.2147Z" fill="#BCA360" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
-          <a href="tel:5554280940" className={footerStyles.phoneNumber}>813-251-0777</a>
+          <a href="tel:5554280940">813-251-0777</a>
           </div>
            <div>
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M8 11.9998V2.6665H24V11.9998" fill="white"/>
                 <path d="M8 11.9998V2.6665H24V11.9998" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M7.99984 24H5.33317C4.62593 24 3.94765 23.719 3.44755 23.219C2.94746 22.7189 2.6665 22.0406 2.6665 21.3333V14.6667C2.6665 13.9594 2.94746 13.2811 3.44755 12.781C3.94765 12.281 4.62593 12 5.33317 12H26.6665C27.3737 12 28.052 12.281 28.5521 12.781C29.0522 13.2811 29.3332 13.9594 29.3332 14.6667V21.3333C29.3332 22.0406 29.0522 22.7189 28.5521 23.219C28.052 23.719 27.3737 24 26.6665 24H23.9998" fill="#BCA360" className={footerStyles.svgColorChange}/>
+                <SvgColor d="M7.99984 24H5.33317C4.62593 24 3.94765 23.719 3.44755 23.219C2.94746 22.7189 2.6665 22.0406 2.6665 21.3333V14.6667C2.6665 13.9594 2.94746 13.2811 3.44755 12.781C3.94765 12.281 4.62593 12 5.33317 12H26.6665C27.3737 12 28.052 12.281 28.5521 12.781C29.0522 13.2811 29.3332 13.9594 29.3332 14.6667V21.3333C29.3332 22.0406 29.0522 22.7189 28.5521 23.219C28.052 23.719 27.3737 24 26.6665 24H23.9998" fill="#BCA360"/>
                 <path d="M7.99984 24H5.33317C4.62593 24 3.94765 23.719 3.44755 23.219C2.94746 22.7189 2.6665 22.0406 2.6665 21.3333V14.6667C2.6665 13.9594 2.94746 13.2811 3.44755 12.781C3.94765 12.281 4.62593 12 5.33317 12H26.6665C27.3737 12 28.052 12.281 28.5521 12.781C29.0522 13.2811 29.3332 13.9594 29.3332 14.6667V21.3333C29.3332 22.0406 29.0522 22.7189 28.5521 23.219C28.052 23.719 27.3737 24 26.6665 24H23.9998" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M24 18.6665H8V29.3332H24V18.6665Z" fill="white" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
-              <a href="tel:5554280940" className={footerStyles.phoneNumber}>813-251-0777</a>
+              <a href="tel:5554280940">813-251-0777</a>
             </div>
-            </address>
+        </TextLink>
 
-            <address className={footerStyles.address}>
+        <Address>
+          <div>
+            <span>
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <SvgColor d="M28 13.3335C28 22.6668 16 30.6668 16 30.6668C16 30.6668 4 22.6668 4 13.3335C4 10.1509 5.26428 7.09865 7.51472 4.84821C9.76515 2.59778 12.8174 1.3335 16 1.3335C19.1826 1.3335 22.2348 2.59778 24.4853 4.84821C26.7357 7.09865 28 10.1509 28 13.3335Z" fill="#BCA360" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16 17.3335C18.2091 17.3335 20 15.5426 20 13.3335C20 11.1244 18.2091 9.3335 16 9.3335C13.7909 9.3335 12 11.1244 12 13.3335C12 15.5426 13.7909 17.3335 16 17.3335Z" fill="#FFF" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
               <div>
-                <span>
-                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M28 13.3335C28 22.6668 16 30.6668 16 30.6668C16 30.6668 4 22.6668 4 13.3335C4 10.1509 5.26428 7.09865 7.51472 4.84821C9.76515 2.59778 12.8174 1.3335 16 1.3335C19.1826 1.3335 22.2348 2.59778 24.4853 4.84821C26.7357 7.09865 28 10.1509 28 13.3335Z" fill="#BCA360" stroke="black" stroke-linecap="round" stroke-linejoin="round" className={footerStyles.svgColorChange}/>
-                  <path d="M16 17.3335C18.2091 17.3335 20 15.5426 20 13.3335C20 11.1244 18.2091 9.3335 16 9.3335C13.7909 9.3335 12 11.1244 12 13.3335C12 15.5426 13.7909 17.3335 16 17.3335Z" fill="#FFF" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <div>
-                  <span>505 S. Magnolia Avenue</span>
-                  <span>Tampa, Florida 33606</span>
-                </div>
-                </span>
+                <span>505 S. Magnolia Avenue</span>
+                <span>Tampa, Florida 33606</span>
               </div>
-            </address>
+            </span>
+          </div>
+         </Address>
 
-            <ul className={footerStyles.socialMedia}>
+        <SocialMedia>
               <li>
                 <a href="https://www.facebook.com/BarnesTrialGroup/">
                   <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -148,15 +262,15 @@ const SubFooter = () => (
                   <FontAwesomeIcon icon={faEnvelope} size="2x"/>
                 </a>
               </li>
-            </ul>
-        </div>
+        </SocialMedia>
+      </Top>
 
-      <div className={footerStyles.subFooter}>
+      <Bottom>
         <div>
           <p style={{fontSize:`1em`}}>
             © {new Date().getFullYear()}, Barnes Trial Group. All Rights Reserved. Attorney Advertising. Past results do not guarantee future outcome.
           </p>
-          <AniLink paintDrip to="/terms-and-conditions" hex="#3d586b" className={footerStyles.subFooterCTA} style={{float:`left`}}>
+          <AniLink paintDrip to="/terms-and-conditions" hex="#3d586b" style={{float:`left`}}>
             Terms & Conditions
           </AniLink>
         </div>
@@ -164,12 +278,12 @@ const SubFooter = () => (
 
         <div>
           <p style={{fontSize:`1em`}}>How was your experience?</p>
-          <a href="/" className={footerStyles.subFooterCTA}>Give feedback about our website</a>
+          <a href="/">Give feedback about our website</a>
         </div>
-      </div>
+      </Bottom>
 
     </div>
-  </div>
+  </Footer>
 )
 
 export default SubFooter

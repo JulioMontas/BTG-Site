@@ -4,7 +4,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `btg. | Barnes Trial Group`,
+    title: `BTG`,
     titleTemplate: "%s · The Real Hero",
     description: `If you have been injured in an accident, turn to the Barnes Trial Group in Tampa. Twenty years of trial experience. Call 813-251-0777.`,
     siteUrl: `https://btg-site.netlify.app/`,

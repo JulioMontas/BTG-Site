@@ -1,4 +1,4 @@
-import * as React from "react"
+import React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import GlobalHero from "../components/globalHero"
@@ -20,11 +20,12 @@ const theme = {
 }
 
 const CaseResult = ({ pageContext: { node } }) => {
+
   return(
     <Layout>
-      <Seo title={node.title} />
+      <Seo title={'Case Study: ' + '$' + node.title} />
       <GlobalHero
-        title={node.title}
+        title={'Case Study: ' + '$' + node.title}
         summary={node.subtitle}
       />
       <div style={{
@@ -38,20 +39,23 @@ const CaseResult = ({ pageContext: { node } }) => {
         </div>
       </div>
 
-      <div style={{background: theme.colorsBG.tertiary, color: theme.colorsText.primary,  padding:`5rem 1rem 5rem`}}>
-        <div className="container">
-        <div className="gridLayout">
-          {node.attorney.map(data => (
-            <AttorneyBtn
-              slug={data.slug}
-              image={data.picture.gatsbyImageData}
-              location={data.location}
-              title={data.name}
-            />
-          ))}
+      {node.attorney.length > 0 &&
+        <div style={{background: theme.colorsBG.tertiary, color: theme.colorsText.primary,  padding:`5rem 1rem 5rem`}}>
+          <div className="container">
+            <div className="gridLayout">
+              {node.attorney.map(data => (
+                <AttorneyBtn
+                  slug={data.slug}
+                  image={data.picture.gatsbyImageData}
+                  location={data.location}
+                  title={data.name}
+                />
+              ))}
+            </div>
+          </div>
         </div>
-        </div>
-      </div>
+      }
+
       <GlobalContact />
     </Layout>
   )

@@ -24,9 +24,9 @@ const theme = {
 const AttorneyProfile = ({ pageContext: { node } }) => {
   return (
     <Layout>
-      <Seo title="Attorney Profile" />
+      <Seo title={"Attorney: " + node.name} />
       <GlobalHero
-        title={node.name}
+        title={"Attorney: " + node.name}
         summary={node.location}
       />
       <div className={Styles.intro} style={{background: theme.colorsBG.secondary, color: theme.colorsText.primary}}>
@@ -40,6 +40,7 @@ const AttorneyProfile = ({ pageContext: { node } }) => {
         </div>
       </div>
 
+      {node.achievement.length > 0 &&
       <div className={Styles.skills}>
         <div className="container">
           <div>
@@ -47,7 +48,9 @@ const AttorneyProfile = ({ pageContext: { node } }) => {
           </div>
         </div>
       </div>
+      }
 
+      {node.practiceArea.length > 0 &&
       <div className={Styles.skills} style={{background: theme.colorsBG.primary, color: theme.colorsText.secondary}}>
         <div className="container">
           <h2 className={Styles.title}>
@@ -56,18 +59,20 @@ const AttorneyProfile = ({ pageContext: { node } }) => {
           <div className="gridLayout">
           {node.practiceArea.map(data => (
             <div>
-            <PracticeAreasBtn
-              url={'/services/' + data.slug}
-              description={data.description}
-              title={data.title}
-              image={data.coverImage.gatsbyImageData}
-            />
+              <PracticeAreasBtn
+                url={'/services/' + data.slug}
+                description={data.description}
+                title={data.title}
+                image={data.coverImage.gatsbyImageData}
+              />
             </div>
           ))}
           </div>
         </div>
       </div>
+      }
 
+      {node.caseResult.length > 0 &&
       <div className={Styles.attorneys}>
         <div className="container">
           <h2 className={Styles.title}>
@@ -86,6 +91,8 @@ const AttorneyProfile = ({ pageContext: { node } }) => {
           </div>
         </div>
       </div>
+      }
+
       <GlobalContact />
     </Layout>
   )

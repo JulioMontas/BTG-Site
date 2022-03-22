@@ -32,7 +32,7 @@ export const query = graphql`
 
 const Disclaimer = ({ data }) => (
   <Layout>
-    <Seo title="Post" />
+    <Seo title={data.datoCmsDisclaimer.title} />
     <GlobalHero
       title={data.datoCmsDisclaimer.title}
       summary={data.datoCmsDisclaimer.summary}

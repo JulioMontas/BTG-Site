@@ -19,7 +19,7 @@ const theme = {
 
 const BlogPost = ({ pageContext: { node } }) => (
   <Layout>
-    <Seo title="Post" />
+    <Seo title={'Blog | ' + node.title} />
     <GlobalHero
       title={node.title}
       summary={node.excerpt}

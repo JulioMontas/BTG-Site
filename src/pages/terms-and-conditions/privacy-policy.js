@@ -32,7 +32,7 @@ export const query = graphql`
 
 const PrivacyPolicy = ({ data }) => (
   <Layout>
-    <Seo title="Post" />
+    <Seo title={data.datoCmsPrivacyPolicy.title} />
     <GlobalHero
       title={data.datoCmsPrivacyPolicy.title}
       summary={data.datoCmsPrivacyPolicy.summary}
