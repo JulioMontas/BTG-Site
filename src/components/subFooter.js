@@ -56,10 +56,6 @@ const Address = styled.address`
     display: inline-flex;
     flex-direction: column;
   }
-  svg{
-    margin-bottom: -12px;
-    margin-right: 11px;
-  }
   @media (min-width: 992px) {
     font-size: 1.1em;
   }
@@ -131,7 +127,6 @@ const Bottom = styled.div`
     }
   }
 `
-
 const SvgColor = styled.path`
   color: var(--primary-cta-color);
   fill: var(--primary-cta-color);
@@ -141,7 +136,6 @@ const SvgColor = styled.path`
     fill: var(--primary-cta-color-hover);
   }
 `
-
 
 const SubFooter = () => (
   <Footer>
@@ -169,16 +163,8 @@ const SubFooter = () => (
 
         <Address>
           <div>
-            <span>
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <SvgColor d="M28 13.3335C28 22.6668 16 30.6668 16 30.6668C16 30.6668 4 22.6668 4 13.3335C4 10.1509 5.26428 7.09865 7.51472 4.84821C9.76515 2.59778 12.8174 1.3335 16 1.3335C19.1826 1.3335 22.2348 2.59778 24.4853 4.84821C26.7357 7.09865 28 10.1509 28 13.3335Z" fill="#BCA360" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M16 17.3335C18.2091 17.3335 20 15.5426 20 13.3335C20 11.1244 18.2091 9.3335 16 9.3335C13.7909 9.3335 12 11.1244 12 13.3335C12 15.5426 13.7909 17.3335 16 17.3335Z" fill="#FFF" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <div>
-                <span>505 S. Magnolia Avenue</span>
-                <span>Tampa, Florida 33606</span>
-              </div>
-            </span>
+            <span>505 S. Magnolia Avenue</span>
+            <span>Tampa, Florida 33606</span>
           </div>
          </Address>
 
@@ -299,7 +285,6 @@ const SubFooter = () => (
             Terms & Conditions
           </AniLink>
         </div>
-
 
         <div>
           <p style={{fontSize:`1em`}}>How was your experience?</p>
