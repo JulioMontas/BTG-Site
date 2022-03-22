@@ -4,21 +4,26 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 import styled from "styled-components"
 
 const Card = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap : 20px;
   background: rgba(188, 163, 96, 0.4);
   box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.32);
   border: 1px solid #BCA360;
   border-radius: 8px;
-  text-align: center;
   padding: 2.5em 1em;
   transition: 0.3s;
   img{
     border: 2px solid #BCA360;
     border-radius: 100%;
-    margin: 0 auto;
   }
   :hover{
     background: var(--primary-cta-color-hover);
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.32);
+  }
+  @media (min-width: 768px) {
+    flex-direction: column;
   }
 `
 const Title = styled.h2`
@@ -30,6 +35,11 @@ const Title = styled.h2`
 const Location = styled.p`
   font-size: 0.9em;
   margin-top: 0.4em;
+  display: none;
+  @media (min-width: 768px) {
+    flex-direction: column;
+    display: block;
+  }
 `
 
 const AttorneyBtn = (props) => {

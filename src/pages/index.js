@@ -94,6 +94,8 @@ const IndexPage = ({ data: {siteColor, siteData, allCaseResult, allAttorney, all
       </div>
     </div>
 
+
+
     <div className={homeStyles.homePadding} style={{background: siteData.testimonialBdColor.hex, color: siteData.testimonialTextColor.hex }}>
       <div className="container">
         {allTestimonial.nodes.map(data => (
@@ -112,6 +114,9 @@ const IndexPage = ({ data: {siteColor, siteData, allCaseResult, allAttorney, all
         </div>
       </div>
     </div>
+
+
+
 
     <div className={homeStyles.homePadding} style={{background: siteData.praticeAreaBdColor.hex, color: siteData.praticeAreaTextColor.hex }}>
       <div className="container">

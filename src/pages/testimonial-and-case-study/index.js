@@ -1,10 +1,10 @@
 import * as React from "react"
+import { graphql } from 'gatsby'
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 import CaseResultBtn from "../../components/caseResultBtn"
 import GlobalHero from "../../components/globalHero"
 import GlobalContact from "../../components/globalContact"
-import { graphql } from 'gatsby'
 import ButtonCta from "../../components/buttonCta"
 import TestimonialBlock from "../../components/testimonialBlock"
 

@@ -4,12 +4,13 @@ import styled from "styled-components"
 
 const Card = styled.div`
   text-align: center;
-  width: 100%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   img{
     margin: 0 auto;
     border-radius: 100%;
-    border: 4px solid red;
   }
   h2{
     font-size: 21px;
