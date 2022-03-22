@@ -21,7 +21,7 @@ const AboutPage = ({data}) => (
 
       <div className="container">
         <div className={aboutStyles.wrapper}>
-          <h2>{data.datoCmsAbout.title}</h2>
+          <h1>{data.datoCmsAbout.title}</h1>
           <p>{data.datoCmsAbout.description}</p>
         </div>
       </div>

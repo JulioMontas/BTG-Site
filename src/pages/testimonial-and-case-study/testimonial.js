@@ -1,9 +1,10 @@
 import * as React from "react"
+import { graphql } from 'gatsby'
+import Seo from "../../components/seo"
 import Layout from "../../components/layout"
 import GlobalHero from "../../components/globalHero"
 import GlobalContact from "../../components/globalContact"
 import TestimonialBlock from "../../components/testimonialBlock"
-import { graphql } from 'gatsby'
 import { HelmetDatoCms } from 'gatsby-source-datocms'
 import { StructuredText } from "react-datocms";
 import { GatsbyImage } from 'gatsby-plugin-image';
@@ -21,6 +22,7 @@ const theme = {
 
 const TestimonialPage = ({data}) => (
   <Layout>
+  <Seo title="Testimonial" />
     <GlobalHero
       title="Testimonial"
       summary="Summary"

@@ -54,7 +54,7 @@ const CaseResultsPage = ({data}) => (
           <div className="centerLink">
             <ButtonCta
               url="/testimonial-and-case-study/testimonial"
-              title="Read more testimonial"
+              title="See More Testimonial"
             />
           </div>
         </div>

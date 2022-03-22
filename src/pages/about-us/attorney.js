@@ -10,7 +10,10 @@ import AttorneyBtn from "../../components/attorneyBtn"
 
 const AttorneysPage = ({ data: { siteData } }) => (
   <Layout>
-    <Seo title="Attorneys" />
+    <Seo
+      title="Attorneys"
+      description="Summary text"
+    />
     <GlobalHero
       title="Attorneys"
       summary= "Summary text"
